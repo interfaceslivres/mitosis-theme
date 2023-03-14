@@ -4,23 +4,98 @@
     gap: 0px 30px;
     grid-auto-flow: row;
     grid-template-areas:
-      "logo logo menu menu menu menu menu menu menu menu menu"
+      "header header header header header header header header header header header"
       "sidebar sidebar conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo"
       "imagem imagem imagem imagem imagem imagem imagem imagem imagem imagem imagem"
-      "logo-footer logo-footer footer footer footer footer footer footer footer footer footer";
+      "footer footer footer footer footer footer footer footer footer footer footer";
   }
-  
-  .logo { grid-area: logo; }
   
   .sidebar { grid-area: sidebar; }
   
   .imagem { grid-area: imagem; }
   
-  .conteudo { grid-area: conteudo; }
+  .conteudo {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "noticias noticias noticias"
+      "Curso Curso Curso"
+      "extras extras extras";
+    grid-area: conteudo;
+  }
   
-  .footer { grid-area: footer; }
+  .noticias {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "n-principal n-principal n-principal n-menor1 n-menor1 n-menor1"
+      "n-principal n-principal n-principal n-menor2 n-menor2 n-menor2";
+    grid-area: noticias;
+  }
   
-  .logo-footer { grid-area: logo-footer; }
+  .n-principal { grid-area: n-principal; }
+  
+  .n-menor1 { grid-area: n-menor1; }
+  
+  .n-menor2 { grid-area: n-menor2; }
+  
+  .extras {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "mapa ."
+      "mapa .";
+    grid-area: extras;
+  }
+  
+  .mapa { grid-area: mapa; }
+  
+  .Curso {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: Curso;
+  }
+  
+  .c-imagem { grid-area: 1 / 1 / 3 / 2; }
+  
+  .c-conteudo { grid-area: 2 / 1 / 3 / 2; }
+  
+  .footer {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 30px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo-f logo-f conteudo-f conteudo-f conteudo-f conteudo-f conteudo-f conteudo-f conteudo-f conteudo-f conteudo-f";
+    grid-area: footer;
+  }
+  
+  .logo-f { grid-area: logo-f; }
+  
+  .conteudo-f { grid-area: conteudo-f; }
+  
+  .header {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "logo logo cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho"
+      "logo logo menu menu menu menu menu menu menu menu menu menu menu";
+    grid-area: header;
+  }
+  
+  .logo { grid-area: logo; }
+  
+  .cabecalho { grid-area: cabecalho; }
   
   .menu { grid-area: menu; }
   
