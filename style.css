@@ -1,101 +1,64 @@
 .container {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 0px 30px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "header header header header header header header header header header header"
-      "sidebar sidebar conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo conteudo"
-      "imagem imagem imagem imagem imagem imagem imagem imagem imagem imagem imagem"
-      "footer footer footer footer footer footer footer footer footer footer footer";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 01fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+
+  font-family: 'Raleway';
+  box-sizing: border-box ;
+}
+
+.sidebar { grid-area: 2 / 1 / 4 / 2; 
+   border: 2px solid black;}
+
+.noticias { grid-area: 2 / 2 / 3 / 7;
+  border: 2px solid black; }
+
+.extras {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "curso"
+    "mapa";
+  grid-area: 3 / 2 / 4 / 7;
+  
+}
+
+.curso { grid-area: curso;
+  border: 2px solid black; }
+
+.mapa { grid-area: mapa;
+  border: 2px solid black; }
+
+.footer { grid-area: 4 / 1 / 5 / 7;
+  border: 2px solid black; }
+
+.logo-f { grid-area: 4 / 1 / 5 / 2;
+  border: 2px solid black; }
+
+.menu-f { grid-area: 4 / 2 / 5 / 7; 
+  border: 2px solid black;}
+
+.header { grid-area: 1 / 1 / 2 / 7;
+  border: 2px solid black; }
+
+.logo { grid-area: 1 / 1 / 2 / 2;
+  border: 2px solid black; }
+
+.menu {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "cabecalho"
+      "menu-h"; 
+    grid-area: 1 / 2 / 2 / 7; 
   }
-  
-  .sidebar { grid-area: sidebar; }
-  
-  .imagem { grid-area: imagem; }
-  
-  .conteudo {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "noticias noticias noticias"
-      "Curso Curso Curso"
-      "extras extras extras";
-    grid-area: conteudo;
-  }
-  
-  .noticias {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "n-principal n-principal n-principal n-menor1 n-menor1 n-menor1"
-      "n-principal n-principal n-principal n-menor2 n-menor2 n-menor2";
-    grid-area: noticias;
-  }
-  
-  .n-principal { grid-area: n-principal; }
-  
-  .n-menor1 { grid-area: n-menor1; }
-  
-  .n-menor2 { grid-area: n-menor2; }
-  
-  .extras {  display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "mapa ."
-      "mapa .";
-    grid-area: extras;
-  }
-  
-  .mapa { grid-area: mapa; }
-  
-  .Curso {  display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-area: Curso;
-  }
-  
-  .c-imagem { grid-area: 1 / 1 / 3 / 2; }
-  
-  .c-conteudo { grid-area: 2 / 1 / 3 / 2; }
-  
-  .footer {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 0px 30px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "logo-f logo-f conteudo-f conteudo-f conteudo-f conteudo-f conteudo-f conteudo-f conteudo-f conteudo-f conteudo-f";
-    grid-area: footer;
-  }
-  
-  .logo-f { grid-area: logo-f; }
-  
-  .conteudo-f { grid-area: conteudo-f; }
-  
-  .header {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "logo logo cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho"
-      "logo logo menu menu menu menu menu menu menu menu menu menu menu";
-    grid-area: header;
-  }
-  
-  .logo { grid-area: logo; }
-  
-  .cabecalho { grid-area: cabecalho; }
-  
-  .menu { grid-area: menu; }
-  
+.cabecalho { grid-area: cabecalho; }
+.menu-h { grid-area: menu-h;
+
+background-color: #00923F;
+}
