@@ -1,18 +1,33 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  
+  margin: 0;
+}
+
+
+
 .container {  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 01fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
 
-  font-family: 'Raleway';
-  box-sizing: border-box ;
 }
 
 .sidebar { grid-area: 2 / 1 / 4 / 2; 
-   border: 2px solid black;}
+    background-color: #F4F4F4;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.1);
+    
+  }
 
 .noticias { grid-area: 2 / 2 / 3 / 7;
-  border: 2px solid black; }
+   }
 
 .extras {  display: grid;
   grid-template-columns: 1fr;
@@ -27,25 +42,25 @@
 }
 
 .curso { grid-area: curso;
-  border: 2px solid black; }
+  }
 
 .mapa { grid-area: mapa;
-  border: 2px solid black; }
+   }
 
 .footer { grid-area: 4 / 1 / 5 / 7;
-  border: 2px solid black; }
+   }
 
 .logo-f { grid-area: 4 / 1 / 5 / 2;
-  border: 2px solid black; }
+   }
 
 .menu-f { grid-area: 4 / 2 / 5 / 7; 
-  border: 2px solid black;}
+  }
 
 .header { grid-area: 1 / 1 / 2 / 7;
-  border: 2px solid black; }
+  }
 
 .logo { grid-area: 1 / 1 / 2 / 2;
-  border: 2px solid black; }
+  }
 
 .menu {
     display: grid; 
@@ -58,7 +73,44 @@
     grid-area: 1 / 2 / 2 / 7; 
   }
 .cabecalho { grid-area: cabecalho; }
-.menu-h { grid-area: menu-h;
+.menu-h { grid-area: menu-h;}
 
-background-color: #00923F;
+.titulo-sidebar{
+  font-family: 'Raleway';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 28px;
+/* or 140% */
+letter-spacing: 0.3px;
+display: flex;
+align-items: center;
+color: #000000;
+width: 28%;
+padding-left: 70%;
+padding-top: 34px;
+}
+
+.text-sidebar{
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 8px;
+  /* identical to box height, or 57% */
+  letter-spacing: 0.3px;
+  
+  
+  color: #000000;
+  cursor: pointer;
+}
+
+.sidebar button{
+  background-color: transparent;
+  border: 0;
+
+}
+.sidebar button > span{
+  display: inline-flex;
+  
 }
