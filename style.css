@@ -1,13 +1,16 @@
 .container {  display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 142px 500px 369px 300px;
-  gap: 0px 0px;
+  gap: 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "header"
     "conteudo"
     "foto-curso"
     "footer";
+  margin: 0%;
+  padding: 0%;
+ 
 }
 
 .header {  display: grid;
@@ -18,9 +21,29 @@
   grid-template-areas:
     "logo menu";
   grid-area: header;
+  margin-left: 14.53%;
+  padding: 0px;
+
 }
 
-.logo { grid-area: logo; }
+.logo { grid-area: logo;
+  
+  max-width: 170px;
+  display: flex;
+  justify-content: center;
+  height: 142px;
+  margin-left: 0px;
+  padding: 0px;
+  border-style: solid;
+}
+
+.imgc-h{
+  
+  text-align: center;
+  object-fit: contain;
+  min-width: 170px;
+  max-width: 200px;
+}
 
 .menu {  display: grid;
   grid-template-columns: 100%;
@@ -31,11 +54,18 @@
     "cabecalho"
     "menu-h";
   grid-area: menu;
+  margin-left: 0px;
+  padding: 0px;
 }
 
-.menu-h { grid-area: menu-h; }
+.menu-h { 
+  grid-area: menu-h; 
+  background-color: #0E409F;
+}
 
-.cabecalho { grid-area: cabecalho; }
+.cabecalho { grid-area: cabecalho;
+  border-style: dotted;
+}
 
 .conteudo {  display: grid;
   grid-template-columns: 14.53% 85.47%;
@@ -45,6 +75,7 @@
   grid-template-areas:
     "sidebar material";
   grid-area: conteudo;
+  
 }
 
 .sidebar { grid-area: sidebar; }
