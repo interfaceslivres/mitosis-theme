@@ -1,3 +1,8 @@
+body{
+  margin: 0%;
+}
+
+
 .container {  display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 142px 500px 369px 300px;
@@ -14,47 +19,45 @@
 }
 
 .header {  display: grid;
-  grid-template-columns: 14.53% 85.47%;
+  grid-template-columns: 28.39% 71.61%;
   grid-template-rows: 142px;
-  gap: 0%;
+  gap: 0% 0%;
   grid-auto-flow: row;
   grid-template-areas:
     "logo menu";
   grid-area: header;
-  margin-left: 14.53%;
 
 
 }
 
 .logo { grid-area: logo;
-  
-  max-width: 300px;
+  max-width: 545px;
   display: flex;
   justify-content: center;
-  height: 141px;
-  
-
+  height: 142px;
+  margin-left: 68.81%;
 }
 
-.imgc-h{
-  
+.imgc-l{
   text-align: center;
   object-fit: contain;
-  min-width: 170px;
-  max-width: 200px;
+  max-width: 170px;
+  max-height: 125px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .menu {  display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 94px 47px;
+  grid-template-rows: 94px 48px;
   gap: 0px 0px;
-  height: 141px;
+  height: 142px;
   grid-auto-flow: row;
   grid-template-areas:
     "cabecalho"
     "menu-h";
   grid-area: menu;
-  
+  margin-left: 0%;
  
 }
 
@@ -115,74 +118,19 @@
 
 .cabecalho { 
   display: grid;
-  grid-template-columns: 2% 98%;
+  grid-template-columns: 2% 52.75% 15% 30.25%;
   grid-template-rows: 94px;
   gap: 0%;
   grid-auto-flow: row;
   grid-template-areas:
-    "retangulo cabecalho_text";
+    "retangulo cabecalho_text cabecalho_logo_direita_text cabecalho_logo";
   grid-area: cabecalho;
+
 }
 
 .cabecalho_text{ 
   grid-area: cabecalho_text;
 }
-
-.retangulo{
-  margin-top: 15px;
-  width: 2px;
-  height: 79px;
-  
-  background: #0E409F;
-}
-
-.conteudo { display: grid;
-  grid-template-columns: 14.53% 85.47%;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "sidebar material";
-  grid-area: conteudo;
-  margin-left: 14.53%;
-  margin-right: 14.53%;
-
-}
-
-.sidebar { grid-area: sidebar; 
-  border-style: solid;
-}
-
-.material {  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 1fr 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "noticias"
-    "extras";
-  grid-area: material;
-}
-
-.noticias { grid-area: noticias; }
-
-.extras { grid-area: extras; }
-
-.foto-curso { grid-area: foto-curso; }
-
-.footer {  display: grid;
-  grid-template-columns: 14.53% 85.47%;
-  grid-template-rows: 369px;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "logo-f menu-f";
-  grid-area: footer;
-}
-
-.logo-f { grid-area: logo-f; }
-
-.menu-f { grid-area: menu-f; }
 
 #tit_centro{ 
  
@@ -218,3 +166,101 @@
 
   color: #000000;
 }
+
+.retangulo{
+  margin-top: 15px;
+  width: 2px;
+  height: 79px;
+  
+  background: #0E409F;
+}
+
+.cabecalho_logo_direita_text{
+  grid-area: cabecalho_logo_direita_text;
+  height:100%;
+}
+
+#cabecalho_logo_direita_text{
+  margin-right: 1%;
+  margin-top: 21px;
+  list-style-type: none;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  /* or 129% */
+
+  text-align: right;
+  text-transform: uppercase;
+
+  color: #747474;
+
+}
+
+.cabecalho_logo{
+  grid-area: cabecalho_logo;
+  margin-right: 88.94%;
+  
+ 
+}
+
+#cabecalho_logo{
+  min-height: 59px;
+  margin-top: 15px;
+}
+
+.conteudo { display: grid;
+  grid-template-columns: 28.39% 71.61%;
+  grid-template-rows: 2fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "sidebar material";
+  grid-area: conteudo;
+ 
+}
+
+.sidebar { grid-area: sidebar; 
+  
+
+  background-color: #F4F4F4 ;
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.1);
+
+  height: max-content;
+  min-height: 1080px;
+}
+
+.material {  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "noticias"
+    "extras";
+  grid-area: material;
+  
+}
+
+.noticias { grid-area: noticias;
+   }
+
+.extras { grid-area: extras; }
+
+.foto-curso { grid-area: foto-curso; }
+
+.footer {  display: grid;
+  grid-template-columns: 14.53% 85.47%;
+  grid-template-rows: 369px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "logo-f menu-f";
+  grid-area: footer;
+}
+
+.logo-f { grid-area: logo-f; }
+
+.menu-f { grid-area: menu-f; }
+
