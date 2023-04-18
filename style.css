@@ -67,7 +67,7 @@ body{
   margin-left: 0%;
 
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 65.45% 34.55%;
   grid-template-rows: 47px;
   gap: 0%;
   grid-auto-flow: row;
@@ -102,18 +102,45 @@ body{
 }
 
 .img-menu-h{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 47px;
+  gap: 0%;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "img-pesquisa img-ac";
   grid-area: img-menu-h;
+
+  margin-top: 10px;
+  margin-right: 78.95%;
 }
 .img-pesquisa{
+  grid-area: img-pesquisa;
+  max-height: 47px;
 
+}
+
+#img-pesquisa{
+  
   float: right;
   display: flex;
   gap: 0%;
-  
-  
-  margin-top: 8px;
+  height: 30px;
 
+}
 
+.img-ac{
+  grid-area: img-ac;
+  max-height: 47px;
+}
+
+#img-ac{
+
+  margin-right: 0%;
+  float: right;
+  display: flex;
+  gap: 0%;
+  height: 30px;
 }
 
 .cabecalho { 
@@ -130,11 +157,12 @@ body{
 
 .cabecalho_text{ 
   grid-area: cabecalho_text;
+ 
 }
 
 #tit_centro{ 
  
-
+  
   margin-left: 30px;
   margin-top: 20px;
   margin-bottom: 0px;
@@ -221,8 +249,17 @@ body{
  
 }
 
-.sidebar { grid-area: sidebar; 
-  
+.sidebar {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 90% 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "sidebar-text"
+    "sidebar-img";
+  grid-area: sidebar;
+
 
   background-color: #F4F4F4 ;
   box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.1);
@@ -231,20 +268,167 @@ body{
   min-height: 1080px;
 }
 
+.sidebar-text{
+  margin-left: 65.22%;
+}
+
+#sidebar-text{
+
+  list-style: none;
+
+  margin-top: 11px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  /* identical to box height, or 57% */
+
+
+  color: #000000; 
+}
+
+.sidebar-titulo{
+  margin-top: 23px;
+  margin-bottom: 15px;
+  
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  /* or 140% */
+
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}
+
+.sidebar-img{
+  margin-left: 65.22%;
+  float:none;
+}
+
 .material {  display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 569px 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "noticias"
     "extras";
   grid-area: material;
+  margin-right: 27.27%;
+  margin-left: 30px;
+}
+
+.noticias { 
+  max-width: 100%;
+  grid-area: noticias; 
+}
+
+.secoes {
+  margin-top: 35px;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 26px;
+  /* or 81% */
+
+  display: flex;
+  align-items: center;
+
+  color: #87A0CF;
+}
+
+.quadros {
+  min-height: 415px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.noticias-coluna {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.noticia-sem-img {
+  width: auto;
+  min-height: 200px;
+
+  padding-top: 16px;
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-bottom: 32px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.noticia-data-tag {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;    
+}
+
+.texto-pequeno-sem-img {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #8D8B8B;
+
   
 }
 
-.noticias { grid-area: noticias;
-   }
+.noticia-sem-img-titulo-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.noticia-sem-img-titulo {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  color: #0E409F;
+
+}
+
+.mais-link {
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  /* identical to box height, or 111% */
+
+  float: right;
+  color: #0E409F;
+  margin-top: 39px;
+
+ 
+}
 
 .extras { grid-area: extras; }
 
