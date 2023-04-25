@@ -5,7 +5,7 @@ body{
 
 .container {  display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 142px 500px 369px 300px;
+  grid-template-rows: 142px 1000px 369px 300px;
   gap: 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -19,32 +19,35 @@ body{
 }
 
 .header {  display: grid;
-  grid-template-columns: 28.39% 71.61%;
+  grid-template-columns: 170px 1000px;
   grid-template-rows: 142px;
   gap: 0% 0%;
   grid-auto-flow: row;
   grid-template-areas:
     "logo menu";
   grid-area: header;
-
+  margin: 0 auto;
+  width: 100%;
+  max-height: 142px;
+  justify-content: center;
+  background-color: rgb(255, 153, 0);
 
 }
 
 .logo { grid-area: logo;
-  max-width: 545px;
   display: flex;
-  justify-content: center;
-  height: 142px;
-  margin-left: 68.81%;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 30px;  
+  margin-left: 1%;
+  background-color: white;
 }
 
 .imgc-l{
-  text-align: center;
-  object-fit: contain;
-  max-width: 170px;
-  max-height: 125px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  background-color: white;
+  height: 83px;   
+  display: flex; 
 }
 
 .menu {  display: grid;
@@ -58,48 +61,56 @@ body{
     "menu-h";
   grid-area: menu;
   margin-left: 0%;
- 
+  
 }
 
 .menu-h { 
   
-  background-color: #0E409F;
-  margin-left: 0%;
-
-  display: grid;
-  grid-template-columns: 65.45% 34.55%;
-  grid-template-rows: 47px;
-  gap: 0%;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "text-menu-h img-menu-h";
-  grid-area: menu-h;
-
+  background-color: #E15323;  
+  margin: 0 auto;
+  width: 100%;
+  max-height: 45px;
+  display: flex;
+  justify-content: center;
  
  
 }
-#menu-h{
-  list-style-type: none;
-  margin-left: 0%;
-  margin-right: 27.27%;
+
+.text-menu-h{ grid-area: text-menu-h;
+  height: auto;
+  grid-area: menu; 
+  
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;  
+  padding-top: 10px;
+  padding-bottom: 14px;
+  margin: 0 30px;
+
+  margin-left: 170px;
 }
 
-#menu-h li{
-  display: inline;
+.text-menu-h ul{
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 27px;
+  margin: 0px;
 
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
-  line-height: 18px;
+  list-style-type: none;
   /* identical to box height, or 100% */
-  margin-left: 20px;
+ 
   
   color: #FFFFFF;
 }
-.text-menu-h{ grid-area: text-menu-h;
-  
-}
+
 
 .img-menu-h{
   display: grid;
@@ -152,7 +163,7 @@ body{
   grid-template-areas:
     "retangulo cabecalho_text cabecalho_logo_direita_text cabecalho_logo";
   grid-area: cabecalho;
-
+  background-color: white;
 }
 
 .cabecalho_text{ 
@@ -200,7 +211,7 @@ body{
   width: 2px;
   height: 79px;
   
-  background: #0E409F;
+  background: #E77817;
 }
 
 .cabecalho_logo_direita_text{
@@ -341,7 +352,7 @@ body{
   display: flex;
   align-items: center;
 
-  color: #87A0CF;
+  color: #F3BC8B;
 }
 
 .quadros {
@@ -410,7 +421,7 @@ body{
   font-weight: 700;
   font-size: 28px;
   line-height: 32px;
-  color: #0E409F;
+  color: #E77817;
 
 }
 
@@ -424,7 +435,7 @@ body{
   /* identical to box height, or 111% */
 
   float: right;
-  color: #0E409F;
+  color: #E77817;
   margin-top: 39px;
 
  
@@ -432,7 +443,15 @@ body{
 
 .extras { grid-area: extras; }
 
-.foto-curso { grid-area: foto-curso; }
+.foto-curso { grid-area: foto-curso;
+    height: 300px;
+    width: 100%;
+    background-image: url("img/UFPB-scaled.jpg");
+    background-position: center;
+    background-size: cover; 
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px -16px 16px rgba(0, 0, 0, 0.25);
+    
+ }
 
 .footer {  display: grid;
   grid-template-columns: 14.53% 85.47%;
