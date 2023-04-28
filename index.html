@@ -1,129 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <title>Document</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Estudo Site Coordenação</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="logo"> 
-        <img class="imgc-l" src="img/demid-logo.jpg" alt="Logo do curso"> 
-      </div>  
-      <div class="menu">
-        <div class="menu-h">
-          <div class="text-menu-h">
-             <ul>
-              <li>Notícias</li>
-              <li>Curso</li>
-              <li>Projetos</li>
-              <li>Documentos</li>
-              <li>Chamados</li>
-  
-             </ul>
-          </div>
-          <div class="img-menu-h">
-            <div class= "img-pesquisa" > <img id="img-pesquisa" src="img/Busca icone.png" alt="Icone de pesquisa no site"> </div>
-            <div class="img-ac"> <img id="img-ac" src="img/Vector.png" alt="Icone de acessibilidade"> </div> 
-          </div>
-        </div>
-        <div class="cabecalho">
-          <div class="retangulo"></div>
-          <div class="cabecalho_text">
-            <p id="tit_centro">CENTRO DE CIÊNCIAS HUMANAS, LETRAS E ARTES</p>
-            <p id="tit_curso">Comunicação em Mídias Digitais</p>
-          </div>
-          <div class="cabecalho_logo_direita_text">
-            <ul id="cabecalho_logo_direita_text">
-              <li>UNIVERSIDADE</li>
-              <li>FEDERAL</li>
-              <li>DA PARAÍBA</li>
-            </ul>
-          </div>
-          <div class="cabecalho_logo">
-            <img id="cabecalho_logo" src="img/Logo_ufpb.png" alt="Icone da UFPB">
-          </div>
-        </div>
-      </div>
+
+<div class="container">
+  <!-- Lateral esquerda do site-->
+  <div class="lateral">
+    <div class="logo-bg">
+    	<div class="logo">
+    		<img src="img/demid-logo.jpg" alt="Logo do curso">
+    	</div>
     </div>
-    <div class="conteudo">
-      <div class="sidebar">
-        <div class="sidebar-text">
-          <ul id="sidebar-text">
-            <li class="sidebar-titulo">Docentes</li>
-            <li>_noitícias</li>
-            <li>_corpo adminstrativo</li>
-            <li class="sidebar-titulo">Discentes</li>
-            <li>_tcc</li>
-            <li>_documentos</li>
-            <li>_projetos</li>
-            <li>_notícias</li>
-            <li>_mapa</li>
-            <li class="sidebar-titulo">Visitantes</li>
-            <li>_apresentação</li>
-            <li>_vídeos</li>
-            <li>_mapa</li>
-            <li class="sidebar-titulo">Links</li>
-            <li>_sigaa</li>
-            <li>_ufpb</li>
-          </ul>
+      <div class="sidebar-bg">
+        <div class="sidebar">
+          sidebar
         </div>
-        <div class="sidebar-img"></div>
-      </div>
-      <div class="material">
-        <div class="noticias">
-         
-            <div class="secoes">Notícias</div>
-            <div class="quadros">
-              <div class="noticia-sem-img">
-                <div class="noticia-data-tag">
-                  <div class="texto-pequeno-sem-img">15 de Setembro de 2022</div>
-                  <div class="texto-pequeno-sem-img">Notícia, Cataclisma</div>
-                </div>
-                <div class="noticia-sem-img-titulo-wrapper">
-                  <div class="noticia-sem-img-titulo">Resultado final do concurso de "Áudio Digital"</div>
-                </div>
-              </div>
-              <div class="noticias-coluna">
-                <div class="noticia-sem-img">
-                  <div class="noticia-data-tag">
-                    <div class="texto-pequeno-sem-img">15 de Setembro de 2022</div>
-                    <div class="texto-pequeno-sem-img">Notícia, Cataclisma</div>
-                  </div>
-                  <div class="noticia-sem-img-titulo-wrapper">
-                    <div class="noticia-sem-img-titulo">Resultado final do concurso de "Áudio Digital"</div>
-                  </div>
-                </div>
-                <div class="noticia-sem-img">
-                  <div class="noticia-data-tag">
-                    <div class="texto-pequeno-sem-img">15 de Setembro de 2022</div>
-                    <div class="texto-pequeno-sem-img">Notícia, Cataclisma</div>
-                  </div>
-                  <div class="noticia-sem-img-titulo-wrapper">
-                    <div class="noticia-sem-img-titulo">Resultado final do concurso de "Áudio Digital"</div>
-                  </div>
-                </div>
-              </div>          
-              
-            </div>
-            <div class="mais-link">Mais Notícias</div>
-             
-        </div>
-        <div class="extras"></div>
-      </div>
-    </div>
-    <div class="foto-curso"></div>
-    <div class="footer">
-      <div class="logo-f"></div>
-      <div class="menu-f"></div>
-    </div>
+	    </div>
   </div>
-  
+
+  <!-- Lateral direita do site-->
+  <header class="cabecalho">
+    <div class="titulo">
+    	<div class="title">
+
+        <!-- Duvida o h1 seria melhor escondido como é em alguns site ou aqui mesmo? -->
+
+    		<p id="tit_centro">CENTRO DE CIÊNCIAS HUMANAS, LETRAS E ARTES</p>
+        <p id="tit_curso">Comunicação em Mídias Digitais</p>
+    	</div>
+    	<div class="brasao">brasao</div>
+    </div>
+    <div class="nav-bar-bg">
+    	<div class="nav-bar">
+    		<nav class="menu">
+              <ul>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Curso</a></li>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Documentos</a></li>
+                <li><a href="#">Chamados</a></li>
+              </ul>
+            </nav>
+            <div class="img-menu-h">
+              <div class= "img-pesquisa" > <img id="img-pesquisa" src="img/Busca icone.png" alt="Icone de pesquisa no site"> </div>
+              <div class="img-ac"> <img id="img-ac" src="img/Vector.png" alt="Icone de acessibilidade"> </div> 
+            </div>
+    	</div>
+    </div>
+  </header>
+  <div class="main">main</div>
+</div>
+
+
 </body>
 </html>

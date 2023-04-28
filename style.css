@@ -1,469 +1,164 @@
-body{
-  margin: 0%;
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+:root {
+  --laranja: #E77817;
 }
 
 
 .container {  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 142px 1000px 369px 300px;
-  gap: 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "header"
-    "conteudo"
-    "foto-curso"
-    "footer";
-  margin: 0%;
-  padding: 0%;
- 
-}
-
-.header {  display: grid;
-  grid-template-columns: 170px 1000px;
-  grid-template-rows: 142px;
-  gap: 0% 0%;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "logo menu";
-  grid-area: header;
-  margin: 0 auto;
-  width: 100%;
-  max-height: 142px;
-  justify-content: center;
-  background-color: rgb(255, 153, 0);
-
-}
-
-.logo { grid-area: logo;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0px;
-  gap: 30px;  
-  margin-left: 1%;
-  background-color: white;
-}
-
-.imgc-l{
-  background-color: white;
-  height: 83px;   
-  display: flex; 
-}
-
-.menu {  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 94px 48px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 0px 0px;
-  height: 142px;
   grid-auto-flow: row;
   grid-template-areas:
-    "cabecalho"
-    "menu-h";
-  grid-area: menu;
-  margin-left: 0%;
-  
-}
-
-.menu-h { 
-  
-  background-color: #E15323;  
-  margin: 0 auto;
-  width: 100%;
-  max-height: 45px;
-  display: flex;
-  justify-content: center;
- 
- 
-}
-
-.text-menu-h{ grid-area: text-menu-h;
-  height: auto;
-  grid-area: menu; 
-  
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1000px;  
+    "lateral cabecalho cabecalho cabecalho cabecalho cabecalho"
+    "lateral main main main main main";
   padding-top: 10px;
-  padding-bottom: 14px;
-  margin: 0 30px;
-
-  margin-left: 170px;
 }
 
-.text-menu-h ul{
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 27px;
-  margin: 0px;
-
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  list-style-type: none;
-  /* identical to box height, or 100% */
- 
-  
-  color: #FFFFFF;
+.lateral {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+	"logo"
+	"sidebar";
+	grid-area: lateral;
 }
 
-
-.img-menu-h{
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 47px;
-  gap: 0%;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "img-pesquisa img-ac";
-  grid-area: img-menu-h;
-
-  margin-top: 10px;
-  margin-right: 78.95%;
-}
-.img-pesquisa{
-  grid-area: img-pesquisa;
-  max-height: 47px;
+.logo-bg {  /* Provavelmente vou ter que trocar pq ta comendo px */
+	grid-area: logo;
+	display: flex;
+	justify-content: flex-end;
+	border-right: 2px solid var(--laranja);
 
 }
 
-#img-pesquisa{
-  
-  float: right;
-  display: flex;
-  gap: 0%;
-  height: 30px;
-
+.logo {
+	margin-left: 20vw; /*alterar no media query*/
 }
 
-.img-ac{
-  grid-area: img-ac;
-  max-height: 47px;
+.sidebar-bg { 
+	grid-area: sidebar; 
+	display: flex;
+	justify-content: flex-end;
+	background: #F4F4F4;
+	box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.1);
 }
 
-#img-ac{
-
-  margin-right: 0%;
-  float: right;
-  display: flex;
-  gap: 0%;
-  height: 30px;
+.sidebar { 
+	margin-left: 20vw; /*alterar no media query*/
 }
 
-.cabecalho { 
-  display: grid;
-  grid-template-columns: 2% 52.75% 15% 30.25%;
-  grid-template-rows: 94px;
-  gap: 0%;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "retangulo cabecalho_text cabecalho_logo_direita_text cabecalho_logo";
-  grid-area: cabecalho;
-  background-color: white;
+.cabecalho {  
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+	"titulo titulo"
+	"nav-bar nav-bar";
+	grid-area: cabecalho;
+	max-height: 142px;
 }
 
-.cabecalho_text{ 
-  grid-area: cabecalho_text;
- 
+
+.titulo {
+	grid-area: titulo;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 16px;
+	padding-left: 28px;
+	padding-bottom: 13px;
+	max-height: 94px;
 }
 
 #tit_centro{ 
  
+	/* Quais elementos são desnecessarios? no caso se puxar do figma*/
+	/* O melhor jeito de definir fonte é em px? no site do mit eles usam px mas com media@ */ 
+	
+	
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	display: flex;
+	align-items: center;
   
-  margin-left: 30px;
-  margin-top: 20px;
-  margin-bottom: 0px;
+	color: #959595;
+  }
   
-
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  display: flex;
-  align-items: center;
-
-  color: #959595;
-}
-
-#tit_curso{
-  gap: 0px;
-  margin: 0%;
-  margin-left: 30px;
-
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 35px;
-  display: flex;
-  align-items: center;
-
-  color: #000000;
-}
-
-.retangulo{
-  margin-top: 15px;
-  width: 2px;
-  height: 79px;
+  #tit_curso{
+	
   
-  background: #E77817;
-}
-
-.cabecalho_logo_direita_text{
-  grid-area: cabecalho_logo_direita_text;
-  height:100%;
-}
-
-#cabecalho_logo_direita_text{
-  margin-right: 1%;
-  margin-top: 21px;
-  list-style-type: none;
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-  /* or 129% */
-
-  text-align: right;
-  text-transform: uppercase;
-
-  color: #747474;
-
-}
-
-.cabecalho_logo{
-  grid-area: cabecalho_logo;
-  margin-right: 88.94%;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 35px;
+	display: flex;
+	align-items: center;
   
- 
+	color: #000000;
+  }
+
+.brasao {
+	margin-right: 20vw; /*alterar no media query*/
 }
 
-#cabecalho_logo{
-  min-height: 59px;
-  margin-top: 15px;
+
+
+.nav-bar-bg {
+	grid-area: nav-bar;
+	background: var(--laranja);
+	display: flex;
+	justify-content: flex-start;
 }
 
-.conteudo { display: grid;
-  grid-template-columns: 28.39% 71.61%;
-  grid-template-rows: 2fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "sidebar material";
-  grid-area: conteudo;
- 
+div.nav-bar {
+	margin-right: 20vw; /*alterar no media query*/
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-left: 18px;
+	max-height: 48px;
 }
 
-.sidebar {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 90% 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "sidebar-text"
-    "sidebar-img";
-  grid-area: sidebar;
-
-
-  background-color: #F4F4F4 ;
-  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.1);
-
-  height: max-content;
-  min-height: 1080px;
+nav.menu ul {
+	display: flex;
 }
 
-.sidebar-text{
-  margin-left: 65.22%;
+nav.menu ul li {
+	list-style-type: none;
+	padding: 10px;
 }
 
-#sidebar-text{
-
-  list-style: none;
-
-  margin-top: 11px;
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  /* identical to box height, or 57% */
-
-
-  color: #000000; 
+nav.menu ul li a {
+	color: #fff;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	text-decoration: none;    
+	padding-bottom: 3px;  
+	font-family: 'Raleway';
+	font-style: normal;
 }
 
-.sidebar-titulo{
-  margin-top: 23px;
-  margin-bottom: 15px;
-  
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
-  /* or 140% */
-
-  display: flex;
-  align-items: center;
-
-  color: #000000;
+nav.menu ul li a:hover {
+	border-bottom: 2px solid #fff;
 }
 
-.sidebar-img{
-  margin-left: 65.22%;
-  float:none;
+.main {
+	grid-area: main;
+	margin-right: 20vw; /*alterar no media query*/
 }
-
-.material {  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 569px 1fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "noticias"
-    "extras";
-  grid-area: material;
-  margin-right: 27.27%;
-  margin-left: 30px;
-}
-
-.noticias { 
-  max-width: 100%;
-  grid-area: noticias; 
-}
-
-.secoes {
-  margin-top: 35px;
-
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 26px;
-  /* or 81% */
-
-  display: flex;
-  align-items: center;
-
-  color: #F3BC8B;
-}
-
-.quadros {
-  min-height: 415px;
-  margin-top: 40px;
-  margin-bottom: 15px;
-
-  display: flex;
-  flex-direction: row;
-  gap: 15px;
-}
-
-.noticias-coluna {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.noticia-sem-img {
-  width: auto;
-  min-height: 200px;
-
-  padding-top: 16px;
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-bottom: 32px;
-
-  background: #FFFFFF;
-  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
-
-  display: flex;
-  flex-direction: column;
-}
-
-.noticia-data-tag {
-  width: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;    
-}
-
-.texto-pequeno-sem-img {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-
-  color: #8D8B8B;
-
-  
-}
-
-.noticia-sem-img-titulo-wrapper {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.noticia-sem-img-titulo {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 32px;
-  color: #E77817;
-
-}
-
-.mais-link {
-
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 20px;
-  /* identical to box height, or 111% */
-
-  float: right;
-  color: #E77817;
-  margin-top: 39px;
-
- 
-}
-
-.extras { grid-area: extras; }
-
-.foto-curso { grid-area: foto-curso;
-    height: 300px;
-    width: 100%;
-    background-image: url("img/UFPB-scaled.jpg");
-    background-position: center;
-    background-size: cover; 
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px -16px 16px rgba(0, 0, 0, 0.25);
-    
- }
-
-.footer {  display: grid;
-  grid-template-columns: 14.53% 85.47%;
-  grid-template-rows: 369px;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "logo-f menu-f";
-  grid-area: footer;
-}
-
-.logo-f { grid-area: logo-f; }
-
-.menu-f { grid-area: menu-f; }
-
