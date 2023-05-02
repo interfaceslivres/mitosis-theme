@@ -11,19 +11,19 @@
 
 .container {  display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto  auto;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    "lateral cabecalho cabecalho cabecalho cabecalho cabecalho"
-    "lateral main main main main main";
+  	"cabecalho cabecalho cabecalho cabecalho cabecalho cabecalho"
+  	"main main main main main main";
   padding-top: 10px;
 }
 
 .lateral {
-	display: grid;
+	display: none;
 	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr;
+	grid-template-rows: 132px 100vh;
 	gap: 0px 0px;
 	grid-auto-flow: row;
 	grid-template-areas:
@@ -32,18 +32,23 @@
 	grid-area: lateral;
 }
 
-.logo-bg {  /* Provavelmente vou ter que trocar pq ta comendo px */
+.logo-bg {  
 	grid-area: logo;
 	display: flex;
 	justify-content: flex-end;
-	border-right: 2px solid var(--laranja);
-
+	align-items: center;
 }
 
 .logo {
-	margin-left: 20vw; /*alterar no media query*/
+
+	margin-left: 0%; /*alterar no media query*/
+	padding-right: 10px;
 }
 
+.logo img{ 
+	object-fit: contain;
+	max-width: 150px;
+}
 .sidebar-bg { 
 	grid-area: sidebar; 
 	display: flex;
@@ -53,20 +58,48 @@
 }
 
 .sidebar { 
-	margin-left: 20vw; /*alterar no media query*/
+	margin-left: 0%; /*alterar no media query*/
+	padding-right: 20px;
 }
 
+.sidebar ul{
+	list-style: none;
+
+	margin-top: 11px;
+	font-family: 'Raleway';
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 18px;
+	/* identical to box height, or 57% */
+
+	color: #000000; 
+}
+
+.sidebar-titulo{
+	
+	font-family: 'Raleway';
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 28px;
+	/* or 140% */
+  
+	display: flex;
+	align-items: center;
+  
+	color: #000000;
+}
+  
 .cabecalho {  
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto auto;
+	grid-template-rows: 85px 45px;
 	gap: 0px 0px;
 	grid-auto-flow: row;
 	grid-template-areas:
 	"titulo titulo"
 	"nav-bar nav-bar";
 	grid-area: cabecalho;
-	max-height: 142px;
+	flex-wrap: wrap;
 }
 
 
@@ -76,18 +109,18 @@
 	justify-content: space-between;
 	padding-top: 16px;
 	padding-left: 28px;
-	padding-bottom: 13px;
-	max-height: 94px;
+	flex-wrap: wrap;
+	border-left: 2px solid var(--laranja);
+	
 }
 
 #tit_centro{ 
  
 	/* Quais elementos são desnecessarios? no caso se puxar do figma*/
-	/* O melhor jeito de definir fonte é em px? no site do mit eles usam px mas com media@ */ 
+	 
 	
 	
 	font-family: 'Raleway';
-	font-style: normal;
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 21px;
@@ -98,10 +131,9 @@
   }
   
   #tit_curso{
-	
+	padding-bottom: 13px;
   
 	font-family: 'Raleway';
-	font-style: normal;
 	font-weight: 700;
 	font-size: 30px;
 	line-height: 35px;
@@ -112,10 +144,14 @@
   }
 
 .brasao {
-	margin-right: 20vw; /*alterar no media query*/
+	display:none;
+	margin-right: 0%; /*alterar no media query*/
 }
 
-
+.brasao img{
+	
+	max-width: 158px;
+}
 
 .nav-bar-bg {
 	grid-area: nav-bar;
@@ -125,12 +161,12 @@
 }
 
 div.nav-bar {
-	margin-right: 20vw; /*alterar no media query*/
+	margin-right: 0%; /*alterar no media query*/
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
 	padding-left: 18px;
-	max-height: 48px;
+	flex-wrap: wrap;
 }
 
 nav.menu ul {
@@ -160,5 +196,97 @@ nav.menu ul li a:hover {
 
 .main {
 	grid-area: main;
-	margin-right: 20vw; /*alterar no media query*/
+	margin-right: 0%; /*alterar no media query*/
 }
+
+
+
+@media only screen and (min-width: 815px)  {
+	.brasao {		
+		display: flex;
+		margin-right: 0vw; 
+	}
+
+	.lateral {
+		display: grid;
+	}
+	
+	.logo {
+		
+		margin-left: 0vw;  
+	}
+
+	.sidebar { 
+
+		margin-left: 0vw;  
+	}
+	div.nav-bar{
+
+		margin-right: 0vw; 
+	}
+	.main{
+		margin-right: 0vw;
+	}
+
+	
+
+	.container{
+		grid-template-areas:
+		"lateral cabecalho cabecalho cabecalho cabecalho cabecalho"
+    	"lateral main main main main main";
+		
+	}
+}
+
+@media only screen and (min-width: 1020px)  {
+	.brasao {		
+		
+		margin-right: 10vw; 
+	} 
+
+	.logo {
+		
+		margin-left: 10vw;  
+	}
+
+	.sidebar { 
+
+		margin-left: 10vw;  
+	}
+	div.nav-bar{
+
+		margin-right: 10vw; 
+	}
+	.main{
+		margin-right: 10vw;
+	}
+
+	
+}
+
+@media only screen and (min-width: 1400px)  {
+	.brasao {		
+		
+		margin-right: 20vw; 
+	}
+
+	.logo {
+		
+		margin-left: 20vw;  
+	}
+
+	.sidebar { 
+
+		margin-left: 20vw;  
+	}
+	div.nav-bar{
+
+		margin-right: 20vw; 
+	}
+	.main{
+		margin-right: 20vw;
+	}
+
+	
+}
+
