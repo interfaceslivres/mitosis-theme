@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Estudo Site Coordenação</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-  	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -14,14 +15,14 @@
   <div class="lateral">
     <div class="logo-bg">
     	<div class="logo">
-    		<img  src="img/demid-logo.jpg" alt="logo DEMID">
+    		<img  src="img/midias-logo.png" alt="logo DEMID">
     	</div>
     </div>
       <div class="sidebar-bg">
         <div class="sidebar">
           <ul>
             <li class="sidebar-titulo">Docentes</li>
-            <li><a href="#">_noitícias</a></li>
+            <li><a href="#">_notícias</a></li>
             <li><a href="#">_corpo adminstrativo</a></li>
             <li class="sidebar-titulo">Discentes</li>
             <li><a href="#">_tcc</a></li>
@@ -57,25 +58,29 @@
     </div>
     <div class="nav-bar-bg">
     	<div class="nav-bar">
-    		<nav class="menu">
+        <div class="topnav" id="myTopnav">
+            <nav>
               <ul>
+                <li><a href="#" class="active" >Início</a></li>
                 <li><a href="#">Notícias</a></li>
                 <li><a href="#">Curso</a></li>
                 <li><a href="#">Projetos</a></li>
                 <li><a href="#">Documentos</a></li>
                 <li><a href="#">Chamados</a></li>
+                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
               </ul>
             </nav>
             <div class="img-menu-h">
-               <!-- <div class= "img-pesquisa" > <img id="img-pesquisa" src="img/Busca icone.png" alt="Icone de pesquisa no site"> </div>
+              <!-- <div class= "img-pesquisa" > <img id="img-pesquisa" src="img/Busca icone.png" alt="Icone de pesquisa no site"> </div>
               <div class="img-ac"> <img id="img-ac" src="img/Vector.png" alt="Icone de acessibilidade"> </div>  -->
-            </div>
+          </div>
+        </div>
     	</div>
     </div>
   </header>
   <div class="main">main</div>
 </div>
 
-
+<script type="text/javascript" src="controller.js"> </script>
 </body>
 </html>
