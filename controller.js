@@ -1,6 +1,6 @@
 // função para menu responsivo
 
-function myFunction() {
+function menuTransforma() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
       x.className += " responsive";
