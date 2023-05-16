@@ -214,8 +214,6 @@ div.nav-bar {
 	font-style: normal;
 }
 
-  /* Hide the link that should open and close the topnav on small screens */
-
 .topnav a.icon {
 	float: right;
 	display: flex;
@@ -238,6 +236,56 @@ div.nav-bar {
   text-align: left;
 }
 
+.topnav.responsive .acc-container{
+	display: block;
+}
+
+/* Accordion */
+
+
+  
+  .acc-container {
+	display: none;
+
+	padding: 0;
+	width:100%;
+	overflow: hidden;
+	color: rgb(255, 255, 255);
+	
+  }
+  
+  .acc-btn { 
+	width:100%;
+	margin:0 auto;
+	padding:20px 25px;
+	cursor:pointer;
+	background: #000000;
+	border-bottom:1px solid #000000;
+	
+  }
+  
+  .acc-content {
+	width:100%;
+	margin:0 auto;
+	display: none;
+	background:#ff4f4f;
+	padding:30px;
+	height: auto;
+	transition:all 1s ease-out;
+	
+  }
+
+  
+  .acc-container p { 
+	color: rgb(255, 255, 255);
+  }
+  
+  .acc-container h3 {
+	color: rgb(255, 255, 255);
+  }
+
+/* Accordion */
+
 .main {
 	grid-area: main;
 	margin-right: 0%; /*alterar no media query*/
@@ -255,6 +303,10 @@ div.nav-bar {
 	}
 	.topnav a.icon {
 	  display: none;
+	}
+
+	.acc-container {
+		display: none;
 	}
 
 	/* versão de comuputador */
