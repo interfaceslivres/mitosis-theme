@@ -176,30 +176,10 @@ div.nav-bar {
 	flex-wrap: wrap;
 }
 
-.topnav {
-	overflow: hidden;
-	justify-content: flex-start;
-	list-style: none;
-	width: 100%;
-	
+/* test --------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.nav {
 
-  }
-
-  .topnav ul li {
-	
-	list-style-type: none;
-
-}
-
-.topnav ul li a:hover {
-	border-bottom: 2px solid #fff;
-}
-  
-  /* Style the links inside the navigation bar */
-.topnav a {
-
-	float: left;
-	display: none;
+	display: flex;
 
 	padding: 10px;
 
@@ -211,87 +191,74 @@ div.nav-bar {
 	text-decoration: none;    
 	padding-bottom: 3px;  
 	font-family: 'Raleway';
-	font-style: normal;
+	justify-content: flex-start;
 }
-
-.topnav a.icon {
-	float: right;
+  .nav > .nav-header {
+	flex: 0.95;
+  }
+  .nav > .nav-header > .nav-title {
+	font-size: 22px;
+	color: #fff;
+  }
+  .nav > .nav-list {
+	justify-content: flex-start;
 	display: flex;
-}
+	gap: 2rem;
+  }
+  .nav > .nav-list > li {
+	list-style-type: none;
+  }
+  .nav > .nav-list > li a {
+	text-decoration: none;
+	color: #efefef;
+	cursor: pointer;
+  }
+  .nav > #nav-check {
+	  display: none;
+  }
+  @media (max-width: 815px) {
 
-.topnav a.active {
-	display:flex;
-}
+	.nav > .nav-btn {
+		justify-content: flex-end;
+		float:right;
+		display: flex;
+	}
+	.nav > .nav-btn > label {
+	  display: inline-block; 
+	}
+	.nav > .nav-btn > label > span {
+	  display: flex;
+	  
 
-.topnav.responsive {position: relative;}
-
-.topnav.responsive .icon {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-.topnav.responsive a {
-  float: none;
-  display: block;
-  text-align: left;
-}
-
-.topnav.responsive .acc-container{
-	display: block;
-}
-
-/* Accordion */
-
-
-  
-  .acc-container {
-	display: none;
-
-	padding: 0;
-	width:100%;
-	overflow: hidden;
-	color: rgb(255, 255, 255);
+	  width: 20px;
+	  height: 5px;
+	  border-top: 2px solid #eee;
+	}
+	.nav > .nav-list {
+	  position: absolute;
+	  display: flex;
+	  flex-direction: column;
 	
-  }
-  
-  .acc-btn { 
-	width:100%;
-	margin:0 auto;
-	padding:20px 25px;
-	cursor:pointer;
-	background: #000000;
-	border-bottom:1px solid #000000;
-	
-  }
-  
-  .acc-content {
-	width:100%;
-	margin:0 auto;
-	display: none;
-	background:#ff4f4f;
-	padding:30px;
-	height: auto;
-	transition:all 1s ease-out;
-	
+	  background-color: var(--laranja);
+	  height: 0;
+	  transition: all 0.3s ease-in;
+	  overflow: hidden;
+	}
+	.nav > .nav-list > li {
+	  width: 100%;
+	}
+	.nav > #nav-check:checked ~ .nav-list {
+	  height: calc(100vh - 50px);
+	}
   }
 
-  
-  .acc-container p { 
-	color: rgb(255, 255, 255);
-  }
-  
-  .acc-container h3 {
-	color: rgb(255, 255, 255);
-  }
-
-/* Accordion */
+/* test --------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .main {
 	grid-area: main;
 	margin-right: 0%; /*alterar no media query*/
 	border-style: dotted;
 }
-
 
 @media only screen and (min-width: 815px)  {
 
