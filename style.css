@@ -165,6 +165,9 @@
 	background: var(--laranja);
 	display: flex;
 	
+
+
+
 }
 
 div.nav-bar {
@@ -174,15 +177,34 @@ div.nav-bar {
 	padding-left: 20px;
 	padding-right: 18px;
 	flex-wrap: wrap;
+	
 }
 
-/* test --------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-.nav {
 
-	display: flex;
+/*-------------------------------------- test -----------------------------------------------*/
+.topnav {
+	overflow: hidden;
+	justify-content: flex-start;
+	list-style: none;
+	width: 100%;
+	position: relative;
+  }
 
+  .topnav ul li {
+	
+	list-style-type: none;
+
+}
+
+.topnav ul li a:hover {
+	border-bottom: 2px solid #fff;
+}
+  
+  /* Style the links inside the navigation bar */
+.topnav a {
+	float: left;
+	display: none;
 	padding: 10px;
-
 	color: #fff;
 	font-family: 'Raleway';
 	font-weight: 700;
@@ -191,68 +213,87 @@ div.nav-bar {
 	text-decoration: none;    
 	padding-bottom: 3px;  
 	font-family: 'Raleway';
-	justify-content: flex-start;
+	font-style: normal;
 }
-  .nav > .nav-header {
-	flex: 0.95;
-  }
-  .nav > .nav-header > .nav-title {
-	font-size: 22px;
-	color: #fff;
-  }
-  .nav > .nav-list {
-	justify-content: flex-start;
+
+.topnav a.icon {
+	float: right;
 	display: flex;
-	gap: 2rem;
-  }
-  .nav > .nav-list > li {
-	list-style-type: none;
-  }
-  .nav > .nav-list > li a {
-	text-decoration: none;
-	color: #efefef;
-	cursor: pointer;
-  }
-  .nav > #nav-check {
-	  display: none;
-  }
-  @media (max-width: 815px) {
+	position: absolute;
+	top:0;
+	right:0;
+}
 
-	.nav > .nav-btn {
-		justify-content: flex-end;
-		float:right;
-		display: flex;
-	}
-	.nav > .nav-btn > label {
-	  display: inline-block; 
-	}
-	.nav > .nav-btn > label > span {
-	  display: flex;
-	  
+.topnav.responsive {
+	position: relative;
+}
 
-	  width: 20px;
-	  height: 5px;
-	  border-top: 2px solid #eee;
-	}
-	.nav > .nav-list {
-	  position: absolute;
-	  display: flex;
-	  flex-direction: column;
+.topnav.responsive .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.topnav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav.responsive .acc-container{
+	display: block;
+}
+
+.topnav.responsive nav ul{ 
+	height: 400px;
+}
+.topnav nav ul{
+	height: 37px;
+	overflow: hidden;
+	transition: height 0.2s;
+}
+
+
+
+/* Accordion */
+  
+  .acc-container {
+	display: none;
+	padding-bottom: 15px;
+	width:100%;
+	overflow: hidden;
+	color: rgb(255, 255, 255);
 	
-	  background-color: var(--laranja);
-	  height: 0;
-	  transition: all 0.3s ease-in;
-	  overflow: hidden;
-	}
-	.nav > .nav-list > li {
-	  width: 100%;
-	}
-	.nav > #nav-check:checked ~ .nav-list {
-	  height: calc(100vh - 50px);
-	}
+  }
+  
+  .acc-btn { 
+	width:100%;
+	margin:0 auto;
+	cursor:pointer;
+	background: #a7a7a7;
+	border-bottom:1px solid #000000;
+
+	
+  }
+  
+  .acc-content {
+	width:100%;
+	margin:0 auto;
+	background:#474747;
+
+	height: auto;
+	
   }
 
-/* test --------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+  
+  .acc-container p { 
+	color: rgb(255, 255, 255);
+  }
+  
+  .acc-container h3 {
+	color: rgb(255, 255, 255);
+  }
+
+/*-------------------------------------- test -----------------------------------------------*/
 
 .main {
 	grid-area: main;
@@ -260,12 +301,14 @@ div.nav-bar {
 	border-style: dotted;
 }
 
+
 @media only screen and (min-width: 815px)  {
 
 	/* menu responsipo */
 
 	.topnav a{
 	  display: flex;
+	  
 		
 	}
 	.topnav a.icon {
@@ -274,6 +317,7 @@ div.nav-bar {
 
 	.acc-container {
 		display: none;
+		
 	}
 
 	/* versão de comuputador */
