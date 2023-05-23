@@ -244,11 +244,11 @@ div.nav-bar {
 }
 
 .topnav.responsive nav ul{ 
-	height: 400px;
+	height: 100vh;
 }
 .topnav nav ul{
 	height: 37px;
-	overflow: hidden;
+	overflow-y: auto;
 	transition: height 0.2s;
 }
 
@@ -420,4 +420,3 @@ div.nav-bar {
 
 	
 }
-

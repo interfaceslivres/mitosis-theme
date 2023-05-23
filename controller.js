@@ -12,7 +12,7 @@ function menuTransforma() {
 const accBtns = document.querySelectorAll('.acc-btn');
 
 accBtns.forEach(function(accBtn) {
-  accBtn.addEventListener('touchstart', function() {
+  accBtn.addEventListener('click', function() {
     const accContent = this.nextElementSibling;
 
     if (accContent.style.display === 'none') {
