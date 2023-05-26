@@ -181,7 +181,7 @@ div.nav-bar {
 }
 
 
-/*-------------------------------------- test -----------------------------------------------*/
+/*-------------------------------------- menu responsivo-----------------------------------------------*/
 .topnav {
 	overflow: hidden;
 	justify-content: flex-start;
@@ -197,7 +197,7 @@ div.nav-bar {
 }
 
 .topnav ul li a:hover {
-	border-bottom: 2px solid #fff;
+	border-bottom: none;
 }
   
   /* Style the links inside the navigation bar */
@@ -246,10 +246,11 @@ div.nav-bar {
 .topnav.responsive nav ul{ 
 	height: 100vh;
 }
+
 .topnav nav ul{
 	height: 37px;
 	overflow-y: auto;
-	transition: height 0.2s;
+	transition: height 0.4s;
 }
 
 
@@ -257,11 +258,15 @@ div.nav-bar {
 /* Accordion */
   
   .acc-container {
+	border-top:3px solid #e06b05;
 	display: none;
+	padding-top: 10px;
+	margin-top: 20px;
 	padding-bottom: 15px;
 	width:100%;
 	overflow: hidden;
 	color: rgb(255, 255, 255);
+	
 	
   }
   
@@ -269,20 +274,24 @@ div.nav-bar {
 	width:100%;
 	margin:0 auto;
 	cursor:pointer;
-	background: #a7a7a7;
-	border-bottom:1px solid #000000;
+	border-bottom:1px solid #ffffff;
 
 	
   }
-  
+
+
   .acc-content {
 	width:100%;
 	margin:0 auto;
-	background:#474747;
-
-	height: auto;
+	background:#c66715;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	height: 0;
+	transition: height 0.5s;
 	
   }
+
+  
 
   
   .acc-container p { 
@@ -293,7 +302,7 @@ div.nav-bar {
 	color: rgb(255, 255, 255);
   }
 
-/*-------------------------------------- test -----------------------------------------------*/
+/*-------------------------------------- main -----------------------------------------------*/
 
 .main {
 	grid-area: main;
@@ -506,6 +515,10 @@ div.nav-bar {
 	.acc-container {
 		display: none;
 		
+	}
+
+	.topnav ul li a:hover {
+		border-bottom: 2px solid #fff;
 	}
 
 	/* versão de comuputador */

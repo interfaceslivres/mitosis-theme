@@ -24,9 +24,11 @@ accBtns.forEach(function(accBtn) {
       });
 
       accContent.style.display = 'block';
-      accContent.style.transition = 'selected';
+      accContent.style.height = 'auto';
+      accContent.style.transition = 'height 5s ease 3s';
     } else {
       accContent.style.display = 'none';
+      accContent.style.height = '0px';
     }
   });
 });
