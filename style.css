@@ -233,6 +233,7 @@ div.nav-bar {
   right: 0;
   top: 0;
 }
+
 .topnav.responsive a {
   float: none;
   display: block;
@@ -257,6 +258,7 @@ div.nav-bar {
 
 /* Accordion */
   
+/*	
   .acc-container {
 	border-top:3px solid #e06b05;
 	display: none;
@@ -266,8 +268,7 @@ div.nav-bar {
 	width:100%;
 	overflow: hidden;
 	color: rgb(255, 255, 255);
-	
-	
+		
   }
   
   .acc-btn { 
@@ -275,10 +276,8 @@ div.nav-bar {
 	margin:0 auto;
 	cursor:pointer;
 	border-bottom:1px solid #ffffff;
-
 	
   }
-
 
   .acc-content {
 	width:100%;
@@ -290,10 +289,52 @@ div.nav-bar {
 	transition: height 0.5s;
 	
   }
-
   
-
+  .acc-container p { 
+	color: rgb(255, 255, 255);
+  }
   
+  .acc-container h3 {
+	color: rgb(255, 255, 255);
+  }
+
+*/
+
+.acc-container {
+	border-top:3px solid #e06b05;
+	display: none;
+	padding-top: 10px;
+	margin-top: 20px;
+	padding-bottom: 15px;
+	width:100%;
+	overflow: hidden;
+	color: rgb(255, 255, 255);
+		
+  }
+  
+  .acc-btn { 
+	width:100%;
+	margin:0 auto;
+	cursor:pointer;
+	border-bottom:1px solid #ffffff;
+	
+  }
+
+  .acc-content {
+	width:100%;
+	margin:0 auto;
+	background:#c66715;
+	padding-left: 10px;
+	height: 0;	
+	overflow-y: hidden;
+  }
+  
+  .acc-content.selected{
+	padding-bottom: 10px;
+	height: 100px;
+	transition: height 0.5s;
+  }
+
   .acc-container p { 
 	color: rgb(255, 255, 255);
   }
@@ -361,8 +402,8 @@ div.nav-bar {
 	min-height: 200px;
 	height: 100%;
   
-	padding-left: 26px;
-	padding-right: 26px;
+	padding-left: 30px;
+	padding-right: 30px;
   
   
 	background: #FFFFFF;
@@ -467,8 +508,7 @@ div.nav-bar {
 	flex-direction: row;
 	/*justify-content: flex-end; */
 
-	padding-bottom: 30px;
-  
+	
 	font-family: 'Raleway';
 	font-style: normal;
 	font-weight: 700;
@@ -479,7 +519,155 @@ div.nav-bar {
   
 	color: var(--laranja);
   }
-/*-------------------------------------- noticias-----------------------------------------------*/
+/*-------------------------------------- noticias -----------------------------------------------*/
+
+/*-------------------------------------- curso -----------------------------------------------*/
+
+.curso {  display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto;
+	gap: 0px 0px;
+	padding-left: 30px;
+	padding-right: 30px;
+	grid-auto-flow: row;
+	grid-template-areas:
+	  "secoes"
+	  "youtube"
+	  "text-curso";
+  }
+
+  
+  .youtube { 
+	padding-top: 35px;
+	height: auto;
+	width: 100%;
+	grid-area: youtube;
+ }
+
+ .youtube iframe{
+	object-fit: cover;
+ }
+  
+  .text-curso { 
+	
+	grid-area: text-curso;
+
+ }
+
+.text-curso h3{
+	padding-top: 35px;
+	font-family: 'Raleway';
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 26px;
+
+	color: #000000;
+}
+
+.text-curso p{
+	padding-top: 15px;
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 18px;
+	/* or 129% */
+
+
+	color: #000000;
+
+}
+
+/*-------------------------------------- curso -----------------------------------------------*/
+/*-------------------------------------- mais -----------------------------------------------*/
+
+
+ .mais {  display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto 1fr;
+	margin: 35px 30px;
+	margin-top: 35px;
+	padding:35px;
+	gap: 35px;
+	grid-template-areas:
+	  "mapa" "text-ufpb";
+
+	background: #F4F4F4;
+	box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.15);
+  }
+  
+.mapa { 
+	
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+	  "mapa-titulo"
+	  "mapa-img";
+}
+  
+.mapa-titulo { 
+	grid-area: mapa-titulo; 
+}
+
+.mapa-titulo h2{
+	font-family: 'Raleway';
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 26px;
+
+	display: flex;
+	align-items: center;
+
+	color: #F3BC8B;
+}
+  
+.mapa-img { 
+	grid-area: mapa-img;
+	padding-top: 35px;
+	min-height: 426px;
+}
+  
+  
+.text-ufpb { 
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto ;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+	  "text-ufpb-titulo"
+	  "text-ufpb-text"
+	  "text-ufpb-link";
+  }
+  
+  .text-ufpb-titulo { 
+	grid-area: text-ufpb-titulo;
+	
+ }
+
+ .text-ufpb-titulo h2{
+
+	font-family: 'Raleway';
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 26px;
+
+	display: flex;
+	align-items: center;
+
+	color: #F3BC8B;
+}
+  
+  .text-ufpb-text { grid-area: text-ufpb-text;
+	max-width: 300px; }
+  
+  .text-ufpb-link { grid-area: text-ufpb-link; }
+  
+  
+/*-------------------------------------- mais -----------------------------------------------*/
 
 .imagem-curso{
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;	
@@ -496,9 +684,8 @@ div.nav-bar {
     position: relative;
 	
   }
-
+  
  
-
 @media only screen and (min-width: 815px)  {
 
 	/* menu responsipo */
@@ -522,6 +709,7 @@ div.nav-bar {
 	}
 
 	/* versão de comuputador */
+	
 
 	.titulo {
 		padding: 0;
@@ -598,7 +786,25 @@ div.nav-bar {
 	.noticias {
 		padding: 0;
 		padding-left: 30px;
-	  }
+	}
+
+	.curso {  
+		padding-right: 0px;
+		
+	}
+	.mais { 
+		grid-template-columns: auto auto;
+		grid-template-rows: auto;
+		margin: 35px 0px;
+		margin-left: 30px;
+		padding: 35px;
+		gap: 35px;
+		grid-auto-flow: row;
+		grid-template-areas:
+		  "mapa text-ufpb";
+	
+	}
+	  
 }
 
 @media only screen and (min-width: 1020px)  {

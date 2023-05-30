@@ -9,6 +9,36 @@ function menuTransforma() {
   }
 }
 
+
+
+const accBtns = document.querySelectorAll('.acc-btn');
+
+accBtns.forEach(function(accBtn) {
+  accBtn.addEventListener('click', function() {
+    const accContent = this.nextElementSibling;
+    console.log(accContent.className);
+
+    if (accContent.className === 'acc-content') {
+      const allAccContent = document.querySelectorAll('.acc-content');
+
+      allAccContent.forEach(function(content) {
+        content.className = "acc-content";
+      });
+
+      accContent.className += " selected";
+      
+
+    } else {
+      accContent.className = "acc-content";
+    }
+  });
+});
+
+
+
+/* backup q funciona: 
+
+
 const accBtns = document.querySelectorAll('.acc-btn');
 
 accBtns.forEach(function(accBtn) {
@@ -24,15 +54,19 @@ accBtns.forEach(function(accBtn) {
       });
 
       accContent.style.display = 'block';
-      accContent.style.height = 'auto';
-      accContent.style.transition = 'height 5s ease 3s';
+      accContent.style.height = '100px';
+      accContent.style.transition = 'height 55s ease 3s';
+      accContent.className += " test";
+      
+
     } else {
       accContent.style.display = 'none';
       accContent.style.height = '0px';
+      accContent.className = "acc-content";
     }
   });
 });
-
+*/
 
 window.addEventListener('resize', function(event) {  
   if (this.screen.width > 813) {
