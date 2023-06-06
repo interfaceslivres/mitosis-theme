@@ -1013,6 +1013,11 @@ div.nav-bar {
 		margin-right: 10vw;
 
 	  }
+
+	  .youtube { 
+		min-height: 480px;
+		min width: 720px;
+	 }
 	  
 }
 
