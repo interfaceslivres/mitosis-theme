@@ -474,6 +474,10 @@ div.nav-bar {
 	overflow: hidden;  
   }
   
+  .noticia-sem-img-titulo:hover{
+	font-size: 32px;
+  }
+
   .noticia-com-img-titulo-wrapper {
 	height: 100%;
 	display: flex;
@@ -634,7 +638,7 @@ div.nav-bar {
 .text-ufpb { 
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: auto auto auto ;
+	grid-template-rows: 26px auto 70px;
 	gap: 0px 0px;
 	grid-auto-flow: row;
 	grid-template-areas:
@@ -645,6 +649,7 @@ div.nav-bar {
   
   .text-ufpb-titulo { 
 	grid-area: text-ufpb-titulo;
+	max-height: 26px;
 	
  }
 
@@ -661,10 +666,18 @@ div.nav-bar {
 	color: #F3BC8B;
 }
   
-  .text-ufpb-text { grid-area: text-ufpb-text;
-	max-width: 300px; }
+  .text-ufpb-text { 
+	grid-area: text-ufpb-text;
+	padding-top: 35px;
+	max-width: 1000px;
+ }
   
-  .text-ufpb-link { grid-area: text-ufpb-link; }
+  .text-ufpb-link { grid-area: text-ufpb-link; 
+	}
+
+  .text-ufpb-link h2{
+	padding-top: 10px;
+  }
   
   
 /*-------------------------------------- mais -----------------------------------------------*/
@@ -672,6 +685,7 @@ div.nav-bar {
 .imagem-curso{
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;	
 	width: 100%;
+	height: 30vh;
 }
 
 .imagem-curso img{	
@@ -684,8 +698,164 @@ div.nav-bar {
     position: relative;
 	
   }
-  
  
+/*-------------------------------------- footer -----------------------------------------------*/
+
+.container-footer {  display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows:  auto;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+	"lateral cabecalho cabecalho cabecalho cabecalho cabecalho"
+		"main";
+
+  }
+  
+  .lateral-footer {
+	  grid-area: lateral;
+  }
+  
+  .cabecalho-footer {  	
+	  grid-area: cabecalho;	
+	  background: #121212;
+  }
+
+
+  
+
+#footer {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 0px;
+	background-color: rgb(255, 255, 255);  
+	width: 100%;
+  
+  
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 20px;  
+	color: #FFFFFF;;
+  }
+  
+  #pre-footer {
+	background: white;
+	flex: 1;
+	height: 100%;
+  }
+  
+  #footer-logo {  
+	height: 100%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding: 30px 0px;
+	padding-left: 2px;
+	background: white;
+  }
+
+  .logo-footer{
+	margin-left: 0%; /*alterar no media query*/
+	padding-right: 10px;
+	object-fit: contain;
+	max-width: 150px;
+  }
+  
+  #footer-dados {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding: 20px 0px 30px 20px;
+	gap: 30px;
+  
+	background: #121212;
+  }
+  
+  #footer-top {
+  display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+  
+	width: 100%;
+  }
+  
+  #footer-dados-contato {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 15px;
+  
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 100%;
+  }
+  
+  #redes-sociais {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	height: 20px;
+  }
+  
+  #footer-dados-creditos {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 16px;
+	height: 50px;
+  }
+  
+  .img-creditos {
+	height: 100%;
+  }
+  
+  #footer-bottom {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 10px;
+  
+	width: 100%;
+	min-height: 20px;
+  }
+  
+  #footer-linha {
+	width: 100%;
+	height: 2px;
+	background-color: white;
+  }
+  
+  #footer-ultima-linha {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	  
+	width: 100%;
+  }
+  
+  #pos-footer {
+	background: #121212;
+	flex: 1;
+	height: 100%;
+  
+  }
+
+
+
+/*-------------------------------------- footer -----------------------------------------------*/
+
 @media only screen and (min-width: 815px)  {
 
 	/* menu responsipo */
@@ -804,6 +974,12 @@ div.nav-bar {
 		  "mapa text-ufpb";
 	
 	}
+
+	.text-ufpb-text { 
+		max-width: 300px;
+	}
+
+	
 	  
 }
 
@@ -829,7 +1005,15 @@ div.nav-bar {
 	.main{
 		margin-right: 10vw;
 	}
-	
+	#footer-logo {  
+		margin-left: 10vw;
+		
+	  }
+	.footer-esp {
+		margin-right: 10vw;
+
+	  }
+	  
 }
 
 @media only screen and (min-width: 1400px)  {
@@ -854,6 +1038,12 @@ div.nav-bar {
 	.main{
 		margin-right: 20vw;
 	}
-
-	
+	#footer-logo {  
+		margin-left: 20vw;
+		max-width: 672px;
+		
+	  }
+	.footer-esp {
+		margin-right: 20vw;
+	  }
 }
