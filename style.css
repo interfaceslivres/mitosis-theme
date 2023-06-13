@@ -175,7 +175,6 @@ div.nav-bar {
 	display: flex;
 	width: 100%;
 	padding-left: 20px;
-	padding-right: 18px;
 	flex-wrap: wrap;
 	
 }
@@ -195,7 +194,10 @@ div.nav-bar {
 	list-style-type: none;
 
 }
+.topnav nav{
+	padding-top: 2px;
 
+}
 .topnav ul li a:hover {
 	border-bottom: none;
 }
@@ -249,56 +251,45 @@ div.nav-bar {
 }
 
 .topnav nav ul{
-	height: 37px;
-	overflow-y: auto;
+
 	transition: height 0.4s;
 }
 
+.topnav.pesquisa{
+	height: 400px;
+}
 
+
+.topnav .search-container {
+	float: right;
+	padding-top: 0px;
+  }
+  
+  .topnav input[type=text], select{
+	border: none;
+  }
+
+  .topnav input[type=text] {
+	padding: 5px;
+	font-size: 17px;
+	border: none;
+  }
+
+  .topnav .search-container button {
+	float: right;
+	max-height: 30px;
+	padding-top: 5px;
+	background: none;
+	font-size: 17px;
+	border: none;
+	cursor: pointer;
+  }
+  
+  .topnav .search-container button:hover {
+	background: none;
+  }
 
 /* Accordion */
-  
-/*	
-  .acc-container {
-	border-top:3px solid #e06b05;
-	display: none;
-	padding-top: 10px;
-	margin-top: 20px;
-	padding-bottom: 15px;
-	width:100%;
-	overflow: hidden;
-	color: rgb(255, 255, 255);
-		
-  }
-  
-  .acc-btn { 
-	width:100%;
-	margin:0 auto;
-	cursor:pointer;
-	border-bottom:1px solid #ffffff;
-	
-  }
-
-  .acc-content {
-	width:100%;
-	margin:0 auto;
-	background:#c66715;
-	padding-bottom: 10px;
-	padding-left: 10px;
-	height: 0;
-	transition: height 0.5s;
-	
-  }
-  
-  .acc-container p { 
-	color: rgb(255, 255, 255);
-  }
-  
-  .acc-container h3 {
-	color: rgb(255, 255, 255);
-  }
-
-*/
 
 .acc-container {
 	border-top:3px solid #e06b05;
@@ -984,31 +975,31 @@ div.nav-bar {
 }
 
 @media only screen and (min-width: 1020px)  {
+
 	.brasao {		
-		
 		margin-right: 10vw; 
 	} 
 
 	.logo {
-		
 		margin-left: 10vw;  
 	}
 
 	.sidebar { 
-
 		margin-left: 10vw;  
 	}
 	div.nav-bar{
-
 		margin-right: 10vw; 
 	}
+
 	.main{
 		margin-right: 10vw;
 	}
+
 	#footer-logo {  
 		margin-left: 10vw;
 		
 	  }
+
 	.footer-esp {
 		margin-right: 10vw;
 
@@ -1016,7 +1007,7 @@ div.nav-bar {
 
 	  .youtube { 
 		min-height: 480px;
-		min width: 720px;
+		min-width: 720px;
 	 }
 	  
 }
