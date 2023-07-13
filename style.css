@@ -4,11 +4,9 @@
 	padding: 0;
 }
 
-
 :root {
   --laranja: #E77817;
 }
-
 
 .container {  display: grid;
   grid-template-columns: 1fr;
@@ -24,7 +22,7 @@
 .lateral {
 	display: none;
 	grid-template-columns: 1fr;
-	grid-template-rows: 132px auto;
+	grid-template-rows: 176px auto;
 	gap: 0px 0px;
 	grid-auto-flow: row;
 	grid-template-areas:
@@ -102,6 +100,22 @@
   
 	color: #000000;
 }
+
+.sidebar li:first-child{
+	padding-top: 34px;
+	padding-bottom: 10px;
+
+	font-family: 'Raleway';
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 28px;
+	/* or 140% */
+  
+	display: flex;
+	align-items: center;
+  
+	color: #000000;
+}
   
 .cabecalho {  
 	display: grid;
@@ -122,9 +136,7 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 10px;
-	flex-wrap: wrap;
 	border-left: none;
-	
 }
 
 #tit_centro{ 
@@ -157,6 +169,7 @@
 }
 
 .brasao img{
+	padding-top: -6px;
 	max-height: 58px;
 	max-width: 158px;
 }
@@ -165,10 +178,6 @@
 	grid-area: nav-bar;
 	background: var(--laranja);
 	display: flex;
-	
-
-
-
 }
 
 div.nav-bar {
@@ -358,15 +367,15 @@ div.nav-bar {
 
 .secoes {
 	font-family: 'Raleway';
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 32px;
 	line-height: 26px;
-	padding-top: 35px;
+	padding-top: 45px;
 
 	display: flex;
 	align-items: center;
 
-	color: #F3BC8B;
+	color: #666666;
 
 }
 
@@ -378,8 +387,7 @@ div.nav-bar {
 
 .conteudo {
     min-height: 415px;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    margin: 20px 0;
   
     display: grid;
     grid-template-columns: 1fr;
@@ -495,8 +503,8 @@ div.nav-bar {
 	font-family: 'Raleway';
 	font-style: normal;
 	font-weight: 700;
-	font-size: 28px;
-	line-height: 32px;
+	font-size: 22px;
+	line-height: 26px;
 	color: var(--laranja);
 	margin: 10px 0 10px 0;
   }
@@ -623,14 +631,14 @@ div.nav-bar {
 
 .mapa-titulo h2{
 	font-family: 'Raleway';
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 32px;
 	line-height: 26px;
 
 	display: flex;
 	align-items: center;
 
-	color: #F3BC8B;
+	color: #666666;
 }
   
 .mapa-img { 
@@ -661,14 +669,14 @@ div.nav-bar {
  .text-ufpb-titulo h2{
 
 	font-family: 'Raleway';
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 32px;
 	line-height: 26px;
 
 	display: flex;
 	align-items: center;
 
-	color: #F3BC8B;
+	color: #666666;
 }
   
   .text-ufpb-text { 
@@ -888,21 +896,17 @@ div.nav-bar {
 
 	.titulo {
 		padding: 0;
-		padding-top: 16px;
+		padding-top: 28px;
 		padding-left: 28px;	
 	}
 
 	#tit_curso{
+		padding-top: 9px;
 		padding-bottom: 13px;
-		font-size: 18px;
-	}
-	  
-	#tit_curso{
-	  
 		font-size: 30px;
-		
+		line-height: 26px;
 	}
-
+	  
 	.brasao {		
 		display: flex;
 		margin-right: 0vw; 
@@ -930,7 +934,7 @@ div.nav-bar {
 	}
 
 	.cabecalho{
-		grid-template-rows: 85px 45px;
+		grid-template-rows: 131px 45px;
 		grid-template-columns: 1fr 1fr;
 		grid-template-areas:
 		"titulo titulo"
@@ -939,7 +943,7 @@ div.nav-bar {
 
 	.container{
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-		grid-template-rows: 132px  auto;
+		grid-template-rows: 176px  auto;
 		grid-template-areas:
 		"lateral cabecalho cabecalho cabecalho cabecalho cabecalho"
     	"lateral main main main main main";
@@ -954,9 +958,7 @@ div.nav-bar {
 	
 	.conteudo {
 		min-height: 415px;
-		margin-top: 35px;
-		margin-bottom: 30px;
-	  
+		margin: 25px 0px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr;
@@ -977,7 +979,7 @@ div.nav-bar {
 	.mais { 
 		grid-template-columns: auto auto;
 		grid-template-rows: auto;
-		margin: 35px 0px;
+		margin: 45px 0px;
 		margin-left: 30px;
 		padding: 35px;
 		gap: 35px;
@@ -1010,6 +1012,7 @@ div.nav-bar {
 
 		margin-left: 10vw;  
 	}
+
 	div.nav-bar{
 
 		margin-right: 10vw; 
