@@ -51,7 +51,6 @@
 .sidebar-bg { 
 	grid-area: sidebar; 
 	height: 100%;
-
 	display: flex;
 	justify-content: flex-end;
 	background: #F4F4F4;
@@ -72,11 +71,10 @@
 .sidebar a{
 
 	text-decoration: none;
-	font-family: 'Raleway';
+	font-family: 'Rawline';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 14px;
-	line-height: 18px;
+	font-size: 0.875rem;
 
 	color: #000000; 
 }
@@ -88,12 +86,11 @@
 .sidebar-titulo{
 	padding-top: 24px;
 	padding-bottom: 10px;
-
-	font-family: 'Raleway';
+	
+	font-family: 'Rawline';
 	font-weight: 600;
-	font-size: 20px;
-	line-height: 28px;
-	/* or 140% */
+	font-size: 1.25rem;
+	line-height: 1.75rem;
   
 	display: flex;
 	align-items: center;
@@ -105,11 +102,10 @@
 	padding-top: 34px;
 	padding-bottom: 10px;
 
-	font-family: 'Raleway';
+	font-family: 'Rawline';
 	font-weight: 600;
-	font-size: 20px;
-	line-height: 28px;
-	/* or 140% */
+	font-size: 1.25rem;
+	line-height: 1.75rem;
   
 	display: flex;
 	align-items: center;
@@ -133,34 +129,45 @@
 
 .titulo {
 	grid-area: titulo;
-	display: flex;
+	display: block;
 	justify-content: space-between;
 	padding: 10px;
 	border-left: none;
+	
+	
+}
+
+#tit_img{
+	display: block;
+	max-width: 150px;
+	padding-bottom: 20px;
+	margin: auto;
+	width: 50%;
 }
 
 #tit_centro{ 
 	
-	font-family: 'Raleway';
+	text-align: left;
+	font-family: 'Rawline';
 	font-weight: 400;
-	font-size: 15px;
-	line-height: 21px;
-	display: flex;
-	align-items: center;
+	font-size: 0.825rem;
+	line-height: 1.3rem;
+	
   
 	color: #959595;
 }
   
   #tit_curso{
   
-	font-family: 'Raleway';
+	text-align: left;
+	font-family: 'Rawline';
 	font-weight: 700;
-	font-size: 23px;
-	line-height: 35px;
-	display: flex;
-	align-items: center;
+	font-size: 2.4rem;
+	line-height: 1.1;
   
 	color: #000000;
+
+	padding-bottom: 10px;
   }
 
 .brasao {
@@ -184,12 +191,12 @@ div.nav-bar {
 	margin-right: 0; /*alterar no media query*/
 	display: flex;
 	width: 100%;
+	min-height: 50px;
 	padding-left: 20px;
 	padding-right: 18px;
 	flex-wrap: wrap;
 	
 }
-
 
 /*-------------------------------------- menu responsivo-----------------------------------------------*/
 .topnav {
@@ -216,27 +223,41 @@ div.nav-bar {
 	display: none;
 	padding: 10px;
 	color: #fff;
-	font-family: 'Raleway';
+	font-family: 'Rawline';
 	font-weight: 700;
-	font-size: 18px;
-	line-height: 22px;
+	font-size: 1.125rem;
+	line-height: 1.375rem;
 	text-decoration: none;    
 	padding-bottom: 3px;  
-	font-family: 'Raleway';
 	font-style: normal;
 }
 
+.topnav.responsive nav ul li:first-child{
+	padding-top: 50px;
+}
+
 .topnav a.icon {
-	float: right;
+	
 	display: flex;
 	position: absolute;
 	top:0;
-	right:0;
+	left:0;
 }
 .topnav a.icon p {
 	margin-top: -2px;
-    padding-right: 10px;
+    padding-left: 10px;
 }
+
+
+.topnav a.icon {
+	
+	display: flex;
+	position: absolute;
+	top:0;
+	left:0;
+}
+
+
 
 .topnav.responsive {
 	position: relative;
@@ -244,7 +265,7 @@ div.nav-bar {
 
 .topnav.responsive .icon {
   position: absolute;
-  right: 0;
+  left: 0;
   top: 0;
 }
 
@@ -268,7 +289,37 @@ div.nav-bar {
 	transition: height 0.4s;
 }
 
+.topnav a.iconPesquisa {
+	
+	display: flex;
+	position: absolute;
+	top:0;
+	Right:0;
+}
 
+.topnav.pesquisa {
+	position: relative;
+}
+
+.topnav.pesquisa .iconPesquisa {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav.pesquisa a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav.pesquisa .acc-container{
+	display: block;
+}
+
+.topnav.pesquisa nav ul{ 
+	height: 100vh;
+}
 
 /* Accordion */
   
@@ -366,11 +417,11 @@ div.nav-bar {
 }
 
 .secoes {
-	font-family: 'Raleway';
+	font-family: 'Rawline';
 	font-weight: 400;
-	font-size: 32px;
-	line-height: 26px;
-	padding-top: 45px;
+	font-size: 1.6rem;
+	line-height: 1.625rem;
+	padding-top: 25px;
 
 	display: flex;
 	align-items: center;
@@ -386,7 +437,7 @@ div.nav-bar {
   }
 
 .conteudo {
-    min-height: 415px;
+  
     margin: 20px 0;
   
     display: grid;
@@ -412,11 +463,10 @@ div.nav-bar {
   
   .noticia-sem-img {
 	width: auto;
-	min-height: 200px;
 	height: 100%;
   
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
   
   
 	background: #FFFFFF;
@@ -428,7 +478,7 @@ div.nav-bar {
   
   .noticia-com-img {
 	width: auto;
-	min-height: 200px;
+	min-height: 180px;
 	height: 100%;
   
 	padding-left: 26px;
@@ -455,11 +505,11 @@ div.nav-bar {
   
   .texto-pequeno-sem-img {
 	
-	font-family: 'Raleway';
+	font-family: 'Rawline';
 	font-style: normal;
 	font-weight: 500;
-	font-size: 14px;
-	line-height: 16px;
+	font-size: 0.875rem;
+	line-height: 1rem;
   
 	color: #8D8B8B;
   }
@@ -469,11 +519,11 @@ div.nav-bar {
   }
   
   .texto-pequeno-com-img {
-	font-family: 'Raleway';
+	font-family: 'Rawline';
 	font-style: normal;
 	font-weight: 500;
-	font-size: 14px;
-	line-height: 16px;
+	font-size: 0.875rem;
+	line-height: 1rem;
   
 	color: #ffffff;
 	text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
@@ -485,10 +535,11 @@ div.nav-bar {
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;  
+	padding-bottom: 32px;
   }
   
   .noticia-sem-img-titulo:hover{
-	font-size: 32px;
+	font-size: 1.5rem;
   }
 
   .noticia-com-img-titulo-wrapper {
@@ -500,22 +551,24 @@ div.nav-bar {
   }
   
   .noticia-sem-img-titulo {
-	font-family: 'Raleway';
+	font-family: 'Rawline';
 	font-style: normal;
 	font-weight: 700;
-	font-size: 22px;
-	line-height: 26px;
+	font-size: 1.325rem;
+	line-height: 1.625rem;
 	color: var(--laranja);
 	margin: 10px 0 10px 0;
   }
   
   .noticia-com-img-titulo {
-	font-family: 'Raleway';
+	font-family: 'Rawline';
 	font-style: normal;
 	font-weight: 700;
-	font-size: 28px;
-	line-height: 32px;
+	font-size: 1.325rem;
+	line-height: 1.625rem;
 	color: #ffffff;
+
+	padding-top: 10px;
 	margin: auto 0 16px 0;
 	text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);  
   }
@@ -524,15 +577,13 @@ div.nav-bar {
 	display: flex;
 	flex-direction: row;
 	/*justify-content: flex-end; */
-
 	
-	font-family: 'Raleway';
+	font-family: 'Rawline';
 	font-style: normal;
 	font-weight: 700;
-	font-size: 18px;
-	line-height: 20px;
-  
-	/* identical to box height, or 111% */
+	font-size: 1.125rem;
+	line-height: 1.25rem;
+
   
 	color: var(--laranja);
   }
@@ -555,10 +606,15 @@ div.nav-bar {
 
   
   .youtube { 
-	padding-top: 35px;
+	padding-top: 25px;
 	height: auto;
 	width: 100%;
 	grid-area: youtube;
+
+	min-height:240px;
+	
+	
+	  
  }
 
  .youtube iframe{
@@ -573,23 +629,21 @@ div.nav-bar {
 
 .text-curso h3{
 	padding-top: 35px;
-	font-family: 'Raleway';
+	font-family: 'Rawline';
 	font-weight: 500;
-	font-size: 24px;
-	line-height: 26px;
+	font-size: 1.5rem;
+	line-height: 1.625rem;
 
 	color: #000000;
 }
 
 .text-curso p{
 	padding-top: 15px;
-	font-family: 'Raleway';
+	font-family: 'Rawline';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 14px;
-	line-height: 18px;
-	/* or 129% */
-
+	font-size: 0.875rem;
+	line-height: 1.125rem;
 
 	color: #000000;
 
@@ -604,7 +658,7 @@ div.nav-bar {
 	grid-template-rows: auto 1fr;
 	margin: 35px 30px;
 	margin-top: 35px;
-	padding:35px;
+	padding:15px;
 	gap: 35px;
 	grid-template-areas:
 	  "mapa" "text-ufpb";
@@ -630,10 +684,10 @@ div.nav-bar {
 }
 
 .mapa-titulo h2{
-	font-family: 'Raleway';
+	font-family: 'Rawline';
 	font-weight: 400;
-	font-size: 32px;
-	line-height: 26px;
+	font-size: 2rem;
+	line-height: 2.25rem;
 
 	display: flex;
 	align-items: center;
@@ -668,10 +722,10 @@ div.nav-bar {
 
  .text-ufpb-titulo h2{
 
-	font-family: 'Raleway';
+	font-family: 'Rawline';
 	font-weight: 400;
-	font-size: 32px;
-	line-height: 26px;
+	font-size: 2rem;
+	line-height: 2.25rem;
 
 	display: flex;
 	align-items: center;
@@ -697,7 +751,7 @@ div.nav-bar {
 
 .imagem-curso{
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;	
-	width: 100%;
+
 	height: 30vh;
 }
 
@@ -733,9 +787,6 @@ div.nav-bar {
 	  grid-area: cabecalho;	
 	  background: #121212;
   }
-
-
-  
 
 #footer {
 	display: flex;
@@ -867,7 +918,7 @@ div.nav-bar {
 
 
 
-/*-------------------------------------- footer -----------------------------------------------*/
+/*-------------------------------------- footer end-----------------------------------------------*/
 
 @media only screen and (min-width: 815px)  {
 
@@ -891,22 +942,41 @@ div.nav-bar {
 		border-bottom: 2px solid #fff;
 	}
 
+	div.topnav nav ul li:first-child{
+		padding-top: 0px;
+	}
+
 	/* versão de comuputador */
 	
 
 	.titulo {
+		display: flex;
 		padding: 0;
 		padding-top: 28px;
 		padding-left: 28px;	
 	}
 
+
+
+	#tit_img{ 
+		display: none;
+	}
+
 	#tit_curso{
+		text-align: left;
 		padding-top: 9px;
 		padding-bottom: 13px;
-		font-size: 30px;
-		line-height: 26px;
+		font-size: 1.875rem;
+		line-height: 2rem;
 	}
-	  
+	
+	#tit_centro{ 	
+		text-align: left;
+		font-size: 1rem;
+		line-height: 1.3rem;
+	
+	}
+  
 	.brasao {		
 		display: flex;
 		margin-right: 0vw; 
@@ -928,6 +998,7 @@ div.nav-bar {
 	div.nav-bar{
 
 		margin-right: 0vw; 
+		min-height: 0px;
 	}
 	.main{
 		margin-right: 0vw;
@@ -957,7 +1028,6 @@ div.nav-bar {
 	/* noticias responsivo */
 	
 	.conteudo {
-		min-height: 415px;
 		margin: 25px 0px;
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -972,10 +1042,29 @@ div.nav-bar {
 		padding-left: 30px;
 	}
 
+	.noticia-sem-img {
+
+		min-height: 160px;
+		
+	}
+	.secoes {
+		font-size: 2rem;
+    	line-height: 1.625rem;
+		padding-top: 45px;
+
+	}
+
 	.curso {  
 		padding-right: 0px;
 		
 	}
+
+	.youtube { 
+		min-height: 480px;
+		min-width: 720px;
+	 }
+	  
+
 	.mais { 
 		grid-template-columns: auto auto;
 		grid-template-rows: auto;
@@ -1029,11 +1118,6 @@ div.nav-bar {
 
 	  }
 
-	  .youtube { 
-		min-height: 480px;
-		min-width: 720px;
-	 }
-	  
 }
 
 @media only screen and (min-width: 1400px)  {

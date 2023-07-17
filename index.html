@@ -7,6 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.cdnfonts.com/css/rawline" rel="stylesheet">
+
 
 </head>
 <body>
@@ -47,11 +49,9 @@
   <header class="cabecalho">
     <div class="titulo">
     	<div class="title">
-
-        <!-- Duvida o h1 seria melhor escondido como é em alguns site ou aqui mesmo? -->
-
+        <img id="tit_img" src="img/midias-logo.png" alt="Logo do curso de Comunicação em Mídias Digitais">
     		<p id="tit_centro">CENTRO DE CIÊNCIAS HUMANAS, LETRAS E ARTES</p>
-        <p id="tit_curso">Línguas Estrangeiras Aplicadas às Negociações Internacionais</p>
+        <p id="tit_curso">Comunicação em Mídias Digitais</p>
     	</div>
     	<div class="brasao">
         <img  src="img/logo + nome.png" alt="logo DEMID">
@@ -62,12 +62,13 @@
         <div class="topnav" id="myTopnav">
             <nav>
               <ul>
-                <li><a href="#">Início</a></li>
                 <li><a href="#">Notícias</a></li>
                 <li><a href="#">Curso</a></li>
                 <li><a href="#">Projetos</a></li>
                 <li><a href="#">Documentos</a></li>
                 <li><a href="#">Chamados</a></li>
+                <li> <a href="javascript:void(0);" class="iconPesquisa" onclick="menuTransformaPesquisa()"><img src="img/Busca icone.png"></a></li>
+
                 <!-- <li>
                   <div class="search-container">
                       <form action="/action_page.php">
@@ -149,7 +150,8 @@
 
               </ul>
             </nav>
-            <a href="javascript:void(0);" class="icon" onclick="menuTransforma()"><p>Menu</p><i class="fa fa-bars"></i></a>
+            <a href="javascript:void(0);" class="icon" onclick="menuTransforma()"><i class="fa fa-bars"></i><p>Menu</p></a>
+           
         </div>
     	</div>
     </div>
@@ -162,7 +164,7 @@
         <div class="noticias-coluna-unica">
           <div class="noticia-sem-img">
             <div class="noticia-data-tag">
-              <div class="texto-pequeno-sem-img" id="texto-pequeno-sem-img">15 de Setembro de 2022</div>
+              <div class="texto-pequeno-sem-img" id="texto-pequeno-sem-img">15/09/2022</div>
               <div class="texto-pequeno-sem-img">Notícia, Cataclisma</div>
             </div>
             <div class="noticia-sem-img-titulo-wrapper">
@@ -177,7 +179,7 @@
           linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #E15323 100%),
           url('img/noticia.jpeg')">
             <div class="noticia-data-tag">
-              <div class="texto-pequeno-com-img">15 de Setembro de 2022</div>
+              <div class="texto-pequeno-com-img">15/09/2022</div>
               <div class="texto-pequeno-com-img">Notícia, Cataclisma</div>
             </div>
             <div class="noticia-com-img-titulo-wrapper">
@@ -186,7 +188,7 @@
           </div>
           <div class="noticia-sem-img">
             <div class="noticia-data-tag">
-              <div class="texto-pequeno-sem-img">15 de Setembro de 2022</div>
+              <div class="texto-pequeno-sem-img">15/09/2022</div>
               <div class="texto-pequeno-sem-img">Notícia, Cataclisma</div>
             </div>
             <div class="noticia-sem-img-titulo-wrapper">
@@ -256,7 +258,7 @@
 <div class="imagem-curso">
   <img src="img/banner.jpg" alt="frente predio DEMID">
 </div>
-
+<!--
 <div id="footer" class="container-footer">
   <div id="footer-logo" class="lateral-footer">
     <img class="logo-footer" src="img/midias-logo.png" alt="logo DEMID">
@@ -287,7 +289,7 @@
     </div>
   </div>
 </div>
-
+-->
 <script type="text/javascript" src="controller.js"> </script>
 
 </body>

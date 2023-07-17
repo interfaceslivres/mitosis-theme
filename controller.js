@@ -74,3 +74,12 @@ window.addEventListener('resize', function(event) {
   x.className = "topnav";
   };
 }, true);
+
+function menuTransformaPesquisa() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " pesquisa";
+  } else {
+    x.className = "topnav";
+  }
+}
