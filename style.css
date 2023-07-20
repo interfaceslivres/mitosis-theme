@@ -185,16 +185,22 @@
 	grid-area: nav-bar;
 	background: var(--laranja);
 	display: flex;
+	z-index: 999;
 }
 
 div.nav-bar {
-	margin-right: 0; /*alterar no media query*/
+	margin-right: 0; 
 	display: flex;
 	width: 100%;
 	min-height: 50px;
 	padding-left: 20px;
-	padding-right: 18px;
 	flex-wrap: wrap;
+	display: grid; 
+	grid-template-columns: auto 50px; 
+	grid-template-rows: auto; 
+	gap: 0px 0px; 
+	grid-template-areas: 
+	  "topnav lupa"; 
 	
 }
 
@@ -243,11 +249,11 @@ div.nav-bar {
 	top:0;
 	left:0;
 }
+
 .topnav a.icon p {
 	margin-top: -2px;
     padding-left: 10px;
 }
-
 
 .topnav a.icon {
 	
@@ -256,8 +262,6 @@ div.nav-bar {
 	top:0;
 	left:0;
 }
-
-
 
 .topnav.responsive {
 	position: relative;
@@ -289,38 +293,87 @@ div.nav-bar {
 	transition: height 0.4s;
 }
 
-.topnav a.iconPesquisa {
-	
-	display: flex;
-	position: absolute;
-	top:0;
-	Right:0;
+
+
+
+
+/*---------------------------------------------  B A R R A  D E  P E S Q U I S A ------------------------------------------------------*/
+
+.lupa {
+	width: 100%;
 }
 
-.topnav.pesquisa {
+.lupa a.iconPesquisa {
+	padding-right: 0;
 	position: relative;
+	float: right;
+	top: 7px;
+	right:0;
 }
 
-.topnav.pesquisa .iconPesquisa {
-  position: absolute;
-  right: 0;
-  top: 0;
+
+.pesquisa.pesquisaBarra {
+	display: flex;
 }
 
-.topnav.pesquisa a {
-  float: none;
-  display: block;
-  text-align: left;
+.pesquisa {
+	
+	
+	max-width: 1170px;
+	padding: 22px 0;
+	padding-left: 10px;
+	display: none;
+	position: relative;
+	z-index: 10;
 }
 
-.topnav.pesquisa .acc-container{
-	display: block;
+.barraBotaop {
+	width: 100%;
+	display: grid; 
+	grid-auto-columns: 1fr; 
+	grid-template-columns: auto auto; 
+	grid-template-rows: auto; 
+	gap: 0px 5px; 
+	grid-template-areas: 
+	  "barra botaop"; 
 }
 
-.topnav.pesquisa nav ul{ 
-	height: 100vh;
+.barra { grid-area: barra;
+	background-color: #fff;
+ }
+
+#barraConfig{
+
+	color: #B7B7B7;
+	font-family: Rawline;
+	font-size: 24px;
+	font-weight: 600;
+
+	
+ 	padding: 11px 54px;
+  	border: none;
+ 	border-bottom: 1px solid #ddd;
 }
 
+.botaop { 
+	grid-area: botaop; 
+	background-color: #fff;
+
+	color: #B7B7B7;
+	font-family: Rawline;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 20px; /* 83.333% */
+}
+
+.botaop p{
+	color: #B7B7B7;
+	font-family: Rawline;
+	font-size: 24px;
+	font-weight: 600;
+
+}
 /* Accordion */
   
 /*	
@@ -1005,7 +1058,7 @@ div.nav-bar {
 	}
 
 	.cabecalho{
-		grid-template-rows: 131px 45px;
+		grid-template-rows: 131px auto;
 		grid-template-columns: 1fr 1fr;
 		grid-template-areas:
 		"titulo titulo"

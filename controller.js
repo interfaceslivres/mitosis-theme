@@ -76,10 +76,10 @@ window.addEventListener('resize', function(event) {
 }, true);
 
 function menuTransformaPesquisa() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " pesquisa";
+  var x = document.getElementById("myPesquisa");
+  if (x.className === "pesquisa") {
+    x.className += " pesquisaBarra";
   } else {
-    x.className = "topnav";
+    x.className = "pesquisa";
   }
 }
