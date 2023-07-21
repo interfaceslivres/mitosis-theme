@@ -77,9 +77,17 @@ window.addEventListener('resize', function(event) {
 
 function menuTransformaPesquisa() {
   var x = document.getElementById("myPesquisa");
+  var y = document.getElementById("lupaParaFechar");
+
   if (x.className === "pesquisa") {
     x.className += " pesquisaBarra";
   } else {
     x.className = "pesquisa";
+  }
+
+  if (y.className === "fa-solid fa-magnifying-glass") {
+    y.className += " fa-solid fa-times";
+  } else {
+    y.className = "fa-solid fa-magnifying-glass";
   }
 }

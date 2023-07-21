@@ -196,7 +196,7 @@ div.nav-bar {
 	padding-left: 20px;
 	flex-wrap: wrap;
 	display: grid; 
-	grid-template-columns: auto 50px; 
+	grid-template-columns: auto 0; 
 	grid-template-rows: auto; 
 	gap: 0px 0px; 
 	grid-template-areas: 
@@ -304,11 +304,14 @@ div.nav-bar {
 }
 
 .lupa a.iconPesquisa {
-	padding-right: 0;
+	padding-right: 30px;
 	position: relative;
 	float: right;
-	top: 7px;
+	top: 10px;
 	right:0;
+	font-size: 140%;
+ 
+  	color: #fff;
 }
 
 
@@ -317,11 +320,11 @@ div.nav-bar {
 }
 
 .pesquisa {
-	
-	
+
 	max-width: 1170px;
 	padding: 22px 0;
 	padding-left: 10px;
+	padding-right: 30px;
 	display: none;
 	position: relative;
 	z-index: 10;
@@ -330,93 +333,65 @@ div.nav-bar {
 .barraBotaop {
 	width: 100%;
 	display: grid; 
-	grid-auto-columns: 1fr; 
-	grid-template-columns: auto auto; 
-	grid-template-rows: auto; 
-	gap: 0px 5px; 
+	grid-template-columns: 80% 20%; 
 	grid-template-areas: 
 	  "barra botaop"; 
 }
 
-.barra { grid-area: barra;
+.barra {
+	
+	margin-right: 5px;
+	grid-area: barra;
 	background-color: #fff;
  }
+
+input[type=text] {
+	width: 100%;
+	padding: 12px 20px;
+	box-sizing: border-box;
+}
 
 #barraConfig{
 
 	color: #B7B7B7;
 	font-family: Rawline;
-	font-size: 24px;
+	font-size: 18px;
 	font-weight: 600;
-
-	
- 	padding: 11px 54px;
   	border: none;
- 	border-bottom: 1px solid #ddd;
 }
 
 .botaop { 
+
+	margin-right: 5px;
+	max-width: 200px;
 	grid-area: botaop; 
 	background-color: #fff;
-
-	color: #B7B7B7;
-	font-family: Rawline;
-	font-size: 24px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: 20px; /* 83.333% */
+	
 }
 
 .botaop p{
-	color: #B7B7B7;
-	font-family: Rawline;
-	font-size: 24px;
-	font-weight: 600;
 
-}
-/* Accordion */
-  
-/*	
-  .acc-container {
-	border-top:3px solid #e06b05;
-	display: none;
 	padding-top: 10px;
-	margin-top: 20px;
-	padding-bottom: 15px;
-	width:100%;
-	overflow: hidden;
-	color: rgb(255, 255, 255);
-		
-  }
-  
-  .acc-btn { 
-	width:100%;
-	margin:0 auto;
-	cursor:pointer;
-	border-bottom:1px solid #ffffff;
-	
-  }
 
-  .acc-content {
-	width:100%;
-	margin:0 auto;
-	background:#c66715;
-	padding-bottom: 10px;
-	padding-left: 10px;
-	height: 0;
-	transition: height 0.5s;
+	color: var(--laranja);
+	font-family: Rawline;
+	font-size: 18px;
+	font-weight: 600;
+	text-align: center;
 	
-  }
-  
-  .acc-container p { 
-	color: rgb(255, 255, 255);
-  }
-  
-  .acc-container h3 {
-	color: rgb(255, 255, 255);
-  }
+	display: none;
+}
 
-*/
+#xBarra{
+	padding-top:10px;
+
+	font-size: 170%;
+  	color: var(--laranja);
+	display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 .acc-container {
 	border-top:3px solid #e06b05;
@@ -466,7 +441,6 @@ div.nav-bar {
 .main {
 	grid-area: main;
 	margin-right: 0%; /*alterar no media query*/
-
 }
 
 .secoes {
@@ -1053,6 +1027,24 @@ div.nav-bar {
 		margin-right: 0vw; 
 		min-height: 0px;
 	}
+
+	.pesquisa {
+		padding-right: 0px;
+	}
+
+	.lupa a.iconPesquisa {
+		padding-right: 5px;
+	
+	}
+
+	.botaop p{		
+		display: block;
+	}
+	
+	#xBarra{
+		display: none;
+	}
+
 	.main{
 		margin-right: 0vw;
 	}
@@ -1077,6 +1069,9 @@ div.nav-bar {
 	.titulo{
 		border-left: 2px solid var(--laranja);
 	}
+
+
+
 
 	/* noticias responsivo */
 	
@@ -1110,13 +1105,7 @@ div.nav-bar {
 	.curso {  
 		padding-right: 0px;
 		
-	}
-
-	.youtube { 
-		min-height: 480px;
-		min-width: 720px;
-	 }
-	  
+	} 
 
 	.mais { 
 		grid-template-columns: auto auto;
@@ -1159,6 +1148,17 @@ div.nav-bar {
 
 		margin-right: 10vw; 
 	}
+
+	.botaop {
+		margin-right: 0px;
+	}
+
+	.lupa a.iconPesquisa {
+		padding-right: 0px;
+	
+	}
+	
+
 	.main{
 		margin-right: 10vw;
 	}
