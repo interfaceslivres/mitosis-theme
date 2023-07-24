@@ -2,10 +2,32 @@
 
 function menuTransforma() {
   var x = document.getElementById("myTopnav");
+  var y = document.getElementById("menuParaFechar");
+  var z = document.getElementById("menuMenu");
+  var i = document.getElementById("menuFecharId");
+  
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {
     x.className = "topnav";
+  }
+
+  if (y.className === "fa-solid fa-bars") {
+    y.className += " fa-solid fa-times";
+  } else {
+    y.className = "fa-solid fa-bars";
+  }
+
+  if (z.className === "menuAbrir") {
+    z.className += " fechar";
+  } else {
+    z.className = "menuAbrir";
+  }
+
+  if (i.className === "menuAbrirFechar.fechar") {
+    i.className = "menuAbrirFechar.abrir";
+  } else {
+    i.className = "menuAbrirFechar.fechar";
   }
 }
 

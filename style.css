@@ -193,7 +193,7 @@ div.nav-bar {
 	display: flex;
 	width: 100%;
 	min-height: 50px;
-	padding-left: 20px;
+	padding-left: 0px;
 	flex-wrap: wrap;
 	display: grid; 
 	grid-template-columns: auto 0; 
@@ -206,7 +206,8 @@ div.nav-bar {
 
 /*-------------------------------------- menu responsivo-----------------------------------------------*/
 .topnav {
-	overflow: hidden;
+	height: 37px;
+	
 	justify-content: flex-start;
 	list-style: none;
 	width: 100%;
@@ -214,44 +215,59 @@ div.nav-bar {
   }
 
   .topnav ul li {
-	
+	top: 50px;
+    position: relative;
 	list-style-type: none;
+	background-color: #F4F4F4;
+
 
 }
 
 .topnav ul li a:hover {
 	border-bottom: none;
 }
+
+.topnav.responsive ul li:first-child {
+	border-top: 3px solid #E06B05 ;
+	padding-top: 10px;
+}
+
+.topnav.responsive ul li:last-child {
+
+	padding-top: 15px;
+}
+
   
   /* Style the links inside the navigation bar */
 .topnav a {
 	float: left;
 	display: none;
-	padding: 10px;
-	color: #fff;
+	padding: 6px;
+	padding-left: 40px;
+	color: #000000;
 	font-family: 'Rawline';
 	font-weight: 700;
 	font-size: 1.125rem;
-	line-height: 1.375rem;
+	line-height: 154.523%;
 	text-decoration: none;    
-	padding-bottom: 3px;  
 	font-style: normal;
 }
 
-.topnav.responsive nav ul li:first-child{
-	padding-top: 50px;
-}
+
 
 .topnav a.icon {
 	
 	display: flex;
 	position: absolute;
+	color: #fff;
 	top:0;
 	left:0;
+	font-size: 140%;
+	padding-top:14px
 }
 
 .topnav a.icon p {
-	margin-top: -2px;
+	margin-top: -7px;
     padding-left: 10px;
 }
 
@@ -259,11 +275,13 @@ div.nav-bar {
 	
 	display: flex;
 	position: absolute;
+	padding-left: 10px;
 	top:0;
 	left:0;
 }
 
 .topnav.responsive {
+
 	position: relative;
 }
 
@@ -275,12 +293,13 @@ div.nav-bar {
 
 .topnav.responsive a {
   float: none;
-  display: block;
+  display: flex;
   text-align: left;
 }
 
 .topnav.responsive .acc-container{
 	display: block;
+	padding-top: 15px;
 }
 
 .topnav.responsive nav ul{ 
@@ -288,13 +307,26 @@ div.nav-bar {
 }
 
 .topnav nav ul{
-	height: 37px;
+
 	overflow-y: auto;
 	transition: height 0.4s;
 }
 
+.Aberto{
+	display: block;
+}
 
+.menuAbrir{
+	display: block;
+}
 
+.menuFechar {
+	display: none;
+}
+
+.fechar{
+	display: none;
+}
 
 
 /*---------------------------------------------  B A R R A  D E  P E S Q U I S A ------------------------------------------------------*/
@@ -304,10 +336,10 @@ div.nav-bar {
 }
 
 .lupa a.iconPesquisa {
-	padding-right: 30px;
+	padding-right: 10px;
 	position: relative;
 	float: right;
-	top: 10px;
+	top: 13px;
 	right:0;
 	font-size: 140%;
  
@@ -394,10 +426,9 @@ input[type=text] {
 }
 
 .acc-container {
-	border-top:3px solid #e06b05;
+	border-bottom: 3px solid #d3d3d3;
 	display: none;
-	padding-top: 10px;
-	margin-top: 20px;
+	border-top: 1px solid #000;
 	padding-bottom: 15px;
 	width:100%;
 	overflow: hidden;
@@ -409,14 +440,20 @@ input[type=text] {
 	width:100%;
 	margin:0 auto;
 	cursor:pointer;
-	border-bottom:1px solid #ffffff;
-	
+	display:flex
+  }
+
+  .acc-btn i{
+	color: #000;
+	position: relative;
+	top: 13px;
+	float: right;
   }
 
   .acc-content {
 	width:100%;
 	margin:0 auto;
-	background:#c66715;
+	background:#d5d5d5;
 	padding-left: 10px;
 	height: 0;	
 	overflow-y: hidden;
@@ -426,6 +463,7 @@ input[type=text] {
 	padding-bottom: 10px;
 	height: 100px;
 	transition: height 0.5s;
+	padding-bottom: 20px;
   }
 
   .acc-container p { 
@@ -953,7 +991,10 @@ input[type=text] {
 
 	.topnav a{
 	  display: flex;
-	  
+	  padding: 10px;
+	  padding-bottom: 3px;
+	  padding-left: 10px;
+	  color: #fff;
 		
 	}
 	.topnav a.icon {
@@ -969,10 +1010,13 @@ input[type=text] {
 		border-bottom: 2px solid #fff;
 	}
 
-	div.topnav nav ul li:first-child{
-		padding-top: 0px;
+	.topnav ul li {
+		top: 0px;
+		position: relative;
+		list-style-type: none;
+	
+	
 	}
-
 	/* versão de comuputador */
 	
 
@@ -1023,7 +1067,7 @@ input[type=text] {
 		margin-left: 0vw;  
 	}
 	div.nav-bar{
-
+		padding-left: 20px;
 		margin-right: 0vw; 
 		min-height: 0px;
 	}
@@ -1034,7 +1078,7 @@ input[type=text] {
 
 	.lupa a.iconPesquisa {
 		padding-right: 5px;
-	
+		top: 10px;
 	}
 
 	.botaop p{		
