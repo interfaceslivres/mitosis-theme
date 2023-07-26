@@ -58,38 +58,6 @@ accBtns.forEach(function(accBtn) {
 
 
 
-/* backup q funciona: 
-
-
-const accBtns = document.querySelectorAll('.acc-btn');
-
-accBtns.forEach(function(accBtn) {
-  accBtn.addEventListener('click', function() {
-    const accContent = this.nextElementSibling;
-
-    if (accContent.style.display === 'none') {
-      const selected = 'selected';
-      const allAccContent = document.querySelectorAll('.acc-content');
-
-      allAccContent.forEach(function(content) {
-        content.style.display = 'none';
-      });
-
-      accContent.style.display = 'block';
-      accContent.style.height = '100px';
-      accContent.style.transition = 'height 55s ease 3s';
-      accContent.className += " test";
-      
-
-    } else {
-      accContent.style.display = 'none';
-      accContent.style.height = '0px';
-      accContent.className = "acc-content";
-    }
-  });
-});
-*/
-
 window.addEventListener('resize', function(event) {  
   if (this.screen.width > 813) {
   var x = document.getElementById("myTopnav");
