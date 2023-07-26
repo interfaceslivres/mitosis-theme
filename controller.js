@@ -24,10 +24,10 @@ function menuTransforma() {
     z.className = "menuAbrir";
   }
 
-  if (i.className === "menuAbrirFechar.fechar") {
-    i.className = "menuAbrirFechar.abrir";
+  if (i.className === "menuFechar") {
+    i.className = " abrir";
   } else {
-    i.className = "menuAbrirFechar.fechar";
+    i.className = "menuFechar";
   }
 }
 
