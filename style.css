@@ -341,7 +341,7 @@ div.nav-bar {
 
 .topnav nav ul{
 
-	overflow-y: auto;
+
 	transition: height 0.4s;
 }
 
@@ -452,9 +452,9 @@ input[type=text] {
 }
 
 #xBarra{
-	padding-top:10px;
+	padding-top:12px;
 
-	font-size: 170%;
+	font-size: var(--fonte-2up);
   	color: var(--cor-tema);;
 	display: block;
 	display: flex;
@@ -1066,14 +1066,12 @@ input[type=text] {
 
   /* AQUI */
 
-	footer {
-		font-size: var(--fonte-base);
-		margin-left: 20px;
-		margin-right: 20px;
-	}
-	
-	  
-	
+		footer {
+			font-size: var(--fonte-base);
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		
 	  #footer-dados {
 		flex-direction: row-reverse;
 	  }
@@ -1236,7 +1234,9 @@ input[type=text] {
 
 	.noticias {
 		padding: 0;
-		margin: 0 30px;
+		margin: 0;
+		margin-left: 30px;
+
 	}
 
 	.noticia-sem-img {
