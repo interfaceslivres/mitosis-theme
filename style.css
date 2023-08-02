@@ -18,7 +18,7 @@
 	--cor-texto-medio: #555555;
 	--cor-texto-claro: white;
   
-	font-size: 12px;
+	font-size: 11px;
   
 	--fonte-base: 1.25rem;
 	--fonte-1up: 1.563rem;
@@ -234,11 +234,11 @@ div.nav-bar {
 	padding-left: 0px;
 	flex-wrap: wrap;
 	display: grid; 
-	grid-template-columns: auto 0; 
+	grid-template-columns: auto 0 0; 
 	grid-template-rows: auto; 
 	gap: 0px 0px; 
 	grid-template-areas: 
-	  "topnav lupa"; 
+	  "topnav acessibilidade lupa"; 
 	
 }
 
@@ -364,7 +364,25 @@ div.nav-bar {
 #menuParaFechar {
 	padding-top: 6px;
 }
+/*----------------------------------------------- acessibilidade ------------------------------------------------------------------------*/
 
+.acessibilidade{
+	width: 100%;
+}
+
+.acessibilidade a.iconAcessibilidade {
+
+
+	position: relative;
+	float: right;
+	top: 13px;
+	right: 50px;
+	font-size: var(--fonte-2up);
+ 
+  	color: #fff;
+}
+
+/*-------------------------------------------------- acessibilidade-end ----------------------------------------------------------------*/
 /*---------------------------------------------  B A R R A  D E  P E S Q U I S A ------------------------------------------------------*/
 
 .lupa {
@@ -442,8 +460,8 @@ input[type=text] {
 
 	padding-top: 10px;
 
-	color: var(--cor-tema);;
-	font-family: Rawline;
+	color: var(--cor-tema);
+	font-family: 'Rawline';
 	font-size: 18px;
 	font-weight: 600;
 	text-align: center;
@@ -514,8 +532,10 @@ input[type=text] {
 /*-------------------------------------- main -----------------------------------------------*/
 
 .main {
+	font-family: 'Rawline';
 	grid-area: main;
 	margin-right: 0%; /*alterar no media query*/
+	min-height: 720px;
 }
 
 .secoes {
@@ -529,7 +549,7 @@ input[type=text] {
 
 }
 
-/*-------------------------------------- noticias-----------------------------------------------*/
+/*-------------------------------------- noticias-home -----------------------------------------------*/
 
   .noticias {
 	font-family: 'Rawline';
@@ -711,7 +731,121 @@ input[type=text] {
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
 }
 
-/*-------------------------------------- noticias -----------------------------------------------*/
+/*-------------------------------------- noticias-home-end -----------------------------------------------*/
+/*-----------------------------------------notícia ----------------------------------------------------*/
+
+
+.corpo {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+ 
+  
+	gap: var(--fonte-4up);
+	margin-top: var(--fonte-2up);
+  }
+  
+  #index.corpo {
+	margin-bottom: var(--fonte-4up);
+	margin-top: 0px;
+  }
+  
+  #index.corpo .imagem {
+	height: 15vh;
+  }
+  
+  .corpo-grid {
+	max-width: 1170px;
+	display: grid;
+	gap: 30px;
+	margin-left: 30px;
+  }
+
+  
+.noticia-h2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+  
+	font-size: var(--fonte-base);
+	font-weight: 400;
+	line-height: 1.45;
+	color: var(--cor-texto-escuro);
+  
+	margin-bottom: var(--fonte-2up);
+  }
+  
+  .noticia-categorias a {
+	color: var(--cor-tema);
+	text-decoration: underline;
+  }
+  
+  .noticia-categorias {
+	display: flex;
+	flex-direction: row;
+	gap: 8px;
+  }
+  
+  .noticia-compartilhe {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-items: center;
+	justify-content: flex-start;
+  }
+  
+  .noticia-redes {
+	color: var(--cor-tema);
+  }
+  
+  .noticia-redes a:hover {
+	color: var(--cor-texto-escuro);
+  }
+  
+  .noticia-imagem {
+	height: auto;
+	width: 100%;
+  }
+  
+  .noticia-imagem-legenda {
+	font-size: var(--fonte-1down);
+  }
+  
+  .noticia-links-relacionados {
+	margin-bottom: var(--fonte-3up);
+  }
+  
+  .noticia-link-relacionado {
+	font-style: normal;
+	font-weight: 600;
+	font-size: var(--fonte-1up);
+	line-height: 1.15;
+	color: var(--cor-tema);
+	margin-bottom: 8px;
+	word-break: break-word;
+  }
+  
+  .noticia-link-relacionado::before {
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	content: "\f019";
+	color: var(--cor-tema);
+  
+	margin-right: 0.5rem;  
+  
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	--webkit-font-smoothing: antialiased;
+  }
+  
+  .noticias-relacionadas {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+  }
+/*------------------------------------------notícia-end ---------------------------------------------------*/
 
 /*-------------------------------------- curso -----------------------------------------------*/
 
@@ -896,8 +1030,10 @@ input[type=text] {
  
 /*-------------------------------------- footer -----------------------------------------------*/
 
+
 #footer-wrapper {
-	font-family: 'rawline';
+	font-size: 12px;
+	font-family: 'Rawline';
 	display: flex;
 	width: 100%;
 	background-color: var(--cor-footer);
@@ -906,10 +1042,10 @@ input[type=text] {
   }
   
   footer {
+
 	width: 100%;
 	max-width: 1170px;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin: 30px 20px;
 	display: flex;
 	gap: 20px; 
 	flex-direction: column;
@@ -920,18 +1056,16 @@ input[type=text] {
 	font-size: var(--fonte-base);
 	line-height: 1.45;  
 	color: var(--cor-texto-claro);
-
-	
-	
   }
   
   #footer-dados {  
 	height: min-content;
 	box-sizing: border-box;
 	display: flex;
-	flex-direction: row;
+	flex-direction: row-reverse;
 	align-items: flex-start;
 	gap: 16px;
+
   }
   
   #footer-dados > div {
@@ -961,22 +1095,22 @@ input[type=text] {
   }
   
   #footer-top {
-	display: flex;
-	flex-direction: column;
-	
-	justify-content: space-between;
-	gap: 20px;
-	width: 100%;
 
-	
+	flex-direction: column;
+    gap: 20px;
+
+	display: flex;
+	justify-content: space-between;
+  
+	width: 100%;
   }
   
   #footer-logo {
-	height: 200px;
+	height: 100px;
   }
   
   .footer-direita {
-	display: flex;
+	display: block;
 	flex-direction: column;
 	justify-content: flex-end;  
 	align-items: flex-end;  
@@ -996,14 +1130,14 @@ input[type=text] {
 	line-height: 100%;
   }
   
-  #redes-sociais {
+  .redes-sociais {
 	display: flex;
 	flex-direction: row; 
 	gap: 10px;
   }
   
   
-  #redes-sociais i {
+  .redes-sociais i {
 	height: 48px;
 	display: flex;
 	align-items: center;
@@ -1013,11 +1147,12 @@ input[type=text] {
   #footer-creditos {
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-end;
+	justify-content: flex-start;
 	align-items: flex-start;
 	padding: 0px;
 	gap: 16px;
 	height: 50px;
+	
   }
   
   #footer-creditos a {
@@ -1047,6 +1182,9 @@ input[type=text] {
 	justify-content: space-between; 
 	  
 	width: 100%;
+
+	flex-direction: column;
+    gap: 4px;
   } 
   
   #footer-ultima-linha a {
@@ -1063,36 +1201,15 @@ input[type=text] {
 	padding: 0 5px 0 0px;
 	border-left: solid 0px var(--cor-texto-claro);
   }
-
-  /* AQUI */
-
-		footer {
-			font-size: var(--fonte-base);
-			margin-left: 20px;
-			margin-right: 20px;
-		}
-		
-	  #footer-dados {
-		flex-direction: row-reverse;
-	  }
-	
-	  .footer-direita {
-		display: block;
-	  }
-	
-	  #footer-creditos {
-		justify-content: flex-start;
-	  }
-	
-	  #footer-logo {
-		height: 100px;
-	  }
-	
-	  #footer-ultima-linha {
-		flex-direction: column;
-		gap: 4px;
-	  }
   
+
+
+
+
+
+
+
+
 
 
 /*-------------------------------------- footer end-----------------------------------------------*/
@@ -1102,6 +1219,9 @@ input[type=text] {
 /* ------------------------------------------------------ versão de comuputador --------------------------------------------------------- */
 	
 /*------------------------ menu responsivo ---------------------------------*/
+	:root{
+		font-size: 12px;
+	}
 
 	.topnav a{
 	  display: flex;
@@ -1182,6 +1302,12 @@ input[type=text] {
 
 	.pesquisa {
 		padding-right: 0px;
+	}
+
+	.acessibilidade a.iconAcessibilidade {
+		top: 10px;
+		right: 40px;
+		
 	}
 
 	.lupa a.iconPesquisa {
@@ -1268,15 +1394,39 @@ input[type=text] {
 		max-width: 300px;
 	}
 
-	footer {
-		margin: 30px 30px 30px 30px;
-	}
 
+	/* --------------------- footer ----------------------*/
+
+	footer {
+		margin: 30px 30px;
+	}
+	
 	#footer-top {
+		flex-direction: row;
+		gap: 0;
+	}
+	
+	#footer-dados {
+		flex-direction: row;
+	}
+	
+	.footer-direita {
+		display: flex;
+	}
+	
+	#footer-creditos {
+		justify-content: flex-end;
+	}
+	
+	#footer-logo {
+		height: 200px;
+	}
+	
+	#footer-ultima-linha {
 		flex-direction: row;
 		gap: 0px;
 	}
-	  
+	  /* --------------------- footer-end ----------------------*/
 }
 
 @media only screen and (min-width: 1020px)  {

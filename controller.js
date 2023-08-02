@@ -7,6 +7,9 @@ function menuTransforma() {
   var i = document.getElementById("menuFecharId");
   
   if (x.className === "topnav") {
+    document.getElementById("myPesquisa").className = "pesquisa";
+    document.getElementById("lupaParaFechar").className = "fa-solid fa-magnifying-glass";
+
     x.className += " responsive";
   } else {
     x.className = "topnav";
@@ -70,6 +73,11 @@ function menuTransformaPesquisa() {
   var y = document.getElementById("lupaParaFechar");
 
   if (x.className === "pesquisa") {
+    document.getElementById("myTopnav").className = "topnav";
+    document.getElementById("menuParaFechar").className = "fa-solid fa-bars";
+    document.getElementById("menuMenu").className = "menuAbrir";
+    document.getElementById("menuFecharId").className = "menuFechar";
+
     x.className += " pesquisaBarra";
   } else {
     x.className = "pesquisa";
