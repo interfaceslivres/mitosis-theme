@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Estudo Site Coordenação</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.cdnfonts.com/css/rawline" rel="stylesheet">
+
+  <link href="assets/fontawesome6/css/fontawesome.css" rel="stylesheet">
+  <link href="assets/fontawesome6/css/brands.css" rel="stylesheet">
+  <link href="assets/fontawesome6/css/regular.css" rel="stylesheet">
+  <link href="assets/fontawesome6/css/solid.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+  <!-- Lateral esquerda do site-->
+  <div class="lateral">
+    <div class="logo-bg">
+    	<div class="logo">
+    		<img  src="img/midias-logo.png" alt="logo DEMID">
+    	</div>
+    </div>
+      <div class="sidebar-bg">
+        <div class="sidebar">
+          <ul>
+            <li class="sidebar-titulo">Docentes</li>
+            <li><a href="#">notícias</a></li>
+            <li><a href="#">corpo adminstrativo</a></li>
+            <li class="sidebar-titulo">Discentes</li>
+            <li><a href="#">tcc</a></li>
+            <li><a href="#">documentos</a></li>
+            <li><a href="#">projetos</a></li>
+            <li><a href="#">notícias</a></li>
+            <li><a href="#">mapa</a></li>
+            <li class="sidebar-titulo">Visitantes</li>
+            <li><a href="#">apresentação</a></li>
+            <li><a href="#">vídeos</a></li>
+            <li><a href="#">mapa</a></li>
+            <li class="sidebar-titulo">Links</li>
+            <li><a href="#">sigaa</a></li>
+            <li><a href="#">ufpb</a></li>
+          </ul>
+        </div>
+	    </div>
+  </div>
+
+  <!-- Lateral direita do site-->
+  <header class="cabecalho">
+
+    <div class="titulo">
+
+      <div class="tit_img"><img id="tit_img" src="img/SVG final.svg" alt="Logo do curso de Comunicação em Mídias Digitais"></div>
+
+    	<div class="title">
+    		<p id="tit_centro">CENTRO DE CIÊNCIAS HUMANAS, LETRAS E ARTES</p>
+        <h1 id="tit_curso">Comunicação em Mídias Digitais</h1>
+    	</div>
+
+    	<div class="brasao">
+        <img  src="img/SVG final.svg" alt="logo ufpb">
+      </div>
+    </div>
+    <div class="nav-bar-bg">
+    	<div class="nav-bar">
+        <div class="topnav" id="myTopnav">
+            <nav>
+              <ul>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Curso</a></li>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Documentos</a></li>
+                <li><a href="#">Chamados</a></li>
+                <li>
+                  <div class="acc-container">
+
+                    <div class="acc-btn"><a>Docentes</a><i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="acc-content">
+                      <a href="#">notícias</a>
+                      <a href="#">corpo adminstrativo</a>
+                    </div>
+                  
+                    <div class="acc-btn"><a>Discentes</a><i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="acc-content">
+                      <a href="#">tcc</a>
+                      <a href="#">documentos</a>
+                      <a href="#">projetos</a>
+                      <a href="#">notícias</a>
+                      <a href="#">mapa</a>
+                    </div>
+                  
+                    <div class="acc-btn"><a>Visitantes</a><i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="acc-content">
+                      <a href="#">apresentação</a>
+                      <a href="#">vídeos</a>
+                      <a href="#">mapa</a>
+                    </div>
+                  
+                    <div class="acc-btn"><a> Links</a><i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="acc-content">
+                      <a href="#">sigaa</a>
+                      <a href="#">ufpb</a>
+                    </div>
+
+                  </div>
+                </li>
+              </ul>
+            </nav>
+
+            <a href="javascript:void(0);" class="icon" onclick="menuTransforma()"><i id="menuParaFechar" class="fa-solid fa-bars"></i><p class="menuAbrir" id="menuMenu">Menu</p><p class="menuFechar" id="menuFecharId">Fechar</p></a>
+      </div>
+
+      <div class="acessibilidade">
+        <a href="javascript:void(0);" class="iconAcessibilidade" onclick="test()" ><i id="acessibilidadeParaFechar" class="fa-solid fa-universal-access"></i></a>
+      </div>
+
+      <div class="lupa">
+        <a href="javascript:void(0);" class="iconPesquisa"  onclick="menuTransformaPesquisa()" ><i id="lupaParaFechar" class="fa-solid fa-magnifying-glass"></i></a>
+      </div>
+      
+      <div id="myPesquisa" class="pesquisa" >
+        <div class="barraBotaop">
+          <div class="barra">
+            <input type="text" placeholder="Digite sua pesquisa..." id="barraConfig">
+          </div>
+          <div class="botaop">
+            <p>Pesquisar</p>
+            <i id="xBarra" class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+
+    	</div>
+    </div>
+  </header>
+  <div class="main">
+    <div class="noticias">
+      <h1 class="secoes">Notícias</h1>
+      <div class="conteudo">
+        <div class="noticias-coluna-unica">
+          <a class="noticia-sem-img camada-1" href="#">
+            <div class="rotulo">
+              <div>15 de Setembro de 2022</div>
+              <div>Notícia, Cataclisma</div>
+            </div>
+            <div class="noticia-sem-img-titulo" id="noticia-principal">Resultado final do concurso de "Áudio Digital"</div>
+          </a>  
+        </div>        
+        <div class="noticias-coluna">
+          <a href="#" class="noticia-com-img camada-1" style="
+          background-image:
+          linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), 
+          linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 85%),
+          url('img/noticia.jpeg')">
+            <div class="rotulo">
+              <div>15 de Setembro de 2022</div>
+              <div>Notícia, Cataclisma</div>
+            </div>
+            <div class="noticia-com-img-titulo">Resultado final do concurso de "Marketing Digital e Empreendedorismo"</div>              
+          </a>
+          <a href="#" class="noticia-sem-img camada-1">
+            <div class="rotulo">
+              <div>15 de Setembro de 2022</div>
+              <div>Notícia, Cataclisma</div>
+            </div>
+            <div class="noticia-sem-img-titulo">Resultado final do concurso de "Áudio Digital"</div>              
+          </a>
+        </div>
+      </div>
+        <a class="mais-link" href="#">Mais Notícias</a>           
+    </div> 
+  
+    <div class="curso">
+      <h2 class="secoes">Comunicação em Mídias digitais</h2>
+
+      <div class="youtube"><iframe width="100%" height="100%"
+         src="https://www.youtube.com/embed/XUCxGYSJEDY?autoplay=0&mute=1" 
+         title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; web-share" allowfullscreen></iframe>
+      </div>
+
+      <div class="text-curso">
+
+        <h3>O que faz um Comunicador em Mídias Digitais?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+
+        <h3>Atribuições em Comunicador em Mídias Digitais?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+
+        <h3>Mercado de trabalho para um Comunicador em Mídias Digitais?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+
+
+      </div>
+    </div>
+    <div class="mais">
+      <div class="mapa">
+
+        <div class="mapa-titulo">
+          <h2>Mapa</h2>
+        </div>
+
+        <div class="mapa-img">   
+          <iframe scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111.87252228998113!2d-34.84983169399343!3d-7.137336889729705!2m3!1f22.312500000000025!2f48.49688112803378!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x7acc2b97fcc474f%3A0x7330f1f2dbd68687!2sDEMID - Departamento de Mídias Digitais!5e1!3m2!1sen!2sbr!4v1682431792367!5m2!1sen!2sbr" width="100%" height="100%" frameborder="0"><a href="https://www.maps.ie/distance-area-calculator.html">area maps</a></iframe>
+        </div>
+    
+      </div>
+      
+      <div class="text-ufpb">
+
+        <div class="text-ufpb-titulo">
+          <h2>UFPB</h2>
+        </div>
+
+        <div class="text-ufpb-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+        </div>
+
+        <div class="text-ufpb-link">
+          <a class="mais-link" href="#">Apresentação</a>
+          <a class="mais-link" href="#">Projeto Político-Pedagógico</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="imagem-curso">
+  <img src="img/banner.jpg" alt="frente predio DEMID">
+</div>
+
+<div id="footer-wrapper">  
+  <footer>          
+    <div id="footer-top">
+      <div id="footer-dados">
+        <img id="footer-logo" src="img/SVG vazadão com nome.svg">
+        <div>
+          <div>Departamento de Mídias Digitais</div>
+          <div class="redes-sociais">
+            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
+            <a href="#"><i class="fa-solid fa-square-rss"></i></a>
+          </div>
+          <address>R. Ver. João Freire - Conj. Pres. Castelo Branco III, João Pessoa - PB, 58050-420</address>
+          <a href="tel:+55 (83) 3216-7847">+55 (83) 3216-7847</a>
+          <a class="mais-link" href="#">Contato</a>
+          <div>Segunda à Sexta, 12h00 às 19h00</div>
+        </div>
+      </div>
+      <div class="footer-direita">              
+        <div id="footer-creditos">
+          <a href="#"><img class="img-creditos" src="img/il-logo.jpg" alt=""></a>
+          <a href="#"><img class="img-creditos" src="img/cchla-logo.png" alt=""></a>
+          <a href="#"><img class="img-creditos" src="img/SVG vazadão com nome.svg" alt=""></a>
+        </div>
+      </div>            
+    </div>
+    <div id="footer-linha"></div>   
+    <div id="footer-bottom">
+      <div id="footer-ultima-linha">
+        <div>© 2023 Universidade Federal da Paraíba.</div>
+        <div>
+          <a href="#">Acesso à Informação</a>
+          <a href="#">Acessibilidade</a>
+          <a href="#">Dados Abertos UFPB</a> 
+          <a href="#">Privacidade e Proteção de Dados</a>
+        </div>
+        
+      </div>
+    </div>     
+  </footer>
+</div>
+</div>
+
+<script type="text/javascript" src="controller.js"> </script>
+
+</body>
+</html>
