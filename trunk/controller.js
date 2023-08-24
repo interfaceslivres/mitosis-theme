@@ -92,19 +92,13 @@ function menuTransformaPesquisa() {
 
 
 function menuTransformaAcessibilidade() {
-  var x = document.getElementById("myPesquisa");
-  var y = document.getElementById("lupaParaFechar");
+  var x = document.getElementById("myMenuAcessibilidade");
 
-  if (x.className === "pesquisa") {
-    x.className += " pesquisaBarra";
+  if (x.className === "menuAcessibilidade") {
+    x.className += " menuAcessibilidadeBarra";
   } else {
-    x.className = "pesquisa";
+    x.className = "menuAcessibilidade";
   }
 
-  if (y.className === "fa-solid fa-magnifying-glass") {
-    y.className += " fa-solid fa-times";
-  } else {
-    y.className = "fa-solid fa-magnifying-glass";
-  }
 }
 
