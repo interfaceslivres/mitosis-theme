@@ -209,7 +209,7 @@ img {
 #tit_centro{
 
 	margin: 0;
-
+	text-transform: uppercase;
 	text-align: left;
 	font-family: 'Rawline';
 	font-weight: 400;

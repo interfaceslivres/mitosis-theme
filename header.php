@@ -59,8 +59,8 @@
 	      <div class="tit_img"><img id="tit_img" src="img/SVG final.svg" alt="Logo do curso de Comunicação em Mídias Digitais"></div>
 
 	    	<div class="title">
-	    		<p id="tit_centro">CENTRO DE CIÊNCIAS HUMANAS, LETRAS E ARTES</p>
-	        <h1 id="tit_curso">Comunicação em Mídias Digitais</h1>
+	    		<p id="tit_centro"><?php printf( get_bloginfo ( 'description' ) ); ?><br /></p>
+	        <h1 id="tit_curso"><?php echo get_bloginfo( 'name' ); ?></h1>
 	    	</div>
 
 	    	<div class="brasao">
