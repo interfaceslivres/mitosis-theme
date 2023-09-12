@@ -28,7 +28,7 @@
     </div>
       <div class="sidebar-bg">
         <div class="sidebar">
-          <ul>
+          <!--<ul>
             <li class="sidebar-titulo">Docentes</li>
             <li><a href="#">notícias</a></li>
             <li><a href="#">corpo adminstrativo</a></li>
@@ -45,7 +45,16 @@
             <li class="sidebar-titulo">Links</li>
             <li><a href="#">sigaa</a></li>
             <li><a href="#">ufpb</a></li>
-          </ul>
+          </ul>-->
+		  <?php 
+			wp_nav_menu(   
+				array ( 
+					'theme_location' => 'sidebar-menu',
+					'items_wrap' => '%3$s',
+					'container' => false,
+				) 
+			); 
+		?>
         </div>
 	    </div>
   </div>
