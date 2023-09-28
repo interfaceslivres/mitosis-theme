@@ -542,27 +542,28 @@ input[type=text] {
 		
   }
   
-  .acc-btn { 
+  .acc-container li{ 
 	width:100%;
 	margin:0 auto;
 	cursor:pointer;
 	display:flex
   }
 
-  .acc-btn i{
+  .acc-container li i{
 	color: #000;
 	position: relative;
 	top: 13px;
 	float: right;
   }
 
-  .acc-content {
+  .acc-container li ul li{
 	width:100%;
 	margin:0 auto;
 	background:#d5d5d5;
 	padding-left: 10px;
 	height: 0;	
 	overflow-y: hidden;
+	height: auto;
   }
   
   .acc-content.selected{

@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Estudo Site Coordenação</title>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
+	<script type="text/javascript" src="<?php echo get_bloginfo("template_directory"); ?>/script.js" ></script>
+	
+ 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.cdnfonts.com/css/rawline" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.cdnfonts.com/css/rawline" rel="stylesheet">
-
-  <link href="assets/fontawesome6/css/fontawesome.css" rel="stylesheet">
-  <link href="assets/fontawesome6/css/brands.css" rel="stylesheet">
-  <link href="assets/fontawesome6/css/regular.css" rel="stylesheet">
-  <link href="assets/fontawesome6/css/solid.css" rel="stylesheet">
+	<link href="assets/fontawesome6/css/fontawesome.css" rel="stylesheet">
+	<link href="assets/fontawesome6/css/brands.css" rel="stylesheet">
+	<link href="assets/fontawesome6/css/regular.css" rel="stylesheet">
+	<link href="assets/fontawesome6/css/solid.css" rel="stylesheet">
 	<?php wp_head(); ?>
+
 </head>
+
 <body>
 
 <div class="container">
@@ -46,6 +50,7 @@
             <li><a href="#">sigaa</a></li>
             <li><a href="#">ufpb</a></li>
           </ul>-->
+
 		  <?php 
 			wp_nav_menu(   
 				array ( 
@@ -79,13 +84,40 @@
 	    <div class="nav-bar-bg">
 	    	<div class="nav-bar">
 	        <div class="topnav" id="myTopnav">
-	            <nav>
-	              <ul>
+	        <nav>
+	            <ul>
+
+				<!--
 	                <li><a href="#">Notícias</a></li>
 	                <li><a href="#">Curso</a></li>
 	                <li><a href="#">Projetos</a></li>
 	                <li><a href="#">Documentos</a></li>
 	                <li><a href="#">Chamados</a></li>
+
+				-->
+					<?php 
+						wp_nav_menu(   
+							array ( 
+								'theme_location' => 'main-menu',
+								'items_wrap' => '%3$s',
+								'container' => false,
+							) 
+						); 
+					?>
+				</ul>
+
+				<ul class="acc-container">
+					<?php 
+						wp_nav_menu(   
+							array ( 
+								'theme_location' => 'sidebar-menu',
+								'items_wrap' => '%3$s',
+								'container' => false,
+							) 
+						); 
+					?>
+
+					<!--
 	                <li>
 	                  <div class="acc-container">
 
@@ -111,14 +143,16 @@
 	                      <a href="#">mapa</a>
 	                    </div>
 
-	                    <div class="acc-btn"><a> Links</a><i class="fa-solid fa-chevron-down"></i></div>
+	                    <div class="acc-btn"><a>Link</a><i class="fa-solid fa-chevron-down"></i></div>
 	                    <div class="acc-content">
 	                      <a href="#">sigaa</a>
 	                      <a href="#">ufpb</a>
+
 	                    </div>
 
 	                  </div>
 	                </li>
+					-->
 	              </ul>
 	            </nav>
 

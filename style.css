@@ -131,6 +131,7 @@ img {
 	margin-left: 0%; /*alterar no media query*/
 	padding-right: 20px;
 	list-style: none;
+	padding-top:34px ;
 }
 
 .sidebar ul{
@@ -138,12 +139,15 @@ img {
 	padding-top: 10px;
 }
 
-.sidebar a{
-
+.sidebar li ul li a{
+	pointer-events: all;
+	padding: 0;
+	padding-bottom: 5px;
 	text-decoration: none;
 	font-family: 'Rawline';
 	font-style: normal;
 	font-weight: 400;
+	text-transform: lowercase;
 	font-size:var(--fonte-base);
 	color: var(--cor-black);
 }
@@ -152,23 +156,22 @@ img {
 	color: var(--cor-highlight);
 }
 
-.sidebar-titulo{
-	padding-top: 24px;
+.sidebar li a{
+	padding-top: 10px;
 	padding-bottom: 10px;
-
+	pointer-events: none;
 	font-family: 'Rawline';
 	font-weight: 600;
 	font-size: var(--fonte-1up);
-
+	text-transform: uppercase;
 	display: flex;
 	align-items: center;
 
 	color: var(--cor-black);
 }
 
-.sidebar li:first-child{
-	padding-top: 34px;
-	padding-bottom: 10px;
+.sidebar li ul li{
+	padding: 0;
 }
 
 /* --------------------------- sidebar end -----------------------------------*/
@@ -288,14 +291,14 @@ div.nav-bar {
 	border-bottom: none;
 }
 
-.topnav.responsive ul li:first-child {
+.topnav.responsive ul:first-child li:first-child {
 	border-top: 3px solid #E06B05 ;
-	padding-top: 10px;
 }
 
 .topnav.responsive ul li:last-child {
 
-	padding-top: 15px;
+	padding-bottom: 15px;
+    border-bottom: 3px solid #d3d3d3;
 }
 
 
@@ -358,7 +361,7 @@ div.nav-bar {
 
 .topnav.responsive .acc-container{
 	display: block;
-	padding-top: 15px;
+
 }
 
 .topnav nav ul{
@@ -393,8 +396,6 @@ div.nav-bar {
 }
 
 .acessibilidade a.iconAcessibilidade {
-
-
 	position: relative;
 	float: right;
 	top: 13px;
@@ -481,7 +482,6 @@ input[type=text] {
 .botaop p{
 
 	padding-top: 10px;
-
 	color: var(--cor-tema);
 	font-family: 'Rawline';
 	font-size: 18px;
@@ -513,42 +513,29 @@ input[type=text] {
 
   }
 
-  .acc-btn {
+.acc-container li {
 	width:100%;
 	margin:0 auto;
 	cursor:pointer;
 	display:flex
-  }
+}
 
-  .acc-btn i{
+.acc-container li i{
 	color: #000;
 	position: relative;
 	top: 13px;
 	float: right;
   }
 
-  .acc-content {
+  .acc-container li ul li a {
 	width:100%;
 	margin:0 auto;
 	background:#d5d5d5;
 	padding-left: 10px;
 	height: 0;
 	overflow-y: hidden;
-  }
-
-  .acc-content.selected{
-
 	height: auto;
-	transition: height 0.5s;
-
-  }
-
-  .acc-content a{
 	font-size: var(--fonte-base);
-  }
-
-  .acc-container h3 {
-	color: rgb(255, 255, 255);
   }
 
 
