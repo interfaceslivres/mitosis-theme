@@ -5,38 +5,117 @@
     <div class="noticias">
       <h1 class="secoes">Notícias</h1>
       <div class="conteudo">
-        <div class="noticias-coluna-unica">
-          <a class="noticia-sem-img camada-1" href="#">
-            <div class="rotulo">
-              <div>15 de Setembro de 2022</div>
-              <div>Notícia, Cataclisma</div>
-            </div>
-            <div class="noticia-sem-img-titulo" id="noticia-principal">Resultado final do concurso de "Áudio Digital"</div>
-          </a>
-        </div>
-        <div class="noticias-coluna">
-          <a href="#" class="noticia-com-img camada-1" style="
-          background-image:
+
+
+      <?php 
+        // the query
+        $the_query = new WP_Query( array(
+            'posts_per_page' => 3,
+        )); 
+      ?>
+
+      <?php if ( $the_query->have_posts() ) : $postCount = 0; while ( $the_query->have_posts() ) : $postCount++; $the_query->the_post()  ?>
+
+      <?php if($postCount == 1) { ?>
+
+        <div class="noticias-coluna-primeira">
+
+        <?php if ( has_post_thumbnail()) : ?>
+
+          <a href="#" class="noticia-com-img camada-1" style="background-image:
           linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%),
           linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 85%),
-          url('img/noticia.jpeg')">
+          url(<?php the_post_thumbnail_url(); ?>)">
             <div class="rotulo">
-              <div>15 de Setembro de 2022</div>
-              <div>Notícia, Cataclisma</div>
+              <div><?php echo get_the_date( 'd \d\e F Y' ); ?></div>
+              <div><?php echo get_the_category( $id )[0]->name ?>, <?php echo get_the_category( $id )[1]->name ?></div>
             </div>
-            <div class="noticia-com-img-titulo">Resultado final do concurso de "Marketing Digital e Empreendedorismo"</div>
+            <h1 class="noticia-com-img-titulo" id="noticia-principal"><?php the_title(); ?></h1>
           </a>
+
+          <?php else : ?>
+
+            <a href="#" class="noticia-sem-img camada-1">
+            <div class="rotulo">
+              <div><?php echo get_the_date( 'd \d\e F Y' ); ?></div>
+              <div><?php echo get_the_category( $id )[0]->name ?>, <?php echo get_the_category( $id )[1]->name ?></div>
+            </div>
+            <h1 class="noticia-sem-img-titulo"><?php the_title(); ?></h1>
+          </a>
+
+          <?php endif; ?>
+
+        </div>
+
+      <div class="noticias-coluna">
+      <?php }  elseif ($postCount == 2) { ?>
+
+        <?php if ( has_post_thumbnail()) : ?>
+
+          <a href="#" class="noticia-com-img camada-1" style="background-image:
+          linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 85%),
+          url(<?php the_post_thumbnail_url(); ?>)">
+            <div class="rotulo">
+              <div><?php echo get_the_date( 'd \d\e F Y' ); ?></div>
+              <div><?php echo get_the_category( $id )[0]->name ?>, <?php echo get_the_category( $id )[1]->name ?></div>
+            </div>
+            <h1 class="noticia-com-img-titulo"><?php the_title(); ?></h1>
+        </a>
+
+        <?php else : ?>
+
           <a href="#" class="noticia-sem-img camada-1">
             <div class="rotulo">
-              <div>15 de Setembro de 2022</div>
-              <div>Notícia, Cataclisma</div>
+              <div><?php echo get_the_date( 'd \d\e F Y' ); ?></div>
+              <div><?php echo get_the_category( $id )[0]->name ?>, <?php echo get_the_category( $id )[1]->name ?></div>
             </div>
-            <div class="noticia-sem-img-titulo">Resultado final do concurso de "Áudio Digital"</div>
+            <h1 class="noticia-sem-img-titulo"><?php the_title(); ?></h1>
           </a>
-        </div>
-      </div>
+
+        <?php endif; ?>
+
+
+      <?php } elseif ($postCount == 3) { ?>
+
+        <?php if ( has_post_thumbnail()) : ?>
+
+            <a href="#" class="noticia-com-img camada-1" style="background-image:
+            linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%),
+            linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 85%),
+            url(<?php the_post_thumbnail_url(); ?>)">
+              <div class="rotulo">
+                <div><?php echo get_the_date( 'd \d\e F Y' ); ?></div>
+                <div><?php echo get_the_category( $id )[0]->name ?>, <?php echo get_the_category( $id )[1]->name ?></div>
+              </div>
+              <h1 class="noticia-com-img-titulo"><?php the_title(); ?></h1>
+            </a>
+
+            <?php else : ?>
+
+            <a href="#" class="noticia-sem-img camada-1">
+              <div class="rotulo">
+                <div><?php echo get_the_date( 'd \d\e F Y' ); ?></div>
+                <div><?php echo get_the_category( $id )[0]->name ?>, <?php echo get_the_category( $id )[1]->name ?></div>
+              </div>
+              <h1 class="noticia-sem-img-titulo"><?php the_title(); ?></h1>
+            </a>
+
+            <?php endif; ?>
+
+      
+      <?php } ?>
+
+          
+
+        <?php endwhile; else : ?>
+      <?php endif; ?>
+      </div> 
         <a class="mais-link" href="#">Mais Notícias</a>
-    </div>
+
+
+    </div> <!-- fechamento da div conteúdo -->
+    </div> <!-- fechamento da div misterio -->
 
     <div class="curso">
       <h2 class="secoes">Comunicação em Mídias digitais</h2>

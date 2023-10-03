@@ -205,8 +205,13 @@ img {
 
 .tit_img{
 	display: flex;
-	height: 80px;
 
+}
+
+.tit_img img{
+	width: 100%;
+	max-height: 80px;
+	object-fit: contain;
 }
 
 #tit_centro{
@@ -278,13 +283,10 @@ div.nav-bar {
   }
 
   .topnav ul li {
-	top: 50px;
+
     position: relative;
 	list-style-type: none;
 	background-color: #F4F4F4;
-
-
-
 }
 
 .topnav ul li a:hover {
@@ -293,15 +295,14 @@ div.nav-bar {
 
 .topnav.responsive ul:first-child li:first-child {
 	border-top: 3px solid #E06B05 ;
+	top: 50px;
 }
 
-.topnav.responsive ul li:last-child {
+.topnav.responsive ul:first-child li:last-child {
 
 	padding-bottom: 15px;
     border-bottom: 3px solid #d3d3d3;
 }
-
-
   /* Style the links inside the navigation bar */
 .topnav a {
 	float: left;
@@ -505,11 +506,12 @@ input[type=text] {
 .acc-container {
 	border-bottom: 3px solid #d3d3d3;
 	display: none;
-	border-top: 1px solid #000;
 	padding-bottom: 15px;
 	width:100%;
 	overflow: hidden;
 	color: rgb(255, 255, 255);
+	background-color: #F4F4F4;
+	
 
   }
 
@@ -517,25 +519,25 @@ input[type=text] {
 	width:100%;
 	margin:0 auto;
 	cursor:pointer;
-	display:flex
+
+
+}
+.acc-container li a {
+ padding-top: 12px;
+ padding-bottom: 12px;
 }
 
-.acc-container li i{
-	color: #000;
-	position: relative;
-	top: 13px;
-	float: right;
-  }
 
   .acc-container li ul li a {
+	padding: 0;
 	width:100%;
 	margin:0 auto;
 	background:#d5d5d5;
-	padding-left: 10px;
-	height: 0;
+	padding-left: 50px;
 	overflow-y: hidden;
 	height: auto;
 	font-size: var(--fonte-base);
+	
   }
 
 
@@ -672,7 +674,7 @@ input[type=text] {
 	padding-bottom: 5px;
   }
 
-  .noticias-coluna-unica {
+  .noticias-coluna-primeira {
 	grid-area: coluna1;
   }
 
@@ -737,7 +739,6 @@ input[type=text] {
 	font-size: var(--fonte-2up);
 	line-height: 1.15;
 	color: var(--cor-tema);
-
 	top: 0;
 	height: 100%;
 	display: flex;
@@ -751,12 +752,12 @@ input[type=text] {
 	font-size: var(--fonte-2up);
 	line-height: 1.15;
 	color: var(--cor-tema);
-
 	top: 0;
 	height: 100%;
 	display: flex;
 	align-items: flex-end;
 	padding: 0 var(--fonte-2up) var(--fonte-1up);
+	margin: 0;
 
   }
 

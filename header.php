@@ -27,7 +27,7 @@
   <div class="lateral">
     <div class="logo-bg">
     	<div class="logo">
-    		<img  src="img/midias-logo.png" alt="logo DEMID">
+    		<?php the_custom_logo(); ?>
     	</div>
     </div>
       <div class="sidebar-bg">
@@ -70,7 +70,7 @@
 
 	    <div class="titulo">
 
-	      <div class="tit_img"><img id="tit_img" src="img/SVG final.svg" alt="Logo do curso de Comunicação em Mídias Digitais"></div>
+	      <div class="tit_img"  id="tit_img"><?php the_custom_logo(); ?></div>
 
 	    	<div class="title">
 	    		<p id="tit_centro"><?php printf( get_bloginfo ( 'description' ) ); ?><br /></p>
@@ -78,13 +78,13 @@
 	    	</div>
 
 	    	<div class="brasao">
-	        <img  src="img/SVG final.svg" alt="logo ufpb">
+	        <img  src="<?php echo get_bloginfo("template_directory"); ?>/img/SVG final.svg" alt="logo ufpb">
 	      </div>
 	    </div>
 	    <div class="nav-bar-bg">
 	    	<div class="nav-bar">
 	        <div class="topnav" id="myTopnav">
-	        <nav>
+	        <nav id="nav">
 	            <ul>
 
 				<!--
