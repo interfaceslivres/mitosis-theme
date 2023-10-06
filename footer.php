@@ -42,7 +42,7 @@
     </div>
   </footer>
 </div>
-</div>
+</div> <!-- fecha div .container aberta no header.php -->
 
 <script type="text/javascript" src="controller.js"> </script>
 <?php wp_footer() ?>
