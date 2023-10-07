@@ -103,7 +103,7 @@ class Widget_Curso extends WP_Widget {
             $faq = $instance['faq' . $i];
             $resposta = $instance['resposta' . $i];
             if (!empty($faq) && !empty($resposta)) {
-                echo '<h3>' . esc_html($faq) . '</h3><p>' . esc_html($resposta) . '</p>';
+                echo '<h3>' . esc_html($faq) . '</h3><p>' . nl2br(esc_html($resposta)) . '</p>';
             }
         }
         echo '</div> <!-- fecha div text-curso --> </div> <!-- fecha div curso -->';
@@ -127,7 +127,7 @@ class Widget_Curso extends WP_Widget {
 	        echo '<div class="mais"> <div class="mapa"> <div class="mapa-titulo">';
 	        echo '<h2>Localização:</h2></div>';
 	        echo '<div class="mapa-img">' . $iframe_code . '</div></div>';
-	        echo '<div class="text-ufpb"> <div class="text-ufpb-text"> <p>' . esc_html($instance['texto-localizacao']) . '</p></div>';
+	        echo '<div class="text-ufpb"> <div class="text-ufpb-text"> <p>' . nl2br(esc_html($instance['texto-localizacao'])) . '</p></div>';
     	
 
 	        // Links de Destaque

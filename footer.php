@@ -3,7 +3,7 @@
   <footer>
     <div id="footer-top">
       <div id="footer-dados">
-        <img id="footer-logo" src="img/SVG vazadão com nome.svg">
+        <img id="footer-logo" src="<?php echo get_bloginfo("template_directory"); ?>/img/logo-ufpb-svg.svg">
         <div>
           <div>Departamento de Mídias Digitais</div>
           <div class="redes-sociais">
@@ -21,9 +21,9 @@
       </div>
       <div class="footer-direita">
         <div id="footer-creditos">
-          <a href="#"><img class="img-creditos" src="img/il-logo.jpg" alt=""></a>
-          <a href="#"><img class="img-creditos" src="img/cchla-logo.png" alt=""></a>
-          <a href="#"><img class="img-creditos" src="img/SVG vazadão com nome.svg" alt=""></a>
+          <a href="#"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/il-logo.jpg" alt=""></a>
+          <a href="#"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/cchla-logo.png" alt=""></a>
+          <a href="#"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/logo-ufpb-svg.svg" alt=""></a>
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@
 </div>
 </div> <!-- fecha div .container aberta no header.php -->
 
-<script type="text/javascript" src="controller.js"> </script>
+<script type="text/javascript" src="<?php echo get_bloginfo("template_directory"); ?>/js/controller.js"> </script>
 <?php wp_footer() ?>
 </body>
 </html>

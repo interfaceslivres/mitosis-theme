@@ -6,16 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Estudo Site Coordenação</title>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
-	<script type="text/javascript" src="<?php echo get_bloginfo("template_directory"); ?>/script.js" ></script>
+	<script type="text/javascript" src="<?php echo get_bloginfo("template_directory"); ?>/js/script.js" ></script>
 	
  	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 	<link href="https://fonts.cdnfonts.com/css/rawline" rel="stylesheet">
 
-	<link href="assets/fontawesome6/css/fontawesome.css" rel="stylesheet">
-	<link href="assets/fontawesome6/css/brands.css" rel="stylesheet">
-	<link href="assets/fontawesome6/css/regular.css" rel="stylesheet">
-	<link href="assets/fontawesome6/css/solid.css" rel="stylesheet">
+	<link href="<?php echo get_bloginfo("template_directory"); ?>/assets/css/fontawesome.min.css" rel="stylesheet">
+	<link href="<?php echo get_bloginfo("template_directory"); ?>/assets/css/brands.min.css" rel="stylesheet">
+	<link href="<?php echo get_bloginfo("template_directory"); ?>/assets/css/regular.min.css" rel="stylesheet">
+	<link href="<?php echo get_bloginfo("template_directory"); ?>/assets/css/solid.min.css" rel="stylesheet">
 	<?php wp_head(); ?>
 
 </head>
@@ -78,7 +78,7 @@
 	    	</div>
 
 	    	<div class="brasao">
-	        <img  src="<?php echo get_bloginfo("template_directory"); ?>/img/SVG final.svg" alt="logo ufpb">
+	        <img  src="<?php echo get_bloginfo("template_directory"); ?>/img/logo-ufpb-cores.svg" alt="logo ufpb">
 	      </div>
 	    </div>
 	    <div class="nav-bar-bg">
