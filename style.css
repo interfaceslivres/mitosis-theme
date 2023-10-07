@@ -1143,7 +1143,8 @@ input[type=text] {
 
 /*-------------------------------------- curso -----------------------------------------------*/
 
-.curso {  display: grid;
+.curso {  
+	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto;
 	gap: 0px 0px;
@@ -1156,17 +1157,15 @@ input[type=text] {
 	  "text-curso";
   }
 
+.secoes {
+	grid-area: secoes;
+}
 
   .youtube {
 	padding-top: 25px;
-	height: auto;
 	width: 100%;
 	grid-area: youtube;
-
-	min-height:240px;
-
-
-
+	height:240px;
  }
 
  .youtube iframe{
@@ -1174,7 +1173,6 @@ input[type=text] {
  }
 
   .text-curso {
-
 	grid-area: text-curso;
 
  }
