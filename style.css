@@ -659,6 +659,10 @@ input[type=text] {
   gap: 30px;
 }
 
+.camada-1 {
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.16);
+}
+
 .noticias-coluna {
   grid-area: coluna2;
   display: flex;
@@ -1140,7 +1144,106 @@ input[type=text] {
 	gap: 30px;
   }
 /*------------------------------------------notícia-end ---------------------------------------------------*/
+/*------------------------------------------Icone ---------------------------------------------------*/
 
+.links-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	grid-area : links;
+
+	justify-content: center;
+  
+	
+
+	background-size: cover;
+	background-position: center;
+	display: block;
+  
+	
+	margin-top: 30px;
+	margin-bottom: 16px;
+	margin-left: 30px;
+  }
+
+  .link-image-wrapper {
+	height: 150px;
+	width: 150px;
+  }
+
+
+
+  .link-img{
+	
+	background-size: cover;
+	background-position: right;
+	display: block;
+	background-repeat: no-repeat;
+
+	width: 200px;
+	height: 120px;
+
+	border-radius: 5%;
+  }
+
+  .links {  
+	  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: var(--fonte-3up);  
+
+	
+  
+	max-width: 1170px;
+	height: auto;
+  
+	/* BG BLOCO */
+
+	
+  }
+  
+  .link-full {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0px;
+	gap: 10px;
+  }
+  
+
+  .link-full:hover .link-image-wrapper{
+	color: var(--cor-background);
+	background-color: var(--cor-tema);
+  }
+  
+  .link-full:hover .link-text{
+	color: var(--cor-tema);
+  }
+  
+  .link-image {
+	display: block;
+	width: 60%;
+	height: 60%;
+  }
+  
+  .link-text {
+	margin-top: 25px;
+
+	font-style: normal;
+	font-weight: 600;
+	font-size: var(--fonte-3up);
+	line-height: 1.15;
+  
+	/* or 125% */
+	text-align: center;
+  
+	color: var(--cor-texto-claro);
+  }
+
+
+/*------------------------------------------Icone-end ---------------------------------------------------*/
 /*-------------------------------------- curso -----------------------------------------------*/
 
 .curso {  
