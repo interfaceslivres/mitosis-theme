@@ -1,4 +1,13 @@
 
+<?php
+// Obtém a URL da imagem do Customizer
+$imagem_footer_url = get_theme_mod('imagem_footer');
+
+if (!empty($imagem_footer_url)) {
+    echo '<div class="imagem-curso"> <img src="' . esc_url($imagem_footer_url) . '" alt="Adendo gráfico do site"></div>';
+}
+?>
+
 <div id="footer-wrapper">
   <footer>
     

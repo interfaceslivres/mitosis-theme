@@ -181,9 +181,9 @@ class Widget_Curso extends WP_Widget {
         echo '</div> </div> </div> </div> </div></div> </div>  <!-- fecha todas as divs do conteiner -->';
 
         // Imagem Banner
-        if (!empty($instance['imagem-banner'])) {
-            echo '<div class="imagem-curso"> <img src="' . esc_url($instance['imagem-banner']) . '" alt="Adendo gráfico do site do curso"></div>';
-        }
+  //      if (!empty($instance['imagem-banner'])) {
+   //         echo '<div class="imagem-curso"> <img src="' . esc_url($instance['imagem-banner']) . '" alt="Adendo gráfico do site do curso"></div>';
+  //      }
 
         echo $args['after_widget'];
     }
@@ -205,8 +205,7 @@ class Widget_Curso extends WP_Widget {
             'texto-link-destaque1' => 'Texto do Link Destaque 1',
             'url-link-destaque1' => 'URL do Link Destaque 1',
             'texto-link-destaque2' => 'Texto do Link Destaque 2',
-            'url-link-destaque2' => 'URL do Link Destaque 2',
-            'imagem-banner' => 'URL da Imagem Banner'
+            'url-link-destaque2' => 'URL do Link Destaque 2'
         );
 
 		// Exibir campos do formulário
@@ -239,6 +238,30 @@ class Widget_Curso extends WP_Widget {
 }
 
 // fim do registro de widget personalizado da home
+
+
+
+
+// imagem customizada entre conteudo e footer
+function adicionar_controle_imagem_footer($wp_customize) {
+    $wp_customize->add_section('secao_imagem_footer', array(
+        'title' => 'Imagem do Footer',
+        'priority' => 30,
+    ));
+
+    $wp_customize->add_setting('imagem_footer', array(
+        'default' => '',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'imagem_footer', array(
+        'label' => 'Selecione a imagem do Footer (Dimensões: 1100 x 200)',
+        'section' => 'secao_imagem_footer',
+        'settings' => 'imagem_footer',
+    )));
+}
+add_action('customize_register', 'adicionar_controle_imagem_footer');
+
 
 
 
