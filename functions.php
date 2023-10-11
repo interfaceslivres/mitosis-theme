@@ -192,20 +192,20 @@ class Widget_Curso extends WP_Widget {
     public function form($instance) {
         // Campos do widget
         $campos = array(
-            'nome-do-curso' => 'Nome do Curso',
-            'video-do-curso' => 'Vídeo do Curso',
-            'faq1' => 'Informação 1',
-            'resposta1' => 'Resposta 1 (670 caracteres)',
-            'faq2' => 'Informação 2',
-            'resposta2' => 'Resposta 2 (670 caracteres)',
-            'faq3' => 'Informação 3',
-            'resposta3' => 'Resposta 3 (670 caracteres)',
+            'nome-do-curso' => 'Título da Seção',
+            'video-do-curso' => 'Vídeo da Seção',
+            'faq1' => 'Título da Informação 1',
+            'resposta1' => 'Texto da Informação 1 (670 caracteres)',
+            'faq2' => 'Título da Informação 2',
+            'resposta2' => 'Texto da Informação 2 (670 caracteres)',
+            'faq3' => 'Título da Informação 3',
+            'resposta3' => 'Texto da Informação 3 (670 caracteres)',
             'localizacao' => 'Localização (cole apenas a URL do Google Maps)',
             'texto-localizacao' => 'Texto sobre Localização (670 caracteres)',
-            'texto-link-destaque1' => 'Texto do Link Destaque 1',
-            'url-link-destaque1' => 'URL do Link Destaque 1',
-            'texto-link-destaque2' => 'Texto do Link Destaque 2',
-            'url-link-destaque2' => 'URL do Link Destaque 2'
+            'texto-link-destaque1' => 'Texto do Link 1',
+            'url-link-destaque1' => 'URL do Link 1',
+            'texto-link-destaque2' => 'Texto do Link 2',
+            'url-link-destaque2' => 'URL do Link 2'
         );
 
 		// Exibir campos do formulário

@@ -1079,12 +1079,12 @@ input[type=text] {
   .noticia-categorias a {
 	color: var(--cor-tema);
 	text-decoration: underline;
+	margin-left: 8px;
   }
 
   .noticia-categorias {
 	display: flex;
 	flex-direction: row;
-	gap: 8px;
   }
 
   .noticia-compartilhe {
@@ -1150,7 +1150,6 @@ input[type=text] {
 
 
   .noticia-titulo {
-    font-size: var(--fonte-2up);
     margin-top: 20px;
   }
 
@@ -1164,6 +1163,10 @@ input[type=text] {
     line-height: 1.15;
     color: var(--cor-texto-medio);
     margin-bottom: var(--fonte-2up);
+}
+
+.content-grid a {
+    color: var(--cor-tema);
 }
 
 .noticia-links-relacionados a:hover{

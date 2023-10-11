@@ -1,3 +1,5 @@
+
+
 // função para menu responsivo
 
 function menuTransforma() {
@@ -36,9 +38,9 @@ function menuTransforma() {
 
 
 
-const accBtns = document.querySelectorAll('.acc-btn');
+const botns = document.querySelectorAll('.acc-btn');
 
-accBtns.forEach(function(accBtn) {
+botns.forEach(function(accBtn) {
   accBtn.addEventListener('click', function() {
     const accContent = this.nextElementSibling;
     console.log(accContent.className);
