@@ -1,24 +1,22 @@
 
 <div id="footer-wrapper">
   <footer>
+    
+
+
     <div id="footer-top">
       <div id="footer-dados">
         <img id="footer-logo" src="<?php echo get_bloginfo("template_directory"); ?>/img/logo-ufpb-svg.svg">
         <div>
-          <div>Departamento de Mídias Digitais</div>
+          <div><?php echo get_bloginfo( 'name' ); ?></div>
           <div class="redes-sociais">
-            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
             <a href="#"><i class="fa-solid fa-square-rss"></i></a>
-          </div>
-          <address>R. Ver. João Freire - Conj. Pres. Castelo Branco III, João Pessoa - PB, 58050-420</address>
-          <a href="tel:+55 (83) 3216-7847">+55 (83) 3216-7847</a>
-          <a class="mais-link" href="#">Contato</a>
-          <div>Segunda à Sexta, 12h00 às 19h00</div>
-        </div>
-      </div>
+
+
+            <?php $widget_values = dynamic_sidebar('widgets-do-footer'); ?>
+
+
+
       <div class="footer-direita">
         <div id="footer-creditos">
           <a href="#"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/il-logo.jpg" alt=""></a>

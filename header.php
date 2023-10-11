@@ -4,7 +4,7 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Estudo Site Coordenação</title>
+	<title><?php echo get_bloginfo( 'name' ); ?> - UFPB</title>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
 	<script type="text/javascript" src="<?php echo get_bloginfo("template_directory"); ?>/js/script.js" ></script>
 	
@@ -16,6 +16,7 @@
 	<link href="<?php echo get_bloginfo("template_directory"); ?>/assets/css/brands.min.css" rel="stylesheet">
 	<link href="<?php echo get_bloginfo("template_directory"); ?>/assets/css/regular.min.css" rel="stylesheet">
 	<link href="<?php echo get_bloginfo("template_directory"); ?>/assets/css/solid.min.css" rel="stylesheet">
+
 	<?php wp_head(); ?>
 
 </head>
@@ -27,7 +28,15 @@
   <div class="lateral">
     <div class="logo-bg">
     	<div class="logo">
-    		<?php the_custom_logo(); ?>
+    		<?php
+    		$custom_logo_id = get_theme_mod( 'custom_logo' );
+				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+				if ( has_custom_logo() ) {
+					echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+				} else {
+					echo '<img src="' . get_bloginfo('template_directory') . '/img/logo-ufpb.png" alt="' . get_bloginfo( 'name' ) . '">';
+				}
+				?>
     	</div>
     </div>
       <div class="sidebar-bg">

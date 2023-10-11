@@ -248,53 +248,36 @@
         </div>
       </div> <!-- fecha div .noticias -->
             
-
-      <div class="links-wrapper ">
-        <div class="links">
-
-
+      <!-- se quiser banners, codigo para o futuro:
+        <div class="links-wrapper ">
+          <div class="links">
             <a href="#" class="link-img camada-1"  style="
-                              background-image:
-                              linear-gradient(180deg, rgba(231, 120, 23, 0.7) 1000%, rgba(0, 0, 0, 0) 50%), 
-                        
-                              url(<?php the_post_thumbnail_url(); ?>)">   
-                         
-                  <div class="link-text" href="#">Calendário Acadêmico</div>
-
+            background-image:
+            linear-gradient(180deg, rgba(231, 120, 23, 0.7) 1000%, rgba(0, 0, 0, 0) 50%), 
+            url(#)">   
+              <div class="link-text" href="#">Calendário Acadêmico</div>
             </a>
-
             <a href="#" class="link-img camada-1"  style="
-                              background-image:
-                              linear-gradient(180deg, rgba(231, 120, 23, 0.7) 1000%, rgba(0, 0, 0, 0) 50%), 
-                        
-                              url(<?php the_post_thumbnail_url(); ?>)">   
-                         
-                  <div class="link-text" href="#">Demidias</div>
-
+            background-image:
+            linear-gradient(180deg, rgba(231, 120, 23, 0.7) 1000%, rgba(0, 0, 0, 0) 50%), 
+            url(#)">   
+              <div class="link-text" href="#">Demidias</div>
             </a>
-
             <a href="#" class="link-img camada-1"  style="
-                              background-image:
-                              linear-gradient(180deg, rgba(231, 120, 23, 0.7) 1000%, rgba(0, 0, 0, 0) 50%), 
-                        
-                              url(<?php the_post_thumbnail_url(); ?>)">   
-                         
-                  <div class="link-text" href="#">test psicotécnico </div>
-
+            background-image:
+            linear-gradient(180deg, rgba(231, 120, 23, 0.7) 1000%, rgba(0, 0, 0, 0) 50%), 
+            url(#)">   
+              <div class="link-text" href="#">test psicotécnico </div>
             </a>
-
             <a href="#" class="link-img camada-1"  style="
-                              background-image:
-                              linear-gradient(180deg, rgba(231, 120, 23, 0.7) 1000%, rgba(0, 0, 0, 0) 50%), 
-                        
-                              url(<?php the_post_thumbnail_url(); ?>)">   
-                         
-                  <div class="link-text" href="#">Calendário Acadêmico</div>
-
+            background-image:
+            linear-gradient(180deg, rgba(231, 120, 23, 0.7) 1000%, rgba(0, 0, 0, 0) 50%), 
+            url(#)">   
+              <div class="link-text" href="#">Calendário Acadêmico</div>
             </a>
-
-        </div>
-      </div>
+          </div>
+        </div> 
+      -->
 
 
 
