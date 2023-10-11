@@ -44,7 +44,7 @@
                           ?>
                         </div><!-- fecha div categorias -->
                       </div><!-- fecha div rotulo -->
-                      <a href="noticia.html" class="noticia-com-img camada-1" style="
+                      <a href="<?php the_permalink();?>" class="noticia-com-img camada-1" style="
                       background-image:
                       linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), 
                       linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 85%),
@@ -84,7 +84,7 @@
                           ?>
                         </div><!-- fecha div categorias -->
                       </div><!-- fecha div rotulo -->
-                      <a class="noticia-sem-img camada-1" href="#"> 
+                      <a class="noticia-sem-img camada-1" href="<?php the_permalink();?>"> 
                         <div class="noticia-sem-img-titulo" id="noticia-principal"><?php the_title(); ?></div>
                       </a>
                     </div>
@@ -122,7 +122,7 @@
                               ?>
                             </div><!-- fecha div categorias -->
                           </div><!-- fecha div rotulo -->
-                          <a href="noticia.html" class="noticia-com-img camada-1" style="
+                          <a href="<?php the_permalink();?>" class="noticia-com-img camada-1" style="
                           background-image:
                           linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), 
                           linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 85%),
@@ -160,7 +160,7 @@
                               ?>
                             </div><!-- fecha div categorias -->
                           </div><!-- fecha div rotulo -->
-                          <a href="noticia.html" class="noticia-sem-img camada-1">              
+                          <a href="<?php the_permalink();?>" class="noticia-sem-img camada-1">              
                             <div class="noticia-sem-img-titulo"><?php the_title(); ?></div>
                           </a>
                         </div>
@@ -194,7 +194,7 @@
                               ?>
                             </div><!-- fecha div categorias -->
                           </div><!-- fecha div rotulo -->
-                          <a href="noticia.html" class="noticia-com-img camada-1" style="
+                          <a href="<?php the_permalink();?>" class="noticia-com-img camada-1" style="
                           background-image:
                           linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), 
                           linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 85%),
@@ -232,7 +232,7 @@
                               ?>
                             </div><!-- fecha div categorias -->
                           </div><!-- fecha div rotulo -->
-                          <a href="noticia.html" class="noticia-sem-img camada-1">              
+                          <a href="<?php the_permalink();?>" class="noticia-sem-img camada-1">              
                             <div class="noticia-sem-img-titulo"><?php the_title(); ?></div>
                           </a>
                         </div>

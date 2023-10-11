@@ -5,6 +5,15 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title><?php echo get_bloginfo( 'name' ); ?> - UFPB</title>
+
+
+
+	<style>
+	:root {
+		--cor-tema: <?php echo get_theme_mod('cor_padrao', '#102d69'); ?>;
+  	--cor-highlight: <?php echo get_theme_mod('cor_padrao', '#102d69'); ?>;
+	}
+	</style>
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>">
 	<script type="text/javascript" src="<?php echo get_bloginfo("template_directory"); ?>/js/script.js" ></script>
 	
@@ -16,6 +25,7 @@
 	<link href="<?php echo get_bloginfo("template_directory"); ?>/assets/css/brands.min.css" rel="stylesheet">
 	<link href="<?php echo get_bloginfo("template_directory"); ?>/assets/css/regular.min.css" rel="stylesheet">
 	<link href="<?php echo get_bloginfo("template_directory"); ?>/assets/css/solid.min.css" rel="stylesheet">
+
 
 	<?php wp_head(); ?>
 

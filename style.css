@@ -27,21 +27,19 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 :root {
-	--cor-tema: #E77817;
+	/*--cor-tema: #E77817;*/
+	/*--cor-highlight: #E15323;*/
 	--cor-black: #000;
 	--cor-background: white;
 	--cor-sidebar: #F4F4F4;
 	--cor-footer: #252525;
 	--cor-middleground: #F0F0F0;
-	--cor-highlight: #E15323;
 	--cor-footer-conteudo: white;
 	--cor-item-nav: var(--cor-background);
 	--cor-texto-escuro: #333333;
 	--cor-texto-medio: #555555;
 	--cor-texto-claro: white;
-
 	font-size: 11px;
-
 	--fonte-base: 1.25rem;
 	--fonte-1up: 1.563rem;
 	--fonte-2up: 1.953rem;
