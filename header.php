@@ -38,15 +38,17 @@
   <div class="lateral">
     <div class="logo-bg">
     	<div class="logo">
-    		<?php
-    		$custom_logo_id = get_theme_mod( 'custom_logo' );
-				$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-				if ( has_custom_logo() ) {
-					echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
-				} else {
-					echo '<img src="' . get_bloginfo('template_directory') . '/img/logo-ufpb.png" alt="' . get_bloginfo( 'name' ) . '">';
-				}
-				?>
+    		<a href="<?php echo get_home_url(); ?>">
+	    		<?php
+	    		$custom_logo_id = get_theme_mod( 'custom_logo' );
+					$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+					if ( has_custom_logo() ) {
+						echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+					} else {
+						echo '<img src="' . get_bloginfo('template_directory') . '/img/logo-ufpb.png" alt="' . get_bloginfo( 'name' ) . '">';
+					}
+					?>
+				</a>
     	</div>
     </div>
       <div class="sidebar-bg">

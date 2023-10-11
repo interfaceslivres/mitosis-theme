@@ -1169,6 +1169,10 @@ input[type=text] {
     color: var(--cor-tema);
 }
 
+.content-grid a:hover {
+    color: var(--cor-texto-escuro);
+}
+
 .noticia-links-relacionados a:hover{
   text-decoration: underline;
 }

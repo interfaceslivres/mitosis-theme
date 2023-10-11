@@ -64,34 +64,14 @@
       endwhile; ?>                                    
 
                     <h2>Outras Notícias</h2>
+
                     <div class="noticias-relacionadas">
-                        <div class="noticia-wrapper">
-                            <div class="rotulo-claro">
-                              <div>15 de Setembro de 2022</div>
-                              <div><a href="ufpb.br">Notícia</a>, <a href="ufpb.br">Calamidade</a></div>
-                            </div>
-                            <a href="noticia.html" class="noticia-com-img camada-1" style="
-                            background-image:
-                            linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), 
-                            linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 85%),
-                            url('img/noticia.jpeg')">
-                              <div class="background-wrapper">                  
-                                <div class="noticia-com-img-titulo">Resultado final do concurso de "Marketing Digital e Empreendedorismo"</div>
-                              </div>                          
-                            </a>
-                          </div>
-              
-                          <div class="noticia-wrapper">
-                            <div class="rotulo">
-                              <div>15 de Setembro de 2022</div>
-                              <div><a href="ufpb.br">Notícia</a>, <a href="ufpb.br">Calamidade</a></div>
-                            </div>
-                            <a href="noticia.html" class="noticia-sem-img camada-1">              
-                              <div class="noticia-sem-img-titulo">Resultado final do concurso de "Áudio Digital"</div>              
-                            </a>
-                            </div>
+                      
+                      <?php cats_related_post() ?>
+
+
                     </div> 
-                </div>
+                </div> <!-- fecha content grid -->
 
 
       </div> <!-- fecha div .noticias -->

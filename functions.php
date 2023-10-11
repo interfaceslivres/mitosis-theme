@@ -266,6 +266,130 @@ add_action('customize_register', 'adicionar_controle_imagem_footer');
 
 
 
+//noticias relacionadas ou outras noticias
+
+function cats_related_post() {
+
+    $post_id = get_the_ID();
+    $cat_ids = array();
+    $categories = get_the_category( $post_id );
+
+    if(!empty($categories) && !is_wp_error($categories)):
+        foreach ($categories as $category):
+            array_push($cat_ids, $category->term_id);
+        endforeach;
+    endif;
+
+    $current_post_type = get_post_type($post_id);
+
+    $query_args = array( 
+        'category__in'   => $cat_ids,
+        'post_type'      => $current_post_type,
+        'post__not_in'    => array($post_id),
+        'posts_per_page'  => '2',
+     );
+
+    $related_cats_post = new WP_Query( $query_args );
+
+    if($related_cats_post->have_posts()):
+         while($related_cats_post->have_posts()): $related_cats_post->the_post(); ?>
+            <?php if ( has_post_thumbnail() ) { ?>
+                    <div class="noticia-wrapper">
+                          <div class="rotulo-claro">
+                            <div><?php echo get_the_date( 'd \d\e F Y' ); ?></div>
+                            <div class="categorias">
+                              <?php
+                            // Obtém as categorias do post
+                            $categories = get_the_category();
+
+                            // Verifica se existem categorias
+                            if ($categories) {
+                                // Limita a exibição a duas categorias
+                                $categories = array_slice($categories, 0, 2);
+
+                                // Loop pelas categorias
+                                foreach ($categories as $category) {
+                                    // Exibe o nome da categoria como um link
+                                    echo '<a href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a>';
+
+                                    // Adiciona uma vírgula após a categoria, exceto pela última
+                                    if (next($categories)) {
+                                        echo ', ';
+                                    }
+                                }
+                            }
+                            ?>
+                            </div> <!-- fecha categorias -->
+                          </div> <!-- fecha div rotulo-claro -->
+                          <a href="<?php the_permalink();?>" class="noticia-com-img camada-1" style="
+                          background-image:
+                          linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), 
+                          linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 85%),
+                          url(<?php the_post_thumbnail_url(); ?>)">
+                            <div class="background-wrapper">                  
+                              <div class="noticia-com-img-titulo"><?php the_title(); ?></div>
+                            </div>                          
+                          </a>
+                    </div>
+            <?php } else { ?> 
+
+                    <div class="noticia-wrapper">
+                            <div class="rotulo">
+                              <div><?php echo get_the_date( 'd \d\e F Y' ); ?></div>
+                              <div class="categorias">
+                                <?php
+                              // Obtém as categorias do post
+                              $categories = get_the_category();
+
+                              // Verifica se existem categorias
+                              if ($categories) {
+                                  // Limita a exibição a duas categorias
+                                  $categories = array_slice($categories, 0, 2);
+
+                                  // Loop pelas categorias
+                                  foreach ($categories as $category) {
+                                      // Exibe o nome da categoria como um link
+                                      echo '<a href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a>';
+
+                                      // Adiciona uma vírgula após a categoria, exceto pela última
+                                      if (next($categories)) {
+                                          echo ', ';
+                                      }
+                                  }
+                              }
+                              ?>
+                              </div> <!-- fecha a div categorias -->
+                            </div> <!-- fecha a div rotulo -->
+                            <a href="<?php the_permalink();?>" class="noticia-sem-img camada-1">              
+                            <div class="noticia-sem-img-titulo"><?php the_title(); ?></div>    
+                            </a>
+                    </div>
+
+
+        <?php 
+         } 
+        endwhile;
+
+        // Restore original Post Data
+        wp_reset_postdata();
+     endif;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
