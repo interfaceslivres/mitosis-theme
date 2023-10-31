@@ -174,6 +174,10 @@ img {
 	padding: 0;
 }
 
+
+.sidebar li ul li ul li{
+	padding-left: 15px;
+}
 /* --------------------------- sidebar end -----------------------------------*/
 
 .cabecalho {
@@ -295,7 +299,7 @@ div.nav-bar {
 
 .topnav.responsive ul:first-child li:first-child {
 	border-top: 3px solid #E06B05 ;
-	top: 50px;
+	margin-top: 50px;
 }
 
 .topnav.responsive ul:first-child li:last-child {
@@ -529,7 +533,7 @@ input[type=text] {
 
 
   .acc-container li ul li a {
-	padding: 0;
+	padding: 3px 0;
 	width:100%;
 	margin:0 auto;
 	background:#d5d5d5;
@@ -955,6 +959,12 @@ input[type=text] {
 #noticias .noticia-wrapper:hover .background-wrapper {
   background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 22%, var(--cor-middleground) 30%);
 }
+
+.cards-lista {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+  }
 
 
 /*FIM DE DOCUMENTOS*/

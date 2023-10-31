@@ -107,15 +107,6 @@
 	        <div class="topnav" id="myTopnav">
 	        <nav id="nav">
 	            <ul>
-
-				<!--
-	                <li><a href="#">Notícias</a></li>
-	                <li><a href="#">Curso</a></li>
-	                <li><a href="#">Projetos</a></li>
-	                <li><a href="#">Documentos</a></li>
-	                <li><a href="#">Chamados</a></li>
-
-				-->
 					<?php 
 						wp_nav_menu(   
 							array ( 
@@ -137,43 +128,6 @@
 							) 
 						); 
 					?>
-
-					<!--
-	                <li>
-	                  <div class="acc-container">
-
-	                    <div class="acc-btn"><a>Docentes</a><i class="fa-solid fa-chevron-down"></i></div>
-	                    <div class="acc-content">
-	                      <a href="#">notícias</a>
-	                      <a href="#">corpo adminstrativo</a>
-	                    </div>
-
-	                    <div class="acc-btn"><a>Discentes</a><i class="fa-solid fa-chevron-down"></i></div>
-	                    <div class="acc-content">
-	                      <a href="#">tcc</a>
-	                      <a href="#">documentos</a>
-	                      <a href="#">projetos</a>
-	                      <a href="#">notícias</a>
-	                      <a href="#">mapa</a>
-	                    </div>
-
-	                    <div class="acc-btn"><a>Visitantes</a><i class="fa-solid fa-chevron-down"></i></div>
-	                    <div class="acc-content">
-	                      <a href="#">apresentação</a>
-	                      <a href="#">vídeos</a>
-	                      <a href="#">mapa</a>
-	                    </div>
-
-	                    <div class="acc-btn"><a>Link</a><i class="fa-solid fa-chevron-down"></i></div>
-	                    <div class="acc-content">
-	                      <a href="#">sigaa</a>
-	                      <a href="#">ufpb</a>
-
-	                    </div>
-
-	                  </div>
-	                </li>
-					-->
 	              </ul>
 	            </nav>
 
