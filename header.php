@@ -145,7 +145,8 @@
 	      <div id="myPesquisa" class="pesquisa" >
 	        <div class="barraBotaop">
 	          <div class="barra">
-	            <input type="text" placeholder="Digite sua pesquisa..." id="barraConfig">
+			  <?php get_search_form(); ?>
+	           <!-- <input type="text" placeholder="Digite sua pesquisa..." id="barraConfig"> -->
 	          </div>
 	          <div class="botaop">
 	            <p>Pesquisar</p>
