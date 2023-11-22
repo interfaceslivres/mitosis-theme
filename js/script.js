@@ -127,3 +127,8 @@ function menuTransformaAcessibilidade() {
       var body = document.getElementsByTagName("body")[0];
       body.classList.toggle("contraste");
     }
+
+    function autismo() {
+      var body = document.getElementsByTagName("body")[0];
+      body.classList.toggle("autismo");
+    }

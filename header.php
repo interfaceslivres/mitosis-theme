@@ -31,7 +31,7 @@
 
 </head>
 
-<body class="contraste">
+<body>
 
 <div class="container">
   <!-- Lateral esquerda do site-->
@@ -43,7 +43,7 @@
 	    		$custom_logo_id = get_theme_mod( 'custom_logo' );
 					$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 					if ( has_custom_logo() ) {
-						echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+						echo '<div class="tit_img" id="tit_img"><img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '"></div>';
 					} else {
 							echo '';
 						//echo '<img src="' . get_bloginfo('template_directory') . '/img/logo-ufpb.png" alt="' . get_bloginfo( 'name' ) . '">';
@@ -92,7 +92,7 @@
 
 	    <div class="titulo">
 
-	      <div class="tit_img"  id="tit_img"><?php the_custom_logo(); ?></div>
+	      <?php the_custom_logo(); ?>
 
 	    	<div class="title">
 	    		<p id="tit_centro"><?php printf( get_bloginfo ( 'description' ) ); ?><br /></p>
@@ -137,7 +137,7 @@
 	      <div class="acessibilidade"  id="acess-bloco">  
 	        <a href="javascript:void(0);" class="iconAcessibilidade" onclick="menuAcess();"><i title="Menu de Acessibilidade" id="icone-acess" class="fa-solid fa-universal-access"></i></a>
 		      <a href="javascript:void(0);" class="iconAcessibilidade altoconstraste" onclick="altoContraste();"><i title="Alto Constraste" class="fa-solid fa-eye"></i></a>
-		      <a href="javascript:void(0);" class="iconAcessibilidade autismo"><i title="Autismo" class="fa-solid fa-ribbon"></i></a>
+		      <a href="javascript:void(0);" class="iconAcessibilidade autismo" onclick="autismo();"><i title="Autismo" class="fa-solid fa-ribbon"></i></a>
 	      </div>
 
 	      <div class="lupa">

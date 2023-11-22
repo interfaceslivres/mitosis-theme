@@ -279,20 +279,18 @@ div.nav-bar {
 
 /*-------------------------------------- menu responsivo-----------------------------------------------*/
 .topnav {
-	height: 37px;
-
+	/* height: 37px; */
 	justify-content: flex-start;
 	list-style: none;
-	width: 100%;
+	width: 83%;
 	position: relative;
   }
 
   .topnav ul li {
-
-    position: relative;
+  position: relative;
 	list-style-type: none;
 	background-color: #F4F4F4;
-}
+	}
 
 .topnav ul li a:hover {
 	border-bottom: none;
@@ -321,6 +319,7 @@ div.nav-bar {
 	line-height: 154.523%;
 	text-decoration: none;
 	font-style: normal;
+	border-bottom: 2px solid var(--cor-tema);
 }
 
 .topnav a.icon p {
@@ -418,9 +417,6 @@ div.nav-bar {
   transform: scaleX(-1);
 }
 
-/*#acess-bloco .baixavisao {
-	color: #000;
-}*/
 
 #acess-bloco .altoconstraste, #acess-bloco .autismo {
 	opacity: 0;
@@ -572,7 +568,71 @@ body.contraste .container .main .mais .text-ufpb .text-ufpb-link .mais-link::aft
 	color: #ff0;
 }
 
+/* fim do alto contraste */
 
+/* início do css p/ autismo */
+
+body.autismo .container .cabecalho .nav-bar-bg {
+	background: #fff;
+}
+
+body.autismo .container .cabecalho .nav-bar-bg {
+	background: #fff;
+}
+body.autismo.contraste .container .cabecalho .nav-bar-bg {
+	background: #252525;
+}
+
+body.autismo .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a {
+  padding: 8px 11px;
+  margin: 0 2px;
+  color: #000;
+}
+
+body.autismo .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li:nth-child(1) a {
+	background: #F23DA0;
+}
+
+body.autismo .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li:nth-child(2) a {
+	background: #1AC6D9;
+}
+body.autismo .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li:nth-child(3) a {
+	background: #DCF230;
+}
+body.autismo .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li:nth-child(4) a {
+	background: #F2D027;
+}
+body.autismo .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li:nth-child(5) a {
+	background: #F27141;
+}
+body.autismo .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li:nth-child(6) a {
+	background: #655AF5;
+}
+body.autismo .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li:nth-child(7) a {
+	background: #3DDC8F;
+}
+body.autismo .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li:nth-child(8) a {
+	background: #B6F52F;
+}
+body.autismo .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li:nth-child(9) a {
+	background: #F5A41A;
+}
+body.autismo .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li:nth-child(10) a {
+	background: #F45056;
+}
+
+body.autismo .container .cabecalho .nav-bar-bg .nav-bar .acessibilidade a, body.autismo .container .cabecalho .nav-bar-bg .nav-bar .lupa a{
+	color: #000;
+} 
+body.autismo.contraste .container .cabecalho .nav-bar-bg .nav-bar .acessibilidade a, body.autismo.contraste .container .cabecalho .nav-bar-bg .nav-bar .lupa a{
+	color: #fff;
+} 
+
+body.autismo .container .lateral .sidebar-bg {
+	box-shadow: none;
+}
+
+/* fim de autismo */
 
 
 /*-------------------------------------------------- acessibilidade-end ----------------------------------------------------------------*/
@@ -1974,7 +2034,7 @@ input[type=text] {
 
 /*-------------------------------------- footer end-----------------------------------------------*/
 
-@media only screen and (min-width: 815px)  {
+@media only screen and (min-width: 960px)  {
 
 /* ------------------------------------------------------ versão de comuputador --------------------------------------------------------- */
 
@@ -2097,7 +2157,7 @@ input[type=text] {
 
 	.container{
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-		grid-template-rows: 176px  auto;
+		/*grid-template-rows: 176px  auto;*/
 		grid-template-areas:
 		"lateral cabecalho cabecalho cabecalho cabecalho cabecalho"
     	"lateral main main main main main";
