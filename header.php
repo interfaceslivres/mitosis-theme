@@ -31,7 +31,7 @@
 
 </head>
 
-<body>
+<body class="contraste">
 
 <div class="container">
   <!-- Lateral esquerda do site-->
@@ -106,37 +106,38 @@
 	    <div class="nav-bar-bg">
 	    	<div class="nav-bar">
 	        <div class="topnav" id="myTopnav">
-	        <nav id="nav">
+	        	<nav id="nav">
 	            <ul>
-					<?php 
-						wp_nav_menu(   
-							array ( 
-								'theme_location' => 'main-menu',
-								'items_wrap' => '%3$s',
-								'container' => false,
-							) 
-						); 
-					?>
-				</ul>
+								<?php 
+									wp_nav_menu(   
+										array ( 
+											'theme_location' => 'main-menu',
+											'items_wrap' => '%3$s',
+											'container' => false,
+										) 
+									); 
+								?>
+							</ul>
+							<ul class="acc-container">
+								<?php 
+									wp_nav_menu(   
+										array ( 
+											'theme_location' => 'sidebar-menu',
+											'items_wrap' => '%3$s',
+											'container' => false,
+										) 
+									); 
+								?>
+			        </ul>
+            </nav>
 
-				<ul class="acc-container">
-					<?php 
-						wp_nav_menu(   
-							array ( 
-								'theme_location' => 'sidebar-menu',
-								'items_wrap' => '%3$s',
-								'container' => false,
-							) 
-						); 
-					?>
-	              </ul>
-	            </nav>
+          	<a href="javascript:void(0);" class="icon" onclick="menuTransforma()"><i id="menuParaFechar" class="fa-solid fa-bars"></i><p class="menuAbrir" id="menuMenu">Menu</p><p class="menuFechar" id="menuFecharId">Fechar</p></a>
+	      	</div>
 
-	            <a href="javascript:void(0);" class="icon" onclick="menuTransforma()"><i id="menuParaFechar" class="fa-solid fa-bars"></i><p class="menuAbrir" id="menuMenu">Menu</p><p class="menuFechar" id="menuFecharId">Fechar</p></a>
-	      </div>
-
-	      <div class="acessibilidade">
-	        <a href="javascript:void(0);" class="iconAcessibilidade" onclick="test()" ><i id="acessibilidadeParaFechar" class="fa-solid fa-universal-access"></i></a>
+	      <div class="acessibilidade"  id="acess-bloco">  
+	        <a href="javascript:void(0);" class="iconAcessibilidade" onclick="menuAcess();"><i title="Menu de Acessibilidade" id="icone-acess" class="fa-solid fa-universal-access"></i></a>
+		      <a href="javascript:void(0);" class="iconAcessibilidade altoconstraste" onclick="altoContraste();"><i title="Alto Constraste" class="fa-solid fa-eye"></i></a>
+		      <a href="javascript:void(0);" class="iconAcessibilidade autismo"><i title="Autismo" class="fa-solid fa-ribbon"></i></a>
 	      </div>
 
 	      <div class="lupa">

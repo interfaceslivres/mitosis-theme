@@ -44,6 +44,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	--fonte-1up: 1.563rem;
 	--fonte-2up: 1.953rem;
 	--fonte-3up: 2.441rem;
+	--fonte-4up: 2.903rem;
 }
 
 a {
@@ -406,9 +407,173 @@ div.nav-bar {
 	top: 13px;
 	right: 50px;
 	font-size: var(--fonte-2up);
-
-  	color: #fff;
+  color: #fff;
+  transition: right, transform, 0.8s;
+  transform: scaleX(1);
 }
+
+.acessibilidade.ativo a.iconAcessibilidade {
+	right: 130px;
+  transition: right, transform, 0.8s;
+  transform: scaleX(-1);
+}
+
+/*#acess-bloco .baixavisao {
+	color: #000;
+}*/
+
+#acess-bloco .altoconstraste, #acess-bloco .autismo {
+	opacity: 0;
+	right: 10px;
+}
+
+#acess-bloco.ativo .altoconstraste, #acess-bloco.ativo .autismo  {
+	opacity: 1;
+	transition: right opacity 0.8s 0.4s;
+}
+
+#acess-bloco.ativo .altoconstraste{
+	right: 90px;
+}
+
+ #acess-bloco.ativo .autismo  {
+	right: 50px;
+}
+
+/* alto contraste */
+
+body.contraste, body.contraste .container .lateral .sidebar-bg {
+	background: #252525;
+}
+
+body.contraste .container .lateral .sidebar-bg .sidebar li a {
+	color: #ff0;
+	font-size: var(--fonte-2up);
+}
+
+body.contraste .container .lateral .sidebar-bg .sidebar li ul li a {
+	color: #CCCC6C;
+	font-size: var(--fonte-1up);
+}
+
+body.contraste .container .lateral .sidebar-bg .sidebar li ul li a:hover {
+	color: #ff0;
+	text-decoration: underline;
+}
+
+body.contraste .container .cabecalho .titulo .title #tit_centro {
+	color: #CCCC6C;
+}
+
+body.contraste .container .cabecalho .titulo .title #tit_curso {
+	color: #ff0;
+}
+
+body.contraste .container .cabecalho .nav-bar-bg {
+	background: #221f1f;
+}
+
+body.contraste .container .main .noticias .secoes {
+	color: #ff0;
+}
+
+body.contraste .container .main .noticias .conteudo .noticias-coluna-unica .noticia-wrapper .background-wrapper2 {
+	background: linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 90%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000 85%);
+}
+
+body.contraste .container .main .noticias .conteudo .noticias-coluna-unica .noticia-wrapper .rotulo-claro .categorias a{
+	color: #fff;
+}
+body.contraste .container .main .noticias .conteudo .noticias-coluna-unica .noticia-wrapper .rotulo-claro .categorias a:hover{
+	color: #fff;
+	text-decoration: underline;
+}
+
+body.contraste .container .main .noticias .conteudo .noticias-coluna-unica .noticia-wrapper .background-wrapper2 .noticia-com-img-titulo{
+	color: #ff0;
+}
+
+body.contraste .container .main .noticias .conteudo .noticias-coluna .noticia-wrapper .noticia-sem-img{
+	background: #221f1f;
+}
+
+body.contraste .container .main .noticias .conteudo .noticias-coluna .noticia-wrapper .rotulo div{
+	color: #fff;
+}
+
+body.contraste .container .main .noticias .conteudo .noticias-coluna .noticia-wrapper .rotulo .categorias a{
+	color: #fff;
+}
+
+body.contraste .container .main .noticias .conteudo .noticias-coluna .noticia-wrapper .rotulo .categorias a:hover{
+	color: #fff;
+	text-decoration: underline;
+}
+
+body.contraste .container .main .noticias .conteudo .noticias-coluna .noticia-wrapper .noticia-sem-img .noticia-sem-img-titulo{
+	color: #ff0;
+}
+
+body.contraste .container .main .noticias .conteudo .noticias-coluna .noticia-wrapper .background-wrapper {
+	background: linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 90%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000 85%);
+}
+
+body.contraste .container .main .noticias .conteudo .noticias-coluna .noticia-wrapper .rotulo-claro .categorias a{
+	color: #fff;
+}
+
+body.contraste .container .main .noticias .conteudo .noticias-coluna .noticia-wrapper .rotulo-claro .categorias a:hover{
+	color: #fff;
+	text-decoration: underline;
+}
+
+body.contraste .container .main .noticias .conteudo .noticias-coluna .noticia-wrapper .background-wrapper .noticia-com-img-titulo{
+	color: #ff0;
+}
+
+
+body.contraste .container .main .noticias .link-wrapper .mais-link{
+	color: #ff0;
+}
+body.contraste .container .main .noticias .link-wrapper .mais-link::after  {
+	color: #ff0;
+}
+
+body.contraste .imagem-curso  {
+	background: linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 90%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000 85%);
+}
+
+body.contraste .container .main .curso .secoes, body.contraste .container .main .curso .text-curso h3 {
+	color: #ff0;
+}
+
+body.contraste .container .main .curso .text-curso p {
+color: #CCCC6C;
+}
+
+body.contraste .container .main .mais {
+background: #221f1f;
+}
+
+body.contraste .container .main .mais .mapa .mapa-titulo h2{
+	color: #ff0;
+}
+
+
+body.contraste .container .main .mais .text-ufpb .text-ufpb-text p {
+color: #CCCC6C;
+}
+
+body.contraste .container .main .mais .text-ufpb .text-ufpb-link .mais-link {
+	color: #ff0;
+}
+
+body.contraste .container .main .mais .text-ufpb .text-ufpb-link .mais-link::after {
+	color: #ff0;
+}
+
+
+
 
 /*-------------------------------------------------- acessibilidade-end ----------------------------------------------------------------*/
 /*---------------------------------------------  B A R R A  D E  P E S Q U I S A ------------------------------------------------------*/

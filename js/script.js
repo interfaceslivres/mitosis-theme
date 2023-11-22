@@ -102,3 +102,28 @@ function menuTransformaAcessibilidade() {
 
 }
 
+// acessibilidade
+    function menuAcess() {
+        var elementoBloco = document.getElementById('acess-bloco');
+        elementoBloco.classList.toggle('ativo');
+
+          if (elementoBloco.classList.contains('ativo')) {
+            setTimeout(function () {
+              var elementoIcone = document.getElementById('icone-acess');
+              elementoIcone.className = 'fa-solid fa-xmark';
+            }, 200);
+          } 
+          else {
+            setTimeout(function () {
+              var elementoIcone = document.getElementById('icone-acess');
+              elementoIcone.className = 'fa-solid fa-universal-access';
+            }, 200);
+          }
+
+
+    }
+
+    function altoContraste() {
+      var body = document.getElementsByTagName("body")[0];
+      body.classList.toggle("contraste");
+    }

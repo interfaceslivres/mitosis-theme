@@ -125,7 +125,10 @@ class Widget_Curso extends WP_Widget {
     public function widget($args, $instance) {
         echo $args['before_widget'];
         // Exibir o conteúdo do widget
+        if (!empty($instance['nome-do-curso'])) {
         echo '<h2 class="secoes">' . esc_html($instance['nome-do-curso']) . '</h2>';
+        }
+        
         if (!empty($instance['video-do-curso'])) {
 	        $url = esc_url($instance['video-do-curso']);
 	        // Substitua "watch" por "embed" na URL
