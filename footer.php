@@ -19,7 +19,7 @@ if (!empty($imagem_footer_url)) {
         <div>
           <div><?php echo get_bloginfo( 'name' ); ?></div>
           <div class="redes-sociais">
-            <a href="#"><i class="fa-solid fa-square-rss"></i></a>
+            <a href="<?php bloginfo('atom_url'); ?>"><i class="fa-solid fa-square-rss"></i></a>
 
 
             <?php $widget_values = dynamic_sidebar('widgets-do-footer'); ?>
@@ -28,9 +28,9 @@ if (!empty($imagem_footer_url)) {
 
       <div class="footer-direita">
         <div id="footer-creditos">
-          <a href="#"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/il-logo.jpg" alt=""></a>
-          <a href="#"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/cchla-logo.png" alt=""></a>
-          <a href="#"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/logo-ufpb-svg.svg" alt=""></a>
+          <a href="https://github.com/interfaceslivres"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/logo-interfaces2.png" alt=""></a>
+          <a href="https://www.sti.ufpb.br/"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/sti-logo-branco.png" alt=""></a>
+          <a href="https://ufpb.br/"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/logo-escura-ufpb.png" alt=""></a>
         </div>
       </div>
     </div>

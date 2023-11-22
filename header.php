@@ -45,7 +45,8 @@
 					if ( has_custom_logo() ) {
 						echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
 					} else {
-						echo '<img src="' . get_bloginfo('template_directory') . '/img/logo-ufpb.png" alt="' . get_bloginfo( 'name' ) . '">';
+							echo '';
+						//echo '<img src="' . get_bloginfo('template_directory') . '/img/logo-ufpb.png" alt="' . get_bloginfo( 'name' ) . '">';
 					}
 					?>
 				</a>
@@ -99,7 +100,7 @@
 	    	</div>
 
 	    	<div class="brasao">
-	        <img  src="<?php echo get_bloginfo("template_directory"); ?>/img/logo-ufpb-cores.svg" alt="logo ufpb">
+	        <a href="https://ufpb.br/"><img  src="<?php echo get_bloginfo("template_directory"); ?>/img/logo-ufpb-cores.svg" alt="logo ufpb"></a>
 	      </div>
 	    </div>
 	    <div class="nav-bar-bg">
