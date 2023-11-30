@@ -87,7 +87,7 @@
 
 	    	<div class="title">
 	    		<p id="tit_centro"><?php printf( get_bloginfo ( 'description' ) ); ?><br /></p>
-	        <h1 id="tit_curso"><?php echo get_bloginfo( 'name' ); ?></h1>
+	        <h1 id="tit_curso"><a href="<?php echo get_home_url(); ?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
 	    	</div>
 
 	    	<div class="brasao">
