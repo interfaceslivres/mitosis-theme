@@ -39,16 +39,7 @@
     <div class="logo-bg">
     	<div class="logo">
     		<a href="<?php echo get_home_url(); ?>">
-	    		<?php
-	    		$custom_logo_id = get_theme_mod( 'custom_logo' );
-					$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-					if ( has_custom_logo() ) {
-						echo '<div class="tit_img" id="tit_img"><img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '"></div>';
-					} else {
-							echo '';
-						//echo '<img src="' . get_bloginfo('template_directory') . '/img/logo-ufpb.png" alt="' . get_bloginfo( 'name' ) . '">';
-					}
-					?>
+	    	<?php the_custom_logo(); ?>
 				</a>
     	</div>
     </div>
@@ -92,7 +83,7 @@
 
 	    <div class="titulo">
 
-	      <?php the_custom_logo(); ?>
+	      
 
 	    	<div class="title">
 	    		<p id="tit_centro"><?php printf( get_bloginfo ( 'description' ) ); ?><br /></p>
@@ -150,10 +141,14 @@
 			  <?php get_search_form(); ?>
 	           <!-- <input type="text" placeholder="Digite sua pesquisa..." id="barraConfig"> -->
 	          </div>
-	          <div class="botaop">
+
+
+	          <!-- <div class="botaop">
 	            <p>Pesquisar</p>
 	            <i id="xBarra" class="fa-solid fa-magnifying-glass"></i>
 	          </div>
+				-->
+				
 	        </div>
 	      </div>
 

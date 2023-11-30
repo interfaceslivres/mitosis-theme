@@ -105,7 +105,6 @@ img {
 .logo-bg {
 	grid-area: logo;
 	display: flex;
-	justify-content: flex-end;
 	align-items: center;
 }
 
@@ -282,7 +281,6 @@ div.nav-bar {
 	/* height: 37px; */
 	justify-content: flex-start;
 	list-style: none;
-	width: 83%;
 	position: relative;
   }
 
@@ -319,7 +317,7 @@ div.nav-bar {
 	line-height: 154.523%;
 	text-decoration: none;
 	font-style: normal;
-	border-bottom: 2px solid var(--cor-tema);
+	padding-top: 12px;
 }
 
 .topnav a.icon p {
@@ -673,16 +671,33 @@ body.autismo .container .lateral .sidebar-bg {
 .barraBotaop {
 	width: 100%;
 	display: grid;
-	grid-template-columns: 80% 20%;
+	grid-template-columns: 100%;
 	grid-template-areas:
-	  "barra submit";
+	  "barra ";
 }
 
-.barra {
+.barra form div {
 
+	display: flex;
+    flex-direction: row;	
 	margin-right: 5px;
 	grid-area: barra;
 	background-color: #fff;
+	> input[type=text] {
+		color: #B7B7B7;
+		font-family: Rawline;
+		font-size: 18px;
+		font-weight: 600;
+  		border: none;
+	}
+	> input[type=submit] {
+		color: #B7B7B7;
+		font-family: Rawline;
+		font-size: 18px;
+		font-weight: 600;
+		border: none;
+		border-left: 5px solid var(--cor-tema);
+	}
  }
 
 input[type=text] {
@@ -691,13 +706,17 @@ input[type=text] {
 	box-sizing: border-box;
 }
 
-#barraConfig{
+input[type=submit] {
+	border-left: 3px var(--cor-tema);
+}
 
-	color: #B7B7B7;
-	font-family: Rawline;
-	font-size: 18px;
-	font-weight: 600;
-  	border: none;
+
+.botaop {
+    margin-right: 5px;
+    max-width: 200px;
+    grid-area: botaop;
+    background-color: #fff;
+	display: none;
 }
 
 .submit {
