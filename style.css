@@ -295,7 +295,6 @@ div.nav-bar {
 }
 
 .topnav.responsive ul:first-child li:first-child {
-	border-top: 3px solid #E06B05 ;
 	margin-top: 50px;
 }
 
@@ -658,14 +657,12 @@ body.autismo .container .lateral .sidebar-bg {
 }
 
 .pesquisa {
-
 	max-width: 1170px;
-	padding: 22px 0;
-	padding-left: 10px;
-	padding-right: 6px;
+	padding: 0px 6px 44px 10px;
 	display: none;
 	position: relative;
 	z-index: 10;
+	top: 28px;
 }
 
 .barraBotaop {
@@ -752,42 +749,80 @@ input[type=submit] {
 }
 
 .acc-container {
-	border-bottom: 3px solid #d3d3d3;
 	display: none;
 	padding-bottom: 15px;
 	width:100%;
 	overflow: hidden;
 	color: rgb(255, 255, 255);
 	background-color: #F4F4F4;
-	
-
   }
 
 .acc-container li {
 	width:100%;
 	margin:0 auto;
 	cursor:pointer;
-
-
 }
+
 .acc-container li a {
  padding-top: 12px;
  padding-bottom: 12px;
 }
 
 
-  .acc-container li ul li a {
-	padding: 3px 0;
-	width:100%;
-	margin:0 auto;
-	background:#d5d5d5;
-	padding-left: 50px;
-	overflow-y: hidden;
-	height: auto;
-	font-size: var(--fonte-base);
-	
-  }
+.acc-container li ul li a {
+		width: 100%;
+    margin: 0 auto;
+    background: #d5d5d5;
+    padding-left: 65px;
+    overflow-y: hidden;
+    height: auto;
+    font-size: var(--fonte-1up);
+ }
 
+
+				html {
+				  -webkit-tap-highlight-color: rgba(0,0,0,0);
+				}
+
+        .acc-container .menu-item-has-children a::after{
+				  font-family: "Font Awesome 6 Free";
+				  font-weight: 900;
+				  content: " \f078";
+				  margin-left: 5px;
+				  transform: rotate(0deg);
+				  transition: .3s all;
+        }
+
+        .acc-container .menu-item-has-children.active a::after{
+        	transform: rotate(-180deg);
+				  transition: .3s all;
+        }
+
+
+        .acc-container .menu-item-has-children .sub-menu li a::after{
+				 content: " ";
+				}
+
+        .acc-container .menu-item .sub-menu {
+            display: none;
+        }
+
+        .acc-container .menu-item.active .sub-menu {
+            display: block;
+        }
+
+        .fa-chevron-down {
+            margin-left: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .menu-item:not(.active) .fa-chevron-down {
+            transform: rotate(0deg);
+        }
+        
+        .menu-item.active .fa-chevron-down {
+            transform: rotate(180deg);
+        }
 
 
 
@@ -2073,7 +2108,7 @@ input[type=submit] {
 	  padding: 0;
 	  margin: 8px 10px;
 	  color: var(--cor-background);
-
+	  border-bottom: 2px solid var(--cor-tema);
 	}
 
 	.topnav a.icon {

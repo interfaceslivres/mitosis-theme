@@ -39,10 +39,11 @@ if (!empty($imagem_footer_url)) {
       <div id="footer-ultima-linha">
         <div>© 2023 Universidade Federal da Paraíba.</div>
         <div>
-          <a href="#">Acesso à Informação</a>
-          <a href="#">Acessibilidade</a>
-          <a href="#">Dados Abertos UFPB</a>
-          <a href="#">Privacidade e Proteção de Dados</a>
+          <a href="https://www.ufpb.br/ouvidoria">Ouvidoria</a>
+          <a href="https://www.ufpb.br/acessoainformacao/">Acesso à Informação</a>
+          <a href="https://www.ufpb.br/cia/">Acessibilidade</a>
+          <a href="https://dados.gov.br/home">Dados Abertos UFPB</a>
+          <a href="https://www.gov.br/mds/pt-br/pt-br/acesso-a-informacao/privacidade-e-protecao-de-dados">Privacidade e Proteção de Dados</a>
         </div>
 
       </div>

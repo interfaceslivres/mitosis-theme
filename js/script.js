@@ -1,5 +1,6 @@
 // função para menu responsivo
 
+
 function menuTransforma() {
   var x = document.getElementById("myTopnav");
   var y = document.getElementById("menuParaFechar");
@@ -60,13 +61,41 @@ accBtns.forEach(function(accBtn) {
 });
 
 
-
 window.addEventListener('resize', function(event) {  
-  if (this.screen.width > 813) {
-  var x = document.getElementById("myTopnav");
-  x.className = "topnav";
+  if (this.screen.width > 400) {
+   var x = document.getElementById("menuMenu");
+       x.className = "menuAbrir";
+   var y = document.getElementById("menuFecharId");
+       y.className = "menuFechar";
+   var z = document.getElementById("menuParaFechar");
+       z.className = "fa-solid fa-bars";
   };
 }, true);
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+
+    // Adiciona um ouvinte de evento a todos os links dentro de itens com subitens
+    document.querySelectorAll('.menu-item-has-children > a').forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita a navegação padrão do link
+
+            var parentMenuItem = link.parentElement;
+
+            // Remove a classe 'active' de todos os itens irmãos
+            var siblings = parentMenuItem.parentElement.children;
+            for (var i = 0; i < siblings.length; i++) {
+                if (siblings[i] !== parentMenuItem) {
+                    siblings[i].classList.remove('active');
+                }
+            }
+
+            // Adiciona a classe 'active' ao item de menu clicado
+            parentMenuItem.classList.toggle('active');
+        });
+    });
+});
+
 
 function menuTransformaPesquisa() {
   var x = document.getElementById("myPesquisa");

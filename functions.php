@@ -527,7 +527,18 @@ add_action('widgets_init', 'registrar_widget_footer_top');
 
 
 
+function custom_nav_menu_items($items, $args) {
+    if ($args->theme_location == 'sidebar-menu') {
+        // Transforma os itens em um array
+        $menu_items = wp_get_nav_menu_items($args->menu);
+        
+        // Itera pelos itens para adicionar setas e classes
+        foreach ($menu_items as $menu_item) {
+            $has_children = in_array('menu-item-has-children', $menu_item->classes);
+        }
 
+    return $items;
+}};
 
 
 
