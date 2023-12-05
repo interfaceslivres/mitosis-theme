@@ -750,6 +750,10 @@ input[type=submit] {
  padding-right: 20px;
 }
 
+#xBarra:hover{
+	background-color: var(--cor-black);
+}
+
 .acc-container {
 	display: none;
 	padding-bottom: 15px;

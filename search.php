@@ -62,7 +62,7 @@
                                                         </div>
                                                     <?php else : ?> 
                                                         <div class="noticia-wrapper4">
-                                                        <div class="rotulo">
+                                                         <div class="rotulo">
                                                             <div><?php echo get_the_date( 'd \d\e F Y' ); ?></div>
                                                             <div class="categorias">
                                                             <?php
@@ -87,7 +87,7 @@
                                                             }
                                                             ?>
                                                             </div><!-- fecha div categorias -->
-                                                        </div><!-- fecha div rotulo -->
+                                                             </div><!-- fecha div rotulo -->
                                                         <a class="noticia-sem-img2 camada-1" href="<?php the_permalink();?>"> 
                                                             <div class="noticia-sem-img-titulo" ><?php the_title(); ?></div>
                                                         </a>
