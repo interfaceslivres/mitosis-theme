@@ -211,11 +211,7 @@ class Widget_Curso extends WP_Widget {
             'faq3' => 'Título da Informação 3',
             'resposta3' => 'Texto da Informação 3 (670 caracteres)',
             'localizacao' => 'Localização (cole apenas a URL do Google Maps)',
-            'texto-localizacao' => 'Texto sobre Localização (670 caracteres)',
-            'texto-link-destaque1' => 'Texto do Link 1',
-            'url-link-destaque1' => 'URL do Link 1',
-            'texto-link-destaque2' => 'Texto do Link 2',
-            'url-link-destaque2' => 'URL do Link 2'
+            'texto-localizacao' => 'Texto sobre Localização (670 caracteres)'
         );
 
 		// Exibir campos do formulário
@@ -226,7 +222,7 @@ class Widget_Curso extends WP_Widget {
 		    echo '<label for="' . $this->get_field_id($campo) . '">' . esc_html($label) . ':</label>';
 
 		    // Verificar se o índice é par
-		    if ($index < 3 || $index == 4 || $index == 6 || $index == 8 ||  $index >= 10) {
+		    if ($index < 3 || $index == 4 || $index == 6 || $index == 8) {
 		        echo '<input class="widefat" id="' . $this->get_field_id($campo) . '" name="' . $this->get_field_name($campo) . '" type="text" value="' . $valor . '">';
 		    } else {
 		        echo '<textarea class="widefat"  maxlength="677" id="' . $this->get_field_id($campo) . '" name="' . $this->get_field_name($campo) . '" rows="5">' . $valor . '</textarea>';
@@ -301,8 +297,12 @@ function cats_related_post() {
 
     $related_cats_post = new WP_Query( $query_args );
 
-    if($related_cats_post->have_posts()):
-         while($related_cats_post->have_posts()): $related_cats_post->the_post(); ?>
+    if($related_cats_post->have_posts()): ?>
+
+        <h2>Outras Notícias</h2>
+        <div class="noticias-relacionadas">
+
+        <?php while($related_cats_post->have_posts()): $related_cats_post->the_post(); ?>
             <?php if ( has_post_thumbnail() ) { ?>
                     <div class="noticia-wrapper">
                           <div class="rotulo-claro">
@@ -382,6 +382,9 @@ function cats_related_post() {
 
         // Restore original Post Data
         wp_reset_postdata();
+        ?> 
+        </div> <!-- fecha div noticias-relacionadas -->
+        <?php
      endif;
 
 }

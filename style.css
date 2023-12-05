@@ -642,6 +642,19 @@ body.contraste div.container div.main div div div.noticias-relacionadas div.noti
 
 /* início do css p/ autismo */
 
+body.autismo div.container header div.nav-bar-bg div #myTopnav a #menuParaFechar {
+	color: #000;
+}
+body.autismo div.container header div.nav-bar-bg div #myTopnav a #menuMenu {
+	color: #000;
+}
+body.autismo div.container header div.nav-bar-bg div #myTopnav a #menuFecharId {
+	color: #000;
+}
+
+
+
+
 body.autismo .container .cabecalho .nav-bar-bg {
 	background: #fff;
 }
@@ -2268,12 +2281,12 @@ body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a:h
 
 /*------------------------ menu responsivo end ---------------------------------*/
 	.sidebar {
-
-		margin-left: 0vw;
+		margin-left: 2vw;
 	}
+
 	div.nav-bar{
+		margin-right: 2vw;
 		padding-left: 20px;
-		margin-right: 0vw;
 		min-height: 0px;
 	}
 
@@ -2333,9 +2346,7 @@ body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a:h
 
 	.noticias {
 		padding: 0;
-		margin: 0;
-		margin-left: 30px;
-
+		margin: 0 2vw 0 30px;
 	}
 
 	.noticia-sem-img {
