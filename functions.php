@@ -10,11 +10,20 @@ function register_menus() {
         array(
             'main-menu' => 'Menu Principal',
             'sidebar-menu' => 'Menu Lateral',
+            'localizacao-menu' => 'Links em Localização',
         )
     ); 
 }
 add_action( 'init', 'register_menus' );
 
+// adicionar opcao de classes pros menus
+function add_menu_link_class( $atts, $item, $args ) {
+  if (property_exists($args, 'link_class')) {
+    $atts['class'] = $args->link_class;
+  }
+  return $atts;
+}
+add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
 
 
 // Função da logo customizada
@@ -51,7 +60,7 @@ function registrar_widgets_personalizados() {
     register_sidebar(array(
         'name'          => 'Área de Widgets do Footer',
         'id'            => 'widgets-do-footer',
-        'description'   => 'Esta é a descrição da minha área de widget personalizada.',
+        'description'   => 'Defina o conteúdo que estará no Footer do site. A imagem é alterada na área de personalização.',
         'before_widget' => '',
         'after_widget'  => '',
         'before_title'  => '',
@@ -116,7 +125,7 @@ class Widget_Curso extends WP_Widget {
             'widget_curso',
             'Widget de Curso',
             array(
-                'description' => 'Um widget personalizado para cursos com campos de nome, vídeo, FAQ, localização, link destaque e imagem banner.'
+                'description' => 'Um widget personalizado para cursos com campos de nome, vídeo, FAQ e localização.'
             )
         );
     }
@@ -165,18 +174,18 @@ class Widget_Curso extends WP_Widget {
 	        echo '<div class="mais"> <div class="mapa"> <div class="mapa-titulo">';
 	        echo '<h2>Localização:</h2></div>';
 	        echo '<div class="mapa-img">' . $iframe_code . '</div></div>';
-	        echo '<div class="text-ufpb"> <div class="text-ufpb-text"> <p>' . nl2br(esc_html($instance['texto-localizacao'])) . '</p></div>';
+	        echo '<div class="text-ufpb"> <div class="text-ufpb-text"> <p>' . nl2br(esc_html($instance['texto-localizacao'])) . '</p></div><div class="text-ufpb-link">';
     	
 
-	        // Links de Destaque
-	        echo '<div class="text-ufpb-link">';
-	        for ($i = 1; $i <= 2; $i++) {
-	            $texto_link = $instance['texto-link-destaque' . $i];
-	            $url_link = $instance['url-link-destaque' . $i];
-	            if (!empty($texto_link) && !empty($url_link)) {
-	                echo '<a class="mais-link" href="' . esc_url($url_link) . '">' . esc_html($texto_link) . '</a>';
-	            }
-	        }
+            wp_nav_menu(   
+                array ( 
+                    'theme_location' => 'localizacao-menu',
+                    'items_wrap' => '%3$s',
+                    'container' => false,
+                    'link_class'   => 'mais-link'
+                ) 
+            ); 
+
 	    }
 
         echo '</div> </div> </div> </div> </div></div> </div>  <!-- fecha todas as divs do conteiner -->';
@@ -256,7 +265,7 @@ function adicionar_controle_imagem_footer($wp_customize) {
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'imagem_footer', array(
-        'label' => 'Selecione a imagem do Footer (Dimensões: 1100 x 200)',
+        'label' => 'Escolha a imagem do footer: 1900 x 300. (Use https://tinypng.com/ para otimizar o carregamento.)',
         'section' => 'secao_imagem_footer',
         'settings' => 'imagem_footer',
     )));
@@ -441,13 +450,13 @@ class WidgetRedesSociais extends WP_Widget {
             echo '<address>' . wp_kses_post($endereco) . '</address>';
         }
         if (!empty($telefone)) {
-            echo '<a href="' . esc_html($telefone) . '">' . esc_html($telefone) . '</a>';
+            echo '<div class="f-link tel"><a href="' . esc_html($telefone) . '">' . esc_html($telefone) . '</a></div>';
         }
         if (!empty($contato)) {
-            echo '<a class="mais-link" href="' . esc_url($contato) . '">Contato</a>';
+            echo '<div class="f-link"><a class="mais-link" href="' . esc_url($contato) . '">Contato</a></div>';
         }
         if (!empty($horario_funcionamento)) {
-            echo '<div>' . esc_html($horario_funcionamento) . '</div></div></div>';
+            echo '<div>' . esc_html($horario_funcionamento) . '</div>';
         }
         echo $args['after_widget'];
     }
