@@ -738,14 +738,16 @@ input[type=submit] {
 }
 
 #xBarra{
-	padding-top:12px;
-
-	font-size: var(--fonte-2up);
-  	color: var(--cor-tema);;
-	display: block;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+ background-color: var(--cor-background);
+ font-size: var(--fonte-2up);
+ color: var(--cor-tema);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border: none;
+ border-left: 5px solid var(--cor-tema);
+ padding-left: 20px;
+ padding-right: 20px;
 }
 
 .acc-container {
@@ -777,6 +779,7 @@ input[type=submit] {
     overflow-y: hidden;
     height: auto;
     font-size: var(--fonte-1up);
+    text-transform: lowercase;
  }
 
 
@@ -1764,7 +1767,7 @@ input[type=submit] {
 }
 
   .youtube {
-	padding-top: 25px;
+	padding-top: 10px;
 	width: 100%;
 	grid-area: youtube;
 	height:240px;
@@ -1780,7 +1783,7 @@ input[type=submit] {
  }
 
 .text-curso h3{
-	padding-top: 10px;
+	padding-top: 20px;
 	font-family: 'Rawline';
 	font-weight: 500;
 	font-size: var(--fonte-2up);
@@ -1794,12 +1797,12 @@ input[type=submit] {
 }
 
 .text-curso p{
-	padding-top: 15px;
+	padding-top: 12px;
 	font-family: 'Rawline';
 	font-style: normal;
 	font-weight: 400;
 	font-size: var(--fonte-base);
-	line-height: 1.5rem;
+	line-height: 1.7rem;
 	margin-bottom: 0;
 	color: var(--cor-texto-escuro);
 
@@ -1883,10 +1886,15 @@ input[type=submit] {
 
   .text-ufpb-link { 
   	grid-area: text-ufpb-link;
+  	align-self: flex-end;
 	}
 
   .text-ufpb-link li {
   	list-style-type: none;
+	}
+
+  .text-ufpb-link li:last-child a.mais-link {
+  	margin-bottom: 0;
 	}
 
   .text-ufpb-link h2{
@@ -2193,10 +2201,6 @@ input[type=submit] {
 
 	.submit p{
 		display: block;
-	}
-
-	#xBarra{
-		display: none;
 	}
 
 	.main{
