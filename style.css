@@ -391,7 +391,13 @@ div.nav-bar {
 #menuParaFechar {
 	padding-top: 6px;
 }
+
+
+
+
 /*----------------------------------------------- acessibilidade ------------------------------------------------------------------------*/
+
+
 
 .acessibilidade{
 	width: 100%;
@@ -433,7 +439,8 @@ div.nav-bar {
 	right: 50px;
 }
 
-/* alto contraste */
+
+/* ---------- alto contraste */
 
 body.contraste, body.contraste .container .lateral .sidebar-bg {
 	background: #252525;
@@ -466,6 +473,16 @@ body.contraste .container .cabecalho .nav-bar-bg {
 	background: #221f1f;
 }
 
+body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a{
+    border-bottom: 2px solid #221f1f;
+    background: #221f1f;
+    color: #FFF;
+}
+
+body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav.responsive ul:first-child li:last-child {
+	    background: #221f1f;
+}
+
 body.contraste .container .main .noticias .secoes {
 	color: #ff0;
 }
@@ -485,6 +502,30 @@ body.contraste .container .main .noticias .conteudo .noticias-coluna-unica .noti
 body.contraste .container .main .noticias .conteudo .noticias-coluna-unica .noticia-wrapper .background-wrapper2 .noticia-com-img-titulo{
 	color: #ff0;
 }
+
+
+body.contraste .container .main .noticias .conteudo .noticias-coluna-unica .noticia-wrapper .rotulo div {
+	color: #fff;
+}
+
+body.contraste .container .main .noticias .conteudo .noticias-coluna-unica .noticia-wrapper .rotulo .categorias a {
+	color: #fff;
+}
+body.contraste .container .main .noticias .conteudo .noticias-coluna-unica .noticia-wrapper .rotulo .categorias a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+
+body.contraste .container .main .noticias .conteudo .noticias-coluna-unica .noticia-wrapper .noticia-sem-img {
+		background: #221f1f;
+}
+
+body.contraste .container .main .noticias .conteudo .noticias-coluna-unica .noticia-wrapper .noticia-sem-img .noticia-sem-img-titulo {
+	color: #ff0;
+}
+
+
 
 body.contraste .container .main .noticias .conteudo .noticias-coluna .noticia-wrapper .noticia-sem-img{
 	background: #221f1f;
@@ -565,7 +606,39 @@ body.contraste .container .main .mais .text-ufpb .text-ufpb-link .mais-link::aft
 	color: #ff0;
 }
 
-/* fim do alto contraste */
+/* internas alto contraste */
+
+body.contraste div.container div.main div div h1.noticia-titulo {
+		color: #ff0;
+}
+body.contraste div.container div.main div div p {
+		color: #fff;
+}
+
+body.contraste div.container div.main div div div.noticia-h2 {
+	color: #fff;
+}
+
+body.contraste div.container div.main div div div.noticia-h2 div div.noticia-categorias a {
+		color: #fff;
+}
+
+
+
+body.contraste div.container div.main div div div.noticias-relacionadas div a div {
+ color: #fff;
+}
+body.contraste div.container div.main div div div.noticias-relacionadas div div div.categorias a{
+	color: #fff;
+	text-decoration: underline;
+}
+
+body.contraste div.container div.main div div div.noticias-relacionadas div.noticia-wrapper a div {
+	background: linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 90%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000 85%);
+}
+/* ------- fim do alto contraste */
+
+
 
 /* início do css p/ autismo */
 
@@ -676,12 +749,12 @@ body.autismo .container .lateral .sidebar-bg {
 .barra form div {
 
 	display: flex;
-    flex-direction: row;	
+  flex-direction: row;	
 	margin-right: 5px;
 	grid-area: barra;
 	background-color: #fff;
 	> input[type=text] {
-		color: #B7B7B7;
+		color: #5a5a5a;
 		font-family: Rawline;
 		font-size: 18px;
 		font-weight: 600;
@@ -697,14 +770,19 @@ body.autismo .container .lateral .sidebar-bg {
 	}
  }
 
-input[type=text] {
+.barra form div input[type=text] {
 	width: 100%;
 	padding: 12px 20px;
 	box-sizing: border-box;
 }
 
-input[type=submit] {
+.barra form div input[type=submit] {
 	border-left: 3px var(--cor-tema);
+}
+
+.barra form div ::placeholder {
+  color: #B7B7B7;
+  opacity: 1; /* Firefox */
 }
 
 
@@ -751,7 +829,7 @@ input[type=submit] {
 }
 
 #xBarra:hover{
-	background-color: var(--cor-black);
+	background-color: var(--cor-sidebar);
 }
 
 .acc-container {
@@ -2176,6 +2254,17 @@ input[type=submit] {
 	.logo {
 		margin-left: 0vw;
 	}
+
+
+body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a{
+  border-bottom: 2px solid #221f1f;
+}
+
+body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a:hover{
+    border-bottom: 2px solid #fff;
+}
+
+
 
 /*------------------------ menu responsivo end ---------------------------------*/
 	.sidebar {
