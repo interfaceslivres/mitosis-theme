@@ -405,10 +405,6 @@ function cats_related_post() {
 
 
 
-
-
-
-
 // WIDGETS PERSONALIZADOS DO FOOTER
 
 class WidgetRedesSociais extends WP_Widget {

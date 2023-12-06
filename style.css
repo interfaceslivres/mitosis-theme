@@ -1160,7 +1160,6 @@ body.autismo .container .lateral .sidebar-bg {
   }
 
   .background-wrapper4 {
-
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -1264,6 +1263,10 @@ body.autismo .container .lateral .sidebar-bg {
   height: 100%;
 }
 
+.noticia-wrapper4 {
+	position: relative;
+}
+
 #noticias .noticia-wrapper:hover .noticia-sem-img{
   background: var(--cor-middleground);
 }
@@ -1307,16 +1310,13 @@ body.autismo .container .lateral .sidebar-bg {
   position: absolute;
   top: var(--fonte-base);
   left: var(--fonte-base);
-
   display: flex;
   flex-direction: row;
   align-items: center;
-
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.45;
   color: var(--cor-texto-medio);
-
   gap: var(--fonte-2up);
 } 
 

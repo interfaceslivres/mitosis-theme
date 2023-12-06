@@ -117,7 +117,7 @@
                         </div>
 
                             <?php else : ?>
-                                <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                                <p><?php _e( 'Desculpe, nenhum post corresponde aos seus critérios.' ); ?></p>
                             <?php endif; ?>
 
                     </div>

@@ -7,24 +7,15 @@
       <div class="corpo" id="noticias">
             <div class="corpo-grid">
                 <div class="content-grid">
-                    <h1>Notícias</h1>
+                    <h1>                <?php
+                printf(__('Resultados para: %s', 'text-domain'), '<span>' . get_search_query() . '</span>');
+                ?></h1>
                     <div class="cards-lista">
               
-                       
-                            <?php
-                                $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-                                $query = new WP_Query( array(
-                                    'paged' => $paged
-                                ) );
-                            ?>
-
-                            <?php if ( $query->have_posts() ) : ?>
-
+                            <?php if ( have_posts() ) : ?>
                             <!-- begin loop -->
-                            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-
-                                    
-                                        
+                            <?php while (have_posts() ) : the_post(); ?>
+  
                                                     <?php if ( has_post_thumbnail()) : ?>
                                                         <div class="noticia-wrapper">
                                                         <div class="rotulo">
@@ -62,7 +53,7 @@
                                                         </div>
                                                     <?php else : ?> 
                                                         <div class="noticia-wrapper4">
-                                                         <div class="rotulo">
+                                                        <div class="rotulo">
                                                             <div><?php echo get_the_date( 'd \d\e F Y' ); ?></div>
                                                             <div class="categorias">
                                                             <?php
@@ -87,7 +78,7 @@
                                                             }
                                                             ?>
                                                             </div><!-- fecha div categorias -->
-                                                             </div><!-- fecha div rotulo -->
+                                                        </div><!-- fecha div rotulo -->
                                                         <a class="noticia-sem-img2 camada-1" href="<?php the_permalink();?>"> 
                                                             <div class="noticia-sem-img-titulo" ><?php the_title(); ?></div>
                                                         </a>
@@ -109,21 +100,11 @@
 
                                 <div class="pagination">
                                     <?php 
-                                        echo paginate_links( array(
-                                            'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
-                                            'total'        => $query->max_num_pages,
-                                            'current'      => max( 1, get_query_var( 'paged' ) ),
-                                            'format'       => '?paged=%#%',
-                                            'show_all'     => false,
-                                            'type'         => 'plain',
-                                            'end_size'     => 2,
-                                            'mid_size'     => 1,
-                                            'prev_next'    => true,
-                                            'prev_text'    => sprintf( '<span>Anterior</span> %1$s', __( '', 'text-domain' ) ),
-                                            'next_text'    => sprintf( '%1$s <span>Próxima</span>', __( '', 'text-domain' ) ),
-                                            'add_args'     => false,
-                                            'add_fragment' => '',
-                                        ) );
+                                    // Paginação
+                                    the_posts_pagination(array(
+                                    'prev_text' => __('Anterior', 'text-domain'),
+                                    'next_text' => __('Próximo', 'text-domain'),
+                                    ));
                                     ?>
                                 </div>
 
@@ -138,7 +119,7 @@
                         </div>
 
                             <?php else : ?>
-                                <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+                                <p><?php _e( 'Desculpe, nenhum resultado corresponde aos seus critérios.' ); ?></p>
                             <?php endif; ?>
 
                     </div>
