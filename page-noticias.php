@@ -7,12 +7,19 @@
       <div class="corpo" id="noticias">
             <div class="corpo-grid">
                 <div class="content-grid">
-                    <h1>Arquivo</h1>
+                    <h1>Notícias</h1>
                     <div class="cards-lista">
-              
-                            <?php if ( have_posts() ) : ?>
+
+
+                            <?php 
+   $args = array(
+        'post_type' => 'post'
+    );
+
+    $post_query = new WP_Query($args);
+                            if ($post_query->have_posts() ) : ?>
                             <!-- begin loop -->
-                            <?php while (have_posts() ) : the_post(); ?>
+                            <?php while ($post_query->have_posts() ) : $post_query->the_post(); ?>
   
                                                     <?php if ( has_post_thumbnail()) : ?>
                                                         <div class="noticia-wrapper">
