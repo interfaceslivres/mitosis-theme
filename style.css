@@ -278,7 +278,6 @@ div.nav-bar {
 
 /*-------------------------------------- menu responsivo-----------------------------------------------*/
 .topnav {
-	/* height: 37px; */
 	justify-content: flex-start;
 	list-style: none;
 	position: relative;
@@ -367,8 +366,6 @@ div.nav-bar {
 }
 
 .topnav nav ul{
-
-
 	transition: height 0.4s;
 }
 
@@ -407,7 +404,7 @@ div.nav-bar {
 .acessibilidade a.iconAcessibilidade {
 	position: absolute;
 	top: 13px;
-	right: 50px;
+  right: 45px;
 	font-size: var(--fonte-2up);
   color: #fff;
   transition: right, transform, 0.8s;
@@ -415,7 +412,7 @@ div.nav-bar {
 }
 
 .acessibilidade.ativo a.iconAcessibilidade {
-	right: 130px;
+	right: 110px;
   transition: right, transform, 0.8s;
   transform: scaleX(-1);
 }
@@ -423,7 +420,7 @@ div.nav-bar {
 
 #acess-bloco .altoconstraste, #acess-bloco .autismo {
 	opacity: 0;
-	right: 10px;
+	right: -25px;
 }
 
 #acess-bloco.ativo .altoconstraste, #acess-bloco.ativo .autismo  {
@@ -432,11 +429,11 @@ div.nav-bar {
 }
 
 #acess-bloco.ativo .altoconstraste{
-	right: 90px;
+	right: 75px;
 }
 
  #acess-bloco.ativo .autismo  {
-	right: 50px;
+	right: 45px;
 }
 
 
@@ -2288,6 +2285,7 @@ body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a:h
 		margin-right: 2vw;
 		padding-left: 20px;
 		min-height: 0px;
+		grid-template-columns: auto 108px 42px;
 	}
 
 	.pesquisa {
@@ -2296,9 +2294,33 @@ body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a:h
 
 	.acessibilidade a.iconAcessibilidade {
 		top: 10px;
-		right: 40px;
-
+    right: 0px;
 	}
+
+.acessibilidade.ativo a.iconAcessibilidade {
+	right: 75px;
+  transition: right, transform, 0.8s;
+  transform: scaleX(-1);
+}
+
+#acess-bloco .altoconstraste, #acess-bloco .autismo {
+	opacity: 0;
+	right: -45px;
+}
+
+#acess-bloco.ativo .altoconstraste, #acess-bloco.ativo .autismo  {
+	opacity: 1;
+	transition: right opacity 0.8s 0.4s;
+}
+
+#acess-bloco.ativo .altoconstraste{
+	right: 35px;
+}
+
+ #acess-bloco.ativo .autismo  {
+	right: 0px;
+}
+
 
 	.lupa a.iconPesquisa {
 		padding-right: 5px;
