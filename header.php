@@ -29,6 +29,13 @@
 
 	<?php wp_head(); ?>
 
+<script>
+  setTimeout(function() {
+    document.body.style.opacity = '1';
+}, 10);
+	//funcao para nao ficar piscando o modo escuro
+</script>
+
 </head>
 
 <body>

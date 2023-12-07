@@ -86,7 +86,10 @@ img {
   grid-template-areas:
   	"cabecalho"
   	"main";
-
+}
+body {
+	opacity: 0;
+	/* para retirar o efeito blink */
 }
 
 /* --------------------------- sidebar-----------------------------------*/
@@ -336,9 +339,9 @@ div.nav-bar {
 	padding: 0;
 	display: flex;
 	position: absolute;
-	padding-left: 10px;
+	padding-left: 20px;
 	top:0;
-	left:0;
+	left: 0;
 	padding-top: 10px;
 	color: var(--cor-texto-claro);
 }
@@ -350,7 +353,7 @@ div.nav-bar {
 
 .topnav.responsive .icon {
   position: absolute;
-  left: 0;
+	left: 0;
   top: 0;
 }
 
@@ -404,7 +407,7 @@ div.nav-bar {
 .acessibilidade a.iconAcessibilidade {
 	position: absolute;
 	top: 13px;
-  right: 45px;
+  right: 60px;
 	font-size: var(--fonte-2up);
   color: #fff;
   transition: right, transform, 0.8s;
@@ -412,7 +415,7 @@ div.nav-bar {
 }
 
 .acessibilidade.ativo a.iconAcessibilidade {
-	right: 110px;
+	right: 120px;
   transition: right, transform, 0.8s;
   transform: scaleX(-1);
 }
@@ -420,7 +423,7 @@ div.nav-bar {
 
 #acess-bloco .altoconstraste, #acess-bloco .autismo {
 	opacity: 0;
-	right: -25px;
+	right: 0px;
 }
 
 #acess-bloco.ativo .altoconstraste, #acess-bloco.ativo .autismo  {
@@ -429,11 +432,11 @@ div.nav-bar {
 }
 
 #acess-bloco.ativo .altoconstraste{
-	right: 75px;
+	right: 85px;
 }
 
  #acess-bloco.ativo .autismo  {
-	right: 45px;
+	right: 55px;
 }
 
 
@@ -633,9 +636,79 @@ body.contraste div.container div.main div div div.noticias-relacionadas div div 
 body.contraste div.container div.main div div div.noticias-relacionadas div.noticia-wrapper a div {
 	background: linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 90%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000 85%);
 }
+
+body.contraste div.container div.main .noticias #noticias div div div div.noticia-wrapper a div.background-wrapper3 {
+background: linear-gradient(-90deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 90%), linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, #221f1f 25%);
+}
+
+body.contraste div.container div.main .noticias #noticias div div div div a.noticia-sem-img2{
+	background: #221f1f;
+}
+
+body.contraste div.container div.main .noticias #noticias div div h1 {
+	color: #ff0;
+}
+
+body.contraste div.container div.main .noticias #noticias div div div div.noticia-wrapper div.rotulo div{
+	color: #fff;
+}
+
+body.contraste div.container div.main .noticias #noticias div div div div.noticia-wrapper div.rotulo div a{
+	color: #fff;
+}
+
+body.contraste div.container div.main .noticias #noticias div div div div.noticia-wrapper div.rotulo div a:hover{
+  text-decoration: underline;
+}
+
+
+body.contraste div.container div.main .noticias #noticias div div div div.noticia-wrapper a div.background-wrapper3 .noticia-com-img-titulo{
+color: #ff0;
+}
+
+body.contraste div.container div.main .noticias #noticias div div div div.noticia-wrapper4 div.rotulo div{
+	color: #fff;
+}
+
+body.contraste div.container div.main .noticias #noticias div div div div.noticia-wrapper4 div.rotulo div a{
+	color: #fff;
+}
+
+body.contraste div.container div.main .noticias #noticias div div div div.noticia-wrapper4 div.rotulo div a:hover{
+  text-decoration: underline;
+}
+
+
+body.contraste div.container div.main .noticias #noticias div div div div a.noticia-sem-img2 div{
+color: #ff0;
+}
+
+body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div nav div span{
+	color: #fff;
+}
+body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div nav div a, 
+body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div nav div a::after,
+body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div nav div a::before {
+	color: #ff0;
+}
+
+body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div span{
+	color: #fff;
+}
+
+body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div a, 
+body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div a::after,
+body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div a::before {
+		color: #ff0;
+}
+
 /* ------- fim do alto contraste */
 
 
+body.autismo.contraste div.container header div.nav-bar-bg div #myTopnav a #menuFecharId, 
+body.autismo.contraste div.container header div.nav-bar-bg div #myTopnav a #menuMenu, body.autismo.contraste div.container header div.nav-bar-bg div #myTopnav a #menuParaFechar  {
+	color: #fff;
+}
 
 /* início do css p/ autismo */
 
@@ -647,6 +720,9 @@ body.autismo div.container header div.nav-bar-bg div #myTopnav a #menuMenu {
 }
 body.autismo div.container header div.nav-bar-bg div #myTopnav a #menuFecharId {
 	color: #000;
+}
+body.autismo.contraste div.container header div.nav-bar-bg div #myTopnav a #menuFecharId {
+	color: #fff;
 }
 
 
@@ -723,8 +799,7 @@ body.autismo .container .lateral .sidebar-bg {
 }
 
 .lupa a.iconPesquisa {
-
-	padding-right: 10px;
+	padding-right: 21px;
 	position: relative;
 	float: right;
 	top: 13px;
@@ -1195,21 +1270,26 @@ body.autismo .container .lateral .sidebar-bg {
   position: absolute;
   top: var(--fonte-base);
   left: var(--fonte-base);
-
   display: flex;
   flex-direction: row;
   align-items: center;
-
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.45;
   color: var(--cor-texto-claro);
-
   gap: var(--fonte-2up);
 } 
 
 .rotulo-claro a {
   color: var(--cor-texto-claro);
+}
+
+.rotulo-claro .categorias a {
+  color: var(--cor-texto-claro);
+}
+
+.rotulo-claro .categorias a:hover {
+  color: var(--cor-tema);
 }
 
 .rotulo-claro a:hover {
@@ -1623,7 +1703,7 @@ body.autismo .container .lateral .sidebar-bg {
 	color: var(--cor-tema);
   }
   
-  .pagination, .page-numbers {
+  .pagination, .page-numbers, .pagination .nav-links {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -1644,62 +1724,42 @@ body.autismo .container .lateral .sidebar-bg {
   }
 
   .next.page-numbers{
-
 	text-decoration: none;
-
   }
 
   .prev.page-numbers{
-
 	text-decoration: none;
-
   }
 
+.pagination a.next.page-numbers:hover, .pagination a.prev.page-numbers:hover {
+	color: var(--cor-tema);
+}
   
+  .pagination a.page-numbers:hover {
+	color: var(--cor-tema);
+  }
 
   .next.page-numbers::after{
 	font-family: "Font Awesome 6 Free";
 	font-weight: 900;
 	content: "\f061";
 	color: var(--cor-tema);
-  
 	margin-left: 0.5rem;  
-  
 	display: inline-block;
 	font-style: normal;
 	font-variant: normal;
 	text-rendering: auto;
 	--webkit-font-smoothing: antialiased;
-  
 	transition-property: transform;
 	transition-duration: 150ms;
 	transition-timing-function: ease-in-out;
 	transition-delay: 0s;
 	line-height: 1;
 	text-decoration: none;
-
   }
 
   .next.page-numbers:hover::after {
-	font-family: "Font Awesome 6 Free";
-	font-weight: 900;
-	content: "\f061";
-	color: var(--cor-tema);
-  
-	margin-left: 0.5rem; 
-  
-	display: inline-block;
-	font-style: normal;
-	font-variant: normal;
-	text-rendering: auto;
-	--webkit-font-smoothing: antialiased;
-  
 	transform: translateX(5px);
-	transition-property: transform;
-	transition-duration: 150ms;
-	transition-timing-function: ease-in-out;
-	transition-delay: 0s;
-	text-decoration: none;
   }
 
   .prev.page-numbers::before {
@@ -1707,15 +1767,12 @@ body.autismo .container .lateral .sidebar-bg {
 	font-weight: 900;
 	content: "\f060";
 	color: var(--cor-tema);
-  
 	margin-right: 0.5rem;  
-  
 	display: inline-block;
 	font-style: normal;
 	font-variant: normal;
 	text-rendering: auto;
 	--webkit-font-smoothing: antialiased;
-  
 	transition-property: transform;
 	transition-duration: 150ms;
 	transition-timing-function: ease-in-out;
@@ -1724,24 +1781,7 @@ body.autismo .container .lateral .sidebar-bg {
   }
   
   .prev.page-numbers:hover::before {
-	font-family: "Font Awesome 6 Free";
-	font-weight: 900;
-	content: "\f060";
-	color: var(--cor-tema);
-  
-	margin-right: 0.5rem; 
-  
-	display: inline-block;
-	font-style: normal;
-	font-variant: normal;
-	text-rendering: auto;
-	--webkit-font-smoothing: antialiased;
-  
 	transform: translateX(-5px);
-	transition-property: transform;
-	transition-duration: 150ms;
-	transition-timing-function: ease-in-out;
-	transition-delay: 0s;
   }
 
 

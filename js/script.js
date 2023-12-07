@@ -178,6 +178,7 @@ function menuTransformaAcessibilidade() {
 
 
     document.addEventListener('DOMContentLoaded', function() {
+
             // Verifica se a classe está no localStorage
              var memoContraste = localStorage.getItem('xContraste');
              var memoAutismo = localStorage.getItem('xAutismo');

@@ -12,8 +12,11 @@
 
 
                             <?php 
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; // Página atual
+
    $args = array(
-        'post_type' => 'post'
+            'post_type' => 'post',
+            'paged' => $paged,
     );
 
     $post_query = new WP_Query($args);
@@ -105,20 +108,16 @@
 
                                 <div class="pagination">
                                     <?php 
-                                    // Paginação
-                                    the_posts_pagination(array(
-                                    'prev_text' => __('Anterior', 'text-domain'),
-                                    'next_text' => __('Próximo', 'text-domain'),
+                                       // Adiciona a paginação
+                                    echo paginate_links(array(
+                                        'total' => $post_query->max_num_pages,
+                                        'current' => max(1, $paged),
+                                        'prev_text' => __('Anterior'),
+                                        'next_text' => __('Próximo'),
                                     ));
                                     ?>
                                 </div>
 
-
-
-
-
-
-                          
 
 
                         </div>
