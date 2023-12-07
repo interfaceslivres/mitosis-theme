@@ -87,10 +87,7 @@ img {
   	"cabecalho"
   	"main";
 }
-body {
-	opacity: 0;
-	/* para retirar o efeito blink */
-}
+
 
 /* --------------------------- sidebar-----------------------------------*/
 .lateral {
