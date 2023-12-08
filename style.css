@@ -154,7 +154,8 @@ img {
 }
 
 .sidebar a:hover{
-	color: var(--cor-highlight);
+	color: var(--cor-tema);
+	text-decoration: underline;
 }
 
 .sidebar li a{
@@ -1203,6 +1204,7 @@ body.autismo .container .lateral .sidebar-bg {
   box-sizing: border-box;  
 }
 
+
 .background-wrapper2 {
   position: relative;
   width: 100%;
@@ -1212,11 +1214,10 @@ body.autismo .container .lateral .sidebar-bg {
   display: flex;
   flex-direction: column;
   padding: var(--fonte-base);
-  box-sizing: border-box;  
+  box-sizing: border-box; 
 }
 
 .background-wrapper3 {
-
 	position: relative;
     width: 100%;
     height: 100%;
@@ -1277,20 +1278,12 @@ body.autismo .container .lateral .sidebar-bg {
   gap: var(--fonte-2up);
 } 
 
-.rotulo-claro a {
-  color: var(--cor-texto-claro);
-}
-
 .rotulo-claro .categorias a {
   color: var(--cor-texto-claro);
 }
 
 .rotulo-claro .categorias a:hover {
-  color: var(--cor-tema);
-}
-
-.rotulo-claro a:hover {
-  color: var(--cor-tema);
+  text-decoration: underline;
 }
 
 .rotulo a {
@@ -1298,7 +1291,12 @@ body.autismo .container .lateral .sidebar-bg {
 }
 
 .rotulo a:hover{
-  color: var(--cor-texto-escuro);
+  color: var(--cor-tema);
+  text-decoration: underline;
+}
+
+a:hover .noticia-sem-img-titulo {  
+text-decoration: underline;
 }
 
 .noticia-sem-img-titulo {  
@@ -1307,11 +1305,15 @@ body.autismo .container .lateral .sidebar-bg {
   font-size: var(--fonte-2up);
   line-height: 1.15;
   color: var(--cor-tema);
-
   top: 0;
   height: 100%;
   display: flex;
   align-items: center;
+}
+
+
+a:hover div .noticia-com-img-titulo {  
+	text-decoration: underline;
 }
 
 .noticia-com-img-titulo {  
@@ -1326,7 +1328,7 @@ body.autismo .container .lateral .sidebar-bg {
   align-items: flex-end;  
 }
 
-.noticia-wrapper:hover .background-wrapper, .noticia-wrapper:hover .background-wrapper2 .background-wrapper3 .background-wrapper4 {
+.noticia-wrapper:hover .background-wrapper, .noticia-wrapper:hover .background-wrapper2,  .noticia-wrapper:hover .background-wrapper3, .noticia-wrapper:hover .background-wrapper4 {
   background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, var(--cor-middleground) 100%);
 }
 
@@ -1399,26 +1401,16 @@ body.autismo .container .lateral .sidebar-bg {
   position: absolute;
   top: var(--fonte-base);
   left: var(--fonte-base);
-
   display: flex;
   flex-direction: row;
   align-items: center;
-
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.45;
   color: var(--cor-texto-claro);
-
   gap: var(--fonte-2up);
 }
 
-.rotulo a {
-  color: var(--cor-tema);
-}
-
-.rotulo a:hover{
-  color: var(--cor-texto-escuro);
-}
 
 .noticia-sem-img-titulo {  
   font-style: normal;
@@ -1578,8 +1570,11 @@ body.autismo .container .lateral .sidebar-bg {
 
   .noticia-categorias a {
 	color: var(--cor-tema);
-	text-decoration: underline;
 	margin-left: 8px;
+  }
+
+  .noticia-categorias a:hover {
+	text-decoration: underline;
   }
 
   .noticia-categorias {
@@ -1665,13 +1660,6 @@ body.autismo .container .lateral .sidebar-bg {
     margin-bottom: var(--fonte-2up);
 }
 
-.content-grid a {
-    color: var(--cor-tema);
-}
-
-.content-grid a:hover {
-    color: var(--cor-texto-escuro);
-}
 
 .noticia-links-relacionados a:hover{
   text-decoration: underline;
@@ -2242,6 +2230,7 @@ body.autismo .container .lateral .sidebar-bg {
 	  margin: 8px 10px;
 	  color: var(--cor-background);
 	  border-bottom: 2px solid var(--cor-tema);
+	  font-size: 1.4em;
 	}
 
 	.topnav a.icon {
@@ -2291,7 +2280,7 @@ body.autismo .container .lateral .sidebar-bg {
 
 	.brasao {
 		display: flex;
-		margin-right: 0vw;
+		margin-right: 2vw;
 	}
 
 	.lateral {
@@ -2317,6 +2306,14 @@ body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a:h
 	.sidebar {
 		margin-left: 2vw;
 	}
+
+.sidebar li a {
+	font-size: 1.4em;
+}
+
+.sidebar li ul li a {
+	font-size: 1.2em;
+}
 
 	div.nav-bar{
 		margin-right: 2vw;
@@ -2482,62 +2479,94 @@ body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a:h
 
 @media only screen and (min-width: 1020px)  {
 
-	.brasao {
-		margin-right: 10vw;
+	.brasao, 	div.nav-bar, .main {
+		margin-right: 2vw;
 	}
 
-	.logo {
-		margin-left: 10vw;
-	}
-
-	.sidebar {
-		margin-left: 10vw;
-	}
-
-	div.nav-bar{
-		margin-right: 10vw;
+	.logo, .sidebar  {
+		margin-left: 2vw;
 	}
 
 	.submit {
 		margin-right: 0px;
 	}
 
-	.lupa a.iconPesquisa {
-		padding-right: 0px;
+  .sidebar li a {
+	font-size: var(--fonte-1up);
+  }
+
+  .sidebar li ul li a {
+	font-size: var(--fonte-base);
+  }
+
+	.topnav a{
+	  font-size: var(--fonte-1up);
 	}
-
-	.main{
-		margin-right: 10vw;
-	}
-
-
-
-
 
 }
 
+
+@media only screen and (min-width: 1200px)  {
+	.brasao, 	div.nav-bar, .main {
+		margin-right: 6vw;
+	}
+
+	.logo, .sidebar  {
+		margin-left: 6vw;
+	}
+
+}
+
+
+@media only screen and (min-width: 1300px)  {
+
+	.brasao, 	div.nav-bar, .main {
+		margin-right: 8vw;
+	}
+
+	.logo, .sidebar  {
+		margin-left: 8vw;
+	}
+
+}
+
+
 @media only screen and (min-width: 1400px)  {
-
-	.brasao {
-		margin-right: 20vw;
+	
+	.brasao, 	div.nav-bar, .main {
+		margin-right: 10vw;
 	}
 
-	.logo {
-		margin-left: 20vw;
+	.logo, .sidebar  {
+		margin-left: 10vw;
 	}
 
-	.sidebar {
-		margin-left: 20vw;
+}
+
+
+@media only screen and (min-width: 1500px)  {
+	
+	.brasao, 	div.nav-bar, .main {
+		margin-right: 13vw;
 	}
 
-	div.nav-bar{
-		margin-right: 20vw;
+	.logo, .sidebar  {
+		margin-left: 13vw;
 	}
 
-	.main{
-		margin-right: 20vw;
+}
+
+
+
+@media only screen and (min-width: 1600px)  {
+	
+	.brasao, 	div.nav-bar, .main {
+		margin-right: 16vw;
 	}
 
+	.logo, .sidebar  {
+		margin-left: 16vw;
+	}
 
 
 
