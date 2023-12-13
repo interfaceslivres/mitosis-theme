@@ -482,7 +482,7 @@ body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav.responsive ul:
 }
 
 body.contraste .container .main .noticias .secoes {
-	color: #ff0;
+	color: #fff;
 }
 
 body.contraste .container .main .noticias .conteudo .noticias-coluna-unica .noticia-wrapper .background-wrapper2 {
@@ -490,10 +490,9 @@ body.contraste .container .main .noticias .conteudo .noticias-coluna-unica .noti
 }
 
 body.contraste .container .main .noticias .conteudo .noticias-coluna-unica .noticia-wrapper .rotulo-claro .categorias a{
-	color: #fff;
+	color: #ff0;
 }
 body.contraste .container .main .noticias .conteudo .noticias-coluna-unica .noticia-wrapper .rotulo-claro .categorias a:hover{
-	color: #fff;
 	text-decoration: underline;
 }
 
@@ -534,11 +533,10 @@ body.contraste .container .main .noticias .conteudo .noticias-coluna .noticia-wr
 }
 
 body.contraste .container .main .noticias .conteudo .noticias-coluna .noticia-wrapper .rotulo .categorias a{
-	color: #fff;
+	color: #ff0;
 }
 
 body.contraste .container .main .noticias .conteudo .noticias-coluna .noticia-wrapper .rotulo .categorias a:hover{
-	color: #fff;
 	text-decoration: underline;
 }
 
@@ -576,11 +574,11 @@ body.contraste .imagem-curso  {
 }
 
 body.contraste .container .main .curso .secoes, body.contraste .container .main .curso .text-curso h3 {
-	color: #ff0;
+	color: #fff;
 }
 
 body.contraste .container .main .curso .text-curso p {
-color: #CCCC6C;
+color: #fff;
 }
 
 body.contraste .container .main .mais {
@@ -588,12 +586,12 @@ background: #221f1f;
 }
 
 body.contraste .container .main .mais .mapa .mapa-titulo h2{
-	color: #ff0;
+	color: #fff;
 }
 
 
 body.contraste .container .main .mais .text-ufpb .text-ufpb-text p {
-color: #CCCC6C;
+color: #fff;
 }
 
 body.contraste .container .main .mais .text-ufpb .text-ufpb-link .mais-link {
@@ -618,25 +616,33 @@ body.contraste div.container div.main div div div.noticia-h2 {
 }
 
 body.contraste div.container div.main div div div.noticia-h2 div div.noticia-categorias a {
-		color: #fff;
+		color: #ff0;
 }
-
 
 
 body.contraste div.container div.main div div div.noticias-relacionadas div a div {
- color: #fff;
-}
-body.contraste div.container div.main div div div.noticias-relacionadas div div div.categorias a{
-	color: #fff;
-	text-decoration: underline;
+ color: #ff0;
 }
 
-body.contraste div.container div.main div div div.noticias-relacionadas div.noticia-wrapper a div {
+body.contraste div.container div.main div div div.noticias-relacionadas div a div.background-wrapper {
+ background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 90%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000 85%);
+}
+
+body.contraste div.container div.main div div div.noticias-relacionadas div div.rotulo div {
+	color: #fff;
+}
+
+
+body.contraste div.container div.main div div div.noticias-relacionadas div div div.categorias a{
+	color: #ff0;
+}
+
+body.contraste div.container div.main div div div.noticias-relacionadas div.noticia-wrapper a.noticia-sem-img {
 	background: linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 90%), linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000 85%);
 }
 
 body.contraste div.container div.main .noticias #noticias div div div div.noticia-wrapper a div.background-wrapper3 {
-background: linear-gradient(-90deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 90%), linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, #221f1f 25%);
+background: linear-gradient(-90deg, rgba(0,   0,   0, 0.2) 0%, rgba(0, 0, 0, 0) 50%), linear-gradient(-90deg, rgba(255, 255, 255, 0) 0%, #221f1f 50%)
 }
 
 body.contraste div.container div.main .noticias #noticias div div div div a.noticia-sem-img2{
@@ -652,7 +658,7 @@ body.contraste div.container div.main .noticias #noticias div div div div.notici
 }
 
 body.contraste div.container div.main .noticias #noticias div div div div.noticia-wrapper div.rotulo div a{
-	color: #fff;
+	color: #ff0;
 }
 
 body.contraste div.container div.main .noticias #noticias div div div div.noticia-wrapper div.rotulo div a:hover{
@@ -669,7 +675,7 @@ body.contraste div.container div.main .noticias #noticias div div div div.notici
 }
 
 body.contraste div.container div.main .noticias #noticias div div div div.noticia-wrapper4 div.rotulo div a{
-	color: #fff;
+	color: #ff0;
 }
 
 body.contraste div.container div.main .noticias #noticias div div div div.noticia-wrapper4 div.rotulo div a:hover{
@@ -698,6 +704,29 @@ body.contraste div.container div.main .noticias #noticias div div div div.pagina
 body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div a::after,
 body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div a::before {
 		color: #ff0;
+}
+
+body.contraste div.container div.main .noticias .content-grid ul li, 
+body.contraste div.container div.main .noticias .content-grid ol li {
+		color: #fff;
+} 
+
+
+body.contraste div.container div.main .noticias .content-grid .noticia-h2 .noticia-compartilhe .redes-sociais a {
+	color: #fff;
+}
+
+body.contraste div.container div.main .noticias .content-grid #outras-n {
+	color: #fff;
+}
+
+body.contraste div.container div.main > div > div h2 {
+	color: #fff;
+}
+
+body.contraste div.container div.main > div > div > div.wp-block-file a, 
+body.contraste div.container div.main > div > div > div.wp-block-file a::before {
+	color: #ff0;
 }
 
 /* ------- fim do alto contraste */
@@ -1376,7 +1405,6 @@ a:hover div .noticia-com-img-titulo {
 
 
 #noticias .noticia-com-img {
-  background-size: contain;
   background-position: right;
   display: block;
   background-repeat: no-repeat;
@@ -1654,7 +1682,22 @@ a:hover div .noticia-com-img-titulo {
     display: none;
 }
 
+.content-grid ul li, .content-grid ol li  {
+  list-style-position: inside;
+  font-size: var(--fonte-base);
+}
 
+.content-grid ul, .content-grid ol {
+  margin: 15px 0;
+}
+
+.content-grid p {
+  margin-bottom: 3px;
+}
+
+#outras-n {
+    margin-top: 45px;
+}
 
 /* -------------- atualizacao em 10/10/2023 - fleig --------------------- */
 
@@ -1672,7 +1715,7 @@ a:hover div .noticia-com-img-titulo {
     font-weight: 400;
     line-height: 1.15;
     color: var(--cor-texto-medio);
-    margin-bottom: var(--fonte-2up);
+    margin: var(--fonte-2up) 0;
 }
 
 
@@ -2104,6 +2147,10 @@ a:hover div .noticia-com-img-titulo {
 	margin-bottom: 0;
 	text-decoration: none;
 	display: inline;
+  }
+
+  #footer-dados > div > div > a:hover {
+  	filter: brightness(90%);
   }
 
   #footer-dados > div > div > a::after {

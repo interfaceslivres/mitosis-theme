@@ -299,7 +299,7 @@ function cats_related_post() {
 
     if($related_cats_post->have_posts()): ?>
 
-        <h2>Outras Notícias</h2>
+        <h2 id="outras-n">Outras Notícias</h2>
         <div class="noticias-relacionadas">
 
         <?php while($related_cats_post->have_posts()): $related_cats_post->the_post(); ?>
@@ -390,13 +390,41 @@ function cats_related_post() {
 }
 
 
+// campo do centro personalizado
+// Adiciona seção ao Customizer
+function customizer_centro($wp_customize) {
+    // Seção para configurações personalizadas
+    $wp_customize->add_section('customizer_centro', array(
+        'title' => 'Centro',
+        'priority' => 30,
+    ));
 
+    // Campo de texto personalizado
+    $wp_customize->add_setting('custom_centro', array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_text_field', // Limpa a entrada do usuário
+    ));
 
+    $wp_customize->add_control('custom_centro', array(
+        'label' => 'Nome do Centro',
+        'section' => 'customizer_centro',
+        'type' => 'text',
+    ));
 
+    // Campo de URL personalizado
+    $wp_customize->add_setting('custom_urlcentro', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw', // Limpa a entrada do usuário como uma URL
+    ));
 
+    $wp_customize->add_control('custom_urlcentro', array(
+        'label' => 'URL do Site do Centro',
+        'section' => 'customizer_centro',
+        'type' => 'url',
+    ));
+}
 
-
-
+add_action('customize_register', 'customizer_centro');
 
 
 
