@@ -1695,6 +1695,15 @@ a:hover div .noticia-com-img-titulo {
   margin-bottom: 3px;
 }
 
+.content-grid p a, .content-grid ul a, .content-grid h2 a {
+		color: var(--cor-tema);
+}
+
+.content-grid p a:hover, .content-grid ul a:hover, .content-grid h2 a:hover {
+    filter: brightness(90%);
+    text-decoration: underline;
+}
+
 #outras-n {
     margin-top: 45px;
 }
