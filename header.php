@@ -18,7 +18,6 @@
 	<script type="text/javascript" src="<?php echo get_bloginfo("template_directory"); ?>/js/script.js" ></script>
 	
  	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 	<link href="https://fonts.cdnfonts.com/css/rawline" rel="stylesheet">
 
 	<link href="<?php echo get_bloginfo("template_directory"); ?>/assets/css/fontawesome.min.css" rel="stylesheet">
