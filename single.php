@@ -54,11 +54,6 @@
 
                     <?php the_content(); ?>
 
-                    <div class="noticia-links-relacionados">
-                        <h2>Arquivos</h2>
-                        <a class="noticia-link-relacionado" href="#">https://mobile.fraudes.com/cdn-content/manual_v2.pdf?id=7dc68bDB879D68BC</a>                    
-                        <a class="noticia-link-relacionado" href="#">Manual de como se defender da nova espécie</a>
-                    </div>
     
       <?php 
       endwhile; ?>                                    

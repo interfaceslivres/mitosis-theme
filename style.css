@@ -1600,7 +1600,7 @@ a:hover div .noticia-com-img-titulo {
   }
 
   .noticia-redes a:hover {
-	color: var(--cor-texto-escuro);
+  filter: brightness(90%);
   }
 
   .noticia-imagem {
@@ -1608,15 +1608,11 @@ a:hover div .noticia-com-img-titulo {
 	width: 100%;
   }
 
-  .noticia-imagem-legenda {
-	font-size: var(--fonte-1down);
+  .content-grid .wp-block-file {
+  	margin-bottom: 10px;
   }
 
-  .noticia-links-relacionados {
-	margin-bottom: var(--fonte-3up);
-  }
-
-  .noticia-link-relacionado {
+  .wp-block-file a {
 	font-style: normal;
 	font-weight: 600;
 	font-size: var(--fonte-1up);
@@ -1627,7 +1623,11 @@ a:hover div .noticia-com-img-titulo {
 	display: block;
   }
 
-  .noticia-link-relacionado::before {
+  .wp-block-file a:hover {
+  	text-decoration: underline;
+  }
+
+  .wp-block-file a::before {
 	font-family: "Font Awesome 6 Free";
 	font-weight: 900;
 	content: "\f019";
@@ -1640,11 +1640,21 @@ a:hover div .noticia-com-img-titulo {
 	--webkit-font-smoothing: antialiased;
   }
 
+  .wp-block-file .wp-element-button, .wp-block-file .wp-block-file__button {
+  	display: none;
+  }
+
   .noticias-relacionadas {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 30px;
   }
+
+.wp-block-gallery button.lightbox-trigger {
+    display: none;
+}
+
+
 
 /* -------------- atualizacao em 10/10/2023 - fleig --------------------- */
 
@@ -2135,8 +2145,6 @@ a:hover div .noticia-com-img-titulo {
 	align-items: flex-end;
 	padding: 0px;
 	gap: 16px;
-
-
 	font-style: normal;
 	font-weight: 700;
 	font-size: 16px;
@@ -2148,7 +2156,6 @@ a:hover div .noticia-com-img-titulo {
 	flex-direction: row;
 	gap: 10px;
   }
-
 
   .redes-sociais i {
 	height: 48px;
