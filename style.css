@@ -1706,11 +1706,11 @@ a:hover div .noticia-com-img-titulo {
 
 .content-grid p a, .content-grid ul a, .content-grid h2 a {
 		color: var(--cor-tema);
+    text-decoration: underline;
 }
 
 .content-grid p a:hover, .content-grid ul a:hover, .content-grid h2 a:hover {
     filter: brightness(90%);
-    text-decoration: underline;
 }
 
 #outras-n {
