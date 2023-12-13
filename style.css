@@ -1651,6 +1651,10 @@ a:hover div .noticia-com-img-titulo {
 	display: block;
   }
 
+  .wp-block-file a:visited {
+    filter: brightness(75%);
+  }
+
   .wp-block-file a:hover {
   	text-decoration: underline;
   }
