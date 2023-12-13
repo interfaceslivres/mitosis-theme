@@ -729,6 +729,12 @@ body.contraste div.container div.main > div > div > div.wp-block-file a::before 
 	color: #ff0;
 }
 
+
+body.contraste div.container div.main .noticias .content-grid p a, body.contraste div.container div.main .noticias .content-grid ul a, body.contraste div.container div.main .noticias .content-grid h2 a {
+	color: #ff0;
+}
+
+
 /* ------- fim do alto contraste */
 
 
@@ -859,7 +865,6 @@ body.autismo .container .lateral .sidebar-bg {
 }
 
 .barra form div {
-
 	display: flex;
   flex-direction: row;	
 	margin-right: 5px;
