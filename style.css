@@ -1701,7 +1701,7 @@ a:hover div .noticia-com-img-titulo {
 }
 
 .content-grid p {
-  margin-bottom: 3px;
+  margin-bottom: var(--fonte-base);
 }
 
 .content-grid p a, .content-grid ul a, .content-grid h2 a {
