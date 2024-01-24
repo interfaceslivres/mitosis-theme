@@ -106,7 +106,7 @@ $custom_centro = get_theme_mod('custom_centro', 'Reitoria'); echo esc_html($cust
 	    	</div>
 
 	    	<div class="brasao">
-	        <a href="https://ufpb.br/"><img  src="<?php echo get_bloginfo("template_directory"); ?>/img/logo-ufpb-cores.svg" alt="logo ufpb"></a>
+	        <a href="https://ufpb.br/"><img  src="<?php echo get_bloginfo("template_directory"); ?>/img/ufpbbrasao6.png" alt="logo ufpb"></a>
 	      </div>
 	    </div>
 	    <div class="nav-bar-bg">
