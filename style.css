@@ -78,6 +78,10 @@ img {
 	height: 100%;
 }
 
+body {
+	overflow-x: hidden;
+}
+
 .container {  display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto  auto;
@@ -690,7 +694,7 @@ color: #ff0;
 body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div nav div span{
 	color: #fff;
 }
-body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div nav div a, 
+body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div nav div a,
 body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div nav div a::after,
 body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div nav div a::before {
 	color: #ff0;
@@ -700,16 +704,16 @@ body.contraste div.container div.main .noticias #noticias div div div div.pagina
 	color: #fff;
 }
 
-body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div a, 
+body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div a,
 body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div a::after,
 body.contraste div.container div.main .noticias #noticias div div div div.paginas-nav div a::before {
 		color: #ff0;
 }
 
-body.contraste div.container div.main .noticias .content-grid ul li, 
+body.contraste div.container div.main .noticias .content-grid ul li,
 body.contraste div.container div.main .noticias .content-grid ol li {
 		color: #fff;
-} 
+}
 
 
 body.contraste div.container div.main .noticias .content-grid .noticia-h2 .noticia-compartilhe .redes-sociais a {
@@ -724,7 +728,7 @@ body.contraste div.container div.main > div > div h2 {
 	color: #fff;
 }
 
-body.contraste div.container div.main > div > div > div.wp-block-file a, 
+body.contraste div.container div.main > div > div > div.wp-block-file a,
 body.contraste div.container div.main > div > div > div.wp-block-file a::before {
 	color: #ff0;
 }
@@ -738,7 +742,7 @@ body.contraste div.container div.main .noticias .content-grid p a, body.contrast
 /* ------- fim do alto contraste */
 
 
-body.autismo.contraste div.container header div.nav-bar-bg div #myTopnav a #menuFecharId, 
+body.autismo.contraste div.container header div.nav-bar-bg div #myTopnav a #menuFecharId,
 body.autismo.contraste div.container header div.nav-bar-bg div #myTopnav a #menuMenu, body.autismo.contraste div.container header div.nav-bar-bg div #myTopnav a #menuParaFechar  {
 	color: #fff;
 }
@@ -812,10 +816,10 @@ body.autismo .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li:nth-c
 
 body.autismo .container .cabecalho .nav-bar-bg .nav-bar .acessibilidade a, body.autismo .container .cabecalho .nav-bar-bg .nav-bar .lupa a{
 	color: #000;
-} 
+}
 body.autismo.contraste .container .cabecalho .nav-bar-bg .nav-bar .acessibilidade a, body.autismo.contraste .container .cabecalho .nav-bar-bg .nav-bar .lupa a{
 	color: #fff;
-} 
+}
 
 body.autismo .container .lateral .sidebar-bg {
 	box-shadow: none;
@@ -866,7 +870,7 @@ body.autismo .container .lateral .sidebar-bg {
 
 .barra form div {
 	display: flex;
-  flex-direction: row;	
+  flex-direction: row;
 	margin-right: 5px;
 	grid-area: barra;
 	background-color: #fff;
@@ -1021,7 +1025,7 @@ body.autismo .container .lateral .sidebar-bg {
         .menu-item:not(.active) .fa-chevron-down {
             transform: rotate(0deg);
         }
-        
+
         .menu-item.active .fa-chevron-down {
             transform: rotate(180deg);
         }
@@ -1137,7 +1141,7 @@ body.autismo .container .lateral .sidebar-bg {
 	max-width: 1170px;
 	margin: 0px 20px;
   }
-  
+
   .conteudo {
 	min-height: 415px;
 	margin-bottom: 30px;
@@ -1214,7 +1218,7 @@ body.autismo .container .lateral .sidebar-bg {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.8rem; 
+  gap: 0.8rem;
   max-width: 670px;
 
   padding: 16px 0 16px var(--fonte-2up);
@@ -1240,7 +1244,7 @@ body.autismo .container .lateral .sidebar-bg {
   display: flex;
   flex-direction: column;
   padding: var(--fonte-base);
-  box-sizing: border-box;  
+  box-sizing: border-box;
 }
 
 
@@ -1253,7 +1257,7 @@ body.autismo .container .lateral .sidebar-bg {
   display: flex;
   flex-direction: column;
   padding: var(--fonte-base);
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .background-wrapper3 {
@@ -1277,7 +1281,7 @@ body.autismo .container .lateral .sidebar-bg {
 	display: flex;
 	flex-direction: column;
 	padding: var(--fonte-base);
-	box-sizing: border-box;  
+	box-sizing: border-box;
   }
 
 .noticia-com-img .rotulo {
@@ -1300,7 +1304,7 @@ body.autismo .container .lateral .sidebar-bg {
   color: var(--cor-texto-medio);
 
   gap: var(--fonte-2up);
-} 
+}
 
 .rotulo-claro {
   z-index: 1;
@@ -1315,7 +1319,7 @@ body.autismo .container .lateral .sidebar-bg {
   line-height: 1.45;
   color: var(--cor-texto-claro);
   gap: var(--fonte-2up);
-} 
+}
 
 .rotulo-claro .categorias a {
   color: var(--cor-texto-claro);
@@ -1334,11 +1338,11 @@ body.autismo .container .lateral .sidebar-bg {
   text-decoration: underline;
 }
 
-a:hover .noticia-sem-img-titulo {  
+a:hover .noticia-sem-img-titulo {
 text-decoration: underline;
 }
 
-.noticia-sem-img-titulo {  
+.noticia-sem-img-titulo {
   font-style: normal;
   font-weight: 600;
   font-size: var(--fonte-2up);
@@ -1351,11 +1355,11 @@ text-decoration: underline;
 }
 
 
-a:hover div .noticia-com-img-titulo {  
+a:hover div .noticia-com-img-titulo {
 	text-decoration: underline;
 }
 
-.noticia-com-img-titulo {  
+.noticia-com-img-titulo {
   font-style: normal;
   font-weight: 600;
   font-size: var(--fonte-2up);
@@ -1364,7 +1368,7 @@ a:hover div .noticia-com-img-titulo {
 
   height: 100%;
   display: flex;
-  align-items: flex-end;  
+  align-items: flex-end;
 }
 
 .noticia-wrapper:hover .background-wrapper, .noticia-wrapper:hover .background-wrapper2,  .noticia-wrapper:hover .background-wrapper3, .noticia-wrapper:hover .background-wrapper4 {
@@ -1402,7 +1406,7 @@ a:hover div .noticia-com-img-titulo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.8rem; 
+  gap: 0.8rem;
   max-width: 670px;
 
   padding: 16px 0 16px var(--fonte-2up);
@@ -1432,7 +1436,7 @@ a:hover div .noticia-com-img-titulo {
   line-height: 1.45;
   color: var(--cor-texto-medio);
   gap: var(--fonte-2up);
-} 
+}
 
 .rotulo-claro {
   z-index: 1;
@@ -1450,7 +1454,7 @@ a:hover div .noticia-com-img-titulo {
 }
 
 
-.noticia-sem-img-titulo {  
+.noticia-sem-img-titulo {
   font-style: normal;
   font-weight: 600;
   font-size: var(--fonte-2up);
@@ -1463,7 +1467,7 @@ a:hover div .noticia-com-img-titulo {
   align-items: center;
 }
 
-#noticias .noticia-com-img-titulo {  
+#noticias .noticia-com-img-titulo {
   width: 70%;
   font-style: normal;
   font-weight: 600;
@@ -1473,7 +1477,7 @@ a:hover div .noticia-com-img-titulo {
 
   height: 100%;
   display: flex;
-  align-items: center;  
+  align-items: center;
 }
 
 #noticias .noticia-wrapper:hover .background-wrapper {
@@ -1525,7 +1529,7 @@ a:hover div .noticia-com-img-titulo {
   content: "\f061";
   color: var(--cor-tema);
 
-  margin-left: 0.5rem;  
+  margin-left: 0.5rem;
 
   display: inline-block;
   font-style: normal;
@@ -1546,7 +1550,7 @@ a:hover div .noticia-com-img-titulo {
   content: "\f061";
   color: var(--cor-tema);
 
-  margin-left: 0.5rem; 
+  margin-left: 0.5rem;
 
   display: inline-block;
   font-style: normal;
@@ -1589,7 +1593,7 @@ a:hover div .noticia-com-img-titulo {
 	max-width: 1170px;
 	display: grid;
 	gap: 30px;
-	
+
   }
 
 
@@ -1753,17 +1757,17 @@ a:hover div .noticia-com-img-titulo {
 	justify-content: center;
 	color: var(--cor-texto-escuro);
   }
-  
+
   .paginas-nav *{
 	font-weight: 600;
 	font-size: var(--fonte-1up);
 	line-height: 1.15;
   }
-  
+
   .paginas-nav a {
 	color: var(--cor-tema);
   }
-  
+
   .pagination, .page-numbers, .pagination .nav-links {
 	display: flex;
 	flex-direction: row;
@@ -1795,7 +1799,7 @@ a:hover div .noticia-com-img-titulo {
 .pagination a.next.page-numbers:hover, .pagination a.prev.page-numbers:hover {
 	color: var(--cor-tema);
 }
-  
+
   .pagination a.page-numbers:hover {
 	color: var(--cor-tema);
   }
@@ -1805,7 +1809,7 @@ a:hover div .noticia-com-img-titulo {
 	font-weight: 900;
 	content: "\f061";
 	color: var(--cor-tema);
-	margin-left: 0.5rem;  
+	margin-left: 0.5rem;
 	display: inline-block;
 	font-style: normal;
 	font-variant: normal;
@@ -1828,7 +1832,7 @@ a:hover div .noticia-com-img-titulo {
 	font-weight: 900;
 	content: "\f060";
 	color: var(--cor-tema);
-	margin-right: 0.5rem;  
+	margin-right: 0.5rem;
 	display: inline-block;
 	font-style: normal;
 	font-variant: normal;
@@ -1840,7 +1844,7 @@ a:hover div .noticia-com-img-titulo {
 	transition-delay: 0s;
 	line-height: 1;
   }
-  
+
   .prev.page-numbers:hover::before {
 	transform: translateX(-5px);
   }
@@ -1870,7 +1874,7 @@ a:hover div .noticia-com-img-titulo {
 
 
   .link-img{
-	
+
 	background-size: cover;
 	background-position: right;
 	display: block;
@@ -1882,23 +1886,23 @@ a:hover div .noticia-com-img-titulo {
 	border-radius: 5%;
   }
 
-  .links {  
+  .links {
 	  display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	gap: var(--fonte-3up);  
+	gap: var(--fonte-3up);
 
-	
-  
+
+
 	max-width: 1170px;
 	height: auto;
-  
+
 	/* BG BLOCO */
 
-	
+
   }
-  
+
   .link-full {
 	display: flex;
 	flex-direction: column;
@@ -1906,23 +1910,23 @@ a:hover div .noticia-com-img-titulo {
 	padding: 0px;
 	gap: 10px;
   }
-  
+
 
   .link-full:hover .link-image-wrapper{
 	color: var(--cor-background);
 	background-color: var(--cor-tema);
   }
-  
+
   .link-full:hover .link-text{
 	color: var(--cor-tema);
   }
-  
+
   .link-image {
 	display: block;
 	width: 60%;
 	height: 60%;
   }
-  
+
   .link-text {
 	margin-top: 25px;
 
@@ -1930,10 +1934,10 @@ a:hover div .noticia-com-img-titulo {
 	font-weight: 600;
 	font-size: var(--fonte-3up);
 	line-height: 1.15;
-  
+
 	/* or 125% */
 	text-align: center;
-  
+
 	color: var(--cor-texto-claro);
   }
 
@@ -1941,7 +1945,7 @@ a:hover div .noticia-com-img-titulo {
 /*------------------------------------------Icone-end ---------------------------------------------------*/
 /*-------------------------------------- curso -----------------------------------------------*/
 
-.curso {  
+.curso {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto;
@@ -2077,7 +2081,7 @@ a:hover div .noticia-com-img-titulo {
 	grid-area: text-ufpb-text;
  }
 
-  .text-ufpb-link { 
+  .text-ufpb-link {
   	grid-area: text-ufpb-link;
   	align-self: flex-end;
 	}
@@ -2609,7 +2613,7 @@ body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a:h
 
 
 @media only screen and (min-width: 1400px)  {
-	
+
 	.brasao, 	div.nav-bar, .main {
 		margin-right: 10vw;
 	}
@@ -2622,7 +2626,7 @@ body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a:h
 
 
 @media only screen and (min-width: 1500px)  {
-	
+
 	.brasao, 	div.nav-bar, .main {
 		margin-right: 13vw;
 	}
@@ -2636,7 +2640,7 @@ body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a:h
 
 
 @media only screen and (min-width: 1600px)  {
-	
+
 	.brasao, 	div.nav-bar, .main {
 		margin-right: 16vw;
 	}

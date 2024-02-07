@@ -2,17 +2,17 @@
 <?php get_header(); ?>
 
   <div class="main">
-    
+
       <div class="noticias">
         <h1 class="secoes">Notícias</h1>
         <div class="conteudo">
-          <?php 
+          <?php
             // the query
             $the_query = new WP_Query( array(
                 'posts_per_page' => 3,
-            )); 
-            if ( $the_query->have_posts() ) : $postCount = 0; while ( $the_query->have_posts() ) : $postCount++; $the_query->the_post();  
-          
+            ));
+            if ( $the_query->have_posts() ) : $postCount = 0; while ( $the_query->have_posts() ) : $postCount++; $the_query->the_post();
+
             if($postCount == 1) { ?>
 
               <div class="noticias-coluna-unica">
@@ -46,17 +46,17 @@
                       </div><!-- fecha div rotulo -->
                       <a href="<?php the_permalink();?>" class="noticia-com-img camada-1" style="
                       background-image:
-                      linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), 
+                      linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%),
                       linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 85%),
-                      url(<?php the_post_thumbnail_url(); ?>); 
+                      url(<?php the_post_thumbnail_url(); ?>);
                       background-position: inherit;
                       ">
-                        <div class="background-wrapper2">                  
+                        <div class="background-wrapper2">
                           <div class="noticia-com-img-titulo"><?php the_title(); ?></div>
-                        </div>                          
+                        </div>
                       </a>
                     </div>
-                  <?php else : ?> 
+                  <?php else : ?>
                     <div class="noticia-wrapper">
                       <div class="rotulo">
                         <div><?php echo get_the_date( 'd \d\e F Y' ); ?></div>
@@ -84,17 +84,17 @@
                           ?>
                         </div><!-- fecha div categorias -->
                       </div><!-- fecha div rotulo -->
-                      <a class="noticia-sem-img camada-1" href="<?php the_permalink();?>"> 
+                      <a class="noticia-sem-img camada-1" href="<?php the_permalink();?>">
                         <div class="noticia-sem-img-titulo" id="noticia-principal"><?php the_title(); ?></div>
                       </a>
                     </div>
       <?php endif; ?>
               </div> <!-- fim de noticias-coluna-unica -->
-              
+
               <div class="noticias-coluna">
                 <?php }
                     elseif ($postCount == 2) {
-                      if ( has_post_thumbnail()) : ?>      
+                      if ( has_post_thumbnail()) : ?>
                         <div class="noticia-wrapper">
                           <div class="rotulo-claro">
                             <div><?php echo get_the_date( 'd \d\e F Y' ); ?></div>
@@ -124,14 +124,14 @@
                           </div><!-- fecha div rotulo -->
                           <a href="<?php the_permalink();?>" class="noticia-com-img camada-1" style="
                           background-image:
-                          linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), 
+                          linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%),
                           linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 85%),
                           url(<?php the_post_thumbnail_url(); ?>)">
-                            <div class="background-wrapper">                  
+                            <div class="background-wrapper">
                               <div class="noticia-com-img-titulo"><?php the_title(); ?></div>
-                            </div>                          
+                            </div>
                           </a>
-                        </div>  
+                        </div>
                 <?php else : ?>
                         <div class="noticia-wrapper">
                           <div class="rotulo">
@@ -160,13 +160,13 @@
                               ?>
                             </div><!-- fecha div categorias -->
                           </div><!-- fecha div rotulo -->
-                          <a href="<?php the_permalink();?>" class="noticia-sem-img camada-1">              
+                          <a href="<?php the_permalink();?>" class="noticia-sem-img camada-1">
                             <div class="noticia-sem-img-titulo"><?php the_title(); ?></div>
                           </a>
                         </div>
               <?php endif;}
                   elseif ($postCount == 3) {
-                      if ( has_post_thumbnail()) : ?>      
+                      if ( has_post_thumbnail()) : ?>
                         <div class="noticia-wrapper">
                           <div class="rotulo-claro">
                             <div><?php echo get_the_date( 'd \d\e F Y' ); ?></div>
@@ -196,14 +196,14 @@
                           </div><!-- fecha div rotulo -->
                           <a href="<?php the_permalink();?>" class="noticia-com-img camada-1" style="
                           background-image:
-                          linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%), 
+                          linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%),
                           linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 85%),
                           url(<?php the_post_thumbnail_url(); ?>)">
-                            <div class="background-wrapper">                  
+                            <div class="background-wrapper">
                               <div class="noticia-com-img-titulo"><?php the_title(); ?></div>
-                            </div>                          
+                            </div>
                           </a>
-                        </div>  
+                        </div>
                 <?php else : ?>
                         <div class="noticia-wrapper">
                           <div class="rotulo">
@@ -232,51 +232,51 @@
                               ?>
                             </div><!-- fecha div categorias -->
                           </div><!-- fecha div rotulo -->
-                          <a href="<?php the_permalink();?>" class="noticia-sem-img camada-1">              
+                          <a href="<?php the_permalink();?>" class="noticia-sem-img camada-1">
                             <div class="noticia-sem-img-titulo"><?php the_title(); ?></div>
                           </a>
                         </div>
 
-              <?php endif; } 
+              <?php endif; }
             endwhile; else : endif; ?>
-              </div> <!-- fecha noticias coluna -->            
+              </div> <!-- fecha noticias coluna -->
         </div> <!-- fecha div .conteudo -->
 
 
         <div class="link-wrapper justify-end">
-          <a class="mais-link" href="<?php echo get_home_url(); ?>/noticias/">Mais Notícias</a>           
+          <a class="mais-link" href="<?php echo get_home_url(); ?>/noticias/">Mais Notícias</a>
         </div>
       </div> <!-- fecha div .noticias -->
-            
+
       <!-- se quiser banners, codigo para o futuro:
         <div class="links-wrapper ">
           <div class="links">
             <a href="#" class="link-img camada-1"  style="
             background-image:
-            linear-gradient(180deg, rgba(231, 120, 23, 0.7) 1000%, rgba(0, 0, 0, 0) 50%), 
-            url(#)">   
+            linear-gradient(180deg, rgba(231, 120, 23, 0.7) 1000%, rgba(0, 0, 0, 0) 50%),
+            url(#)">
               <div class="link-text" href="#">Calendário Acadêmico</div>
             </a>
             <a href="#" class="link-img camada-1"  style="
             background-image:
-            linear-gradient(180deg, rgba(231, 120, 23, 0.7) 1000%, rgba(0, 0, 0, 0) 50%), 
-            url(#)">   
+            linear-gradient(180deg, rgba(231, 120, 23, 0.7) 1000%, rgba(0, 0, 0, 0) 50%),
+            url(#)">
               <div class="link-text" href="#">Demidias</div>
             </a>
             <a href="#" class="link-img camada-1"  style="
             background-image:
-            linear-gradient(180deg, rgba(231, 120, 23, 0.7) 1000%, rgba(0, 0, 0, 0) 50%), 
-            url(#)">   
+            linear-gradient(180deg, rgba(231, 120, 23, 0.7) 1000%, rgba(0, 0, 0, 0) 50%),
+            url(#)">
               <div class="link-text" href="#">test psicotécnico </div>
             </a>
             <a href="#" class="link-img camada-1"  style="
             background-image:
-            linear-gradient(180deg, rgba(231, 120, 23, 0.7) 1000%, rgba(0, 0, 0, 0) 50%), 
-            url(#)">   
+            linear-gradient(180deg, rgba(231, 120, 23, 0.7) 1000%, rgba(0, 0, 0, 0) 50%),
+            url(#)">
               <div class="link-text" href="#">Calendário Acadêmico</div>
             </a>
           </div>
-        </div> 
+        </div>
       -->
 
 
