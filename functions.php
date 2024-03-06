@@ -464,7 +464,7 @@ class WidgetRedesSociais extends WP_Widget {
             echo '<a href="' . esc_url($instagram) . '"><i class="fa-brands fa-square-instagram"></i></a>';
         }
         if (!empty($twitter)) {
-            echo '<a href="' . esc_url($twitter) . '"><i class="fa-brands fa-square-twitter"></i></a>';
+            echo '<a href="' . esc_url($twitter) . '"><i class="fa-brands fa-square-x-twitter"></i></a>';
         }
         if (!empty($facebook)) {
             echo '<a href="' . esc_url($facebook) . '"><i class="fa-brands fa-square-facebook"></i></a>';

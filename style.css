@@ -2159,6 +2159,7 @@ a:hover div .noticia-com-img-titulo {
 	display: flex;
 	flex-direction: column;
 	gap: 4px;
+	max-width: 500px;
   }
 
   #footer-dados > div > div > a {
@@ -2483,7 +2484,7 @@ body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a:h
 
 	.noticias {
 		padding: 0;
-		margin: 0 2vw 0 30px;
+		margin: 0 0 0 30px;
 	}
 
 	.noticia-sem-img {
