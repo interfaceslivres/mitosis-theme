@@ -278,7 +278,7 @@ div.nav-bar {
 	gap: 0px 0px;
 	grid-template-areas:
 	  "topnav acessibilidade lupa";
-
+	max-width: 1170px;
 }
 
 /*-------------------------------------- menu responsivo-----------------------------------------------*/
@@ -2010,6 +2010,7 @@ a:hover div .noticia-com-img-titulo {
 
 .curso {
 	margin-bottom: 35px;
+	max-width: 1170px;
 }
 
  .mais {  display: grid;
@@ -2336,9 +2337,7 @@ a:hover div .noticia-com-img-titulo {
 
 	.titulo {
 		display: flex;
-
 		margin: 0;
-
 		padding: 0;
 		padding-left: 28px;
 	}
@@ -2652,4 +2651,20 @@ body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a:h
 
 
 
+}
+
+@media only screen and (min-width: 1990px) {
+
+.titulo {
+	max-width: 1170px;
+}
+
+}
+
+
+@media only screen and (min-width: 1990px)  {
+
+	.brasao, 	div.nav-bar, .main {
+		margin-right: 3px;
+	}
 }
