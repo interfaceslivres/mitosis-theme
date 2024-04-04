@@ -12,7 +12,7 @@ if (!empty($imagem_footer_url)) {
   <footer>
   <div id="footer-top">
       <div id="footer-dados">
-        <img id="footer-logo" src="<?php echo get_bloginfo("template_directory"); ?>/img/logo-ufpb-svg.svg">
+        <img id="footer-logo" src="<?php echo get_bloginfo("template_directory"); ?>/img/ufpb-brasao-pb.png">
         <div>
           <div><?php echo get_bloginfo( 'name' ); ?></div>
           <div class="redes-sociais">
@@ -23,13 +23,13 @@ if (!empty($imagem_footer_url)) {
 
         <div class="footer-direita">
           <div id="footer-creditos">
-            <a href="https://github.com/interfaceslivres"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/logo-interfaces2.png" alt="Logo do Projeto Interfaces Livres"></a>
+            <!--<a href="https://github.com/interfaceslivres"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/logo-interfaces2.png" alt="Logo do Projeto Interfaces Livres"></a>-->
             <a href="https://www.sti.ufpb.br/"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/sti-logo-branco.png" alt="Logo do STI"></a>
             <a href="https://ufpb.br/"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/logo-ufpb-branca-footer.png" alt="Logo da UFPB"></a>
           </div>
         </div>
       </div>
-    
+
       <div id="footer-linha"></div>
 
       <div id="footer-bottom">
