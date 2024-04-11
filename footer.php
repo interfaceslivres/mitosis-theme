@@ -53,7 +53,6 @@ if (!empty($imagem_footer_url)) {
 
 </div> <!-- fecha div .container aberta no header.php -->
 
-<script type="text/javascript" src="<?php echo get_bloginfo("template_directory"); ?>/js/controller.js"> </script>
 <?php wp_footer() ?>
 </body>
 </html>
