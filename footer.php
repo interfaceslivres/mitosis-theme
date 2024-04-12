@@ -25,7 +25,7 @@ if (!empty($imagem_footer_url)) {
           <div id="footer-creditos">
             <!--<a href="https://github.com/interfaceslivres"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/logo-interfaces2.png" alt="Logo do Projeto Interfaces Livres"></a>-->
             <a href="https://www.sti.ufpb.br/"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/sti-logo-branco.png" alt="Logo do STI"></a>
-            <a href="https://ufpb.br/"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/logo-ufpb-branca-footer.png" alt="Logo da UFPB"></a>
+            <a href="https://ufpb.br/"><img class="img-creditos" src="<?php echo get_bloginfo("template_directory"); ?>/img/ufpb-brasao-pb2.png" alt="Logo da UFPB"></a>
           </div>
         </div>
       </div>
