@@ -46,8 +46,8 @@
                       </div><!-- fecha div rotulo -->
                       <a href="<?php the_permalink();?>" class="noticia-com-img camada-1" style="
                       background-image:
-                      linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%),
-                      linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 85%),
+                      linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0px, rgba(0, 0, 0, 0) 50px),
+                      linear-gradient(0deg, #fff 25px, rgba(0, 0, 0, 0) 100px)
                       url(<?php the_post_thumbnail_url(); ?>);
                       background-position: inherit;
                       ">
@@ -124,8 +124,8 @@
                           </div><!-- fecha div rotulo -->
                           <a href="<?php the_permalink();?>" class="noticia-com-img camada-1" style="
                           background-image:
-                          linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%),
-                          linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 85%),
+                          linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0px, rgba(0, 0, 0, 0) 50px),
+                          linear-gradient(0deg, #fff 25px, rgba(0, 0, 0, 0) 100px)
                           url(<?php the_post_thumbnail_url(); ?>)">
                             <div class="background-wrapper">
                               <div class="noticia-com-img-titulo"><?php the_title(); ?></div>
@@ -196,8 +196,8 @@
                           </div><!-- fecha div rotulo -->
                           <a href="<?php the_permalink();?>" class="noticia-com-img camada-1" style="
                           background-image:
-                          linear-gradient(180deg, rgba(0,   0,   0, 0.5) 0%, rgba(0, 0, 0, 0) 50%),
-                          linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 85%),
+                          linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0px, rgba(0, 0, 0, 0) 50px),
+                          linear-gradient(0deg, #fff 25px, rgba(0, 0, 0, 0) 100px)
                           url(<?php the_post_thumbnail_url(); ?>)">
                             <div class="background-wrapper">
                               <div class="noticia-com-img-titulo"><?php the_title(); ?></div>

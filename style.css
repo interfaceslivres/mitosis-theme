@@ -16,11 +16,6 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-
-
-
-
-
 * {
 	margin: 0;
 	padding: 0;
@@ -152,7 +147,7 @@ body {
 	font-family: 'Rawline';
 	font-style: normal;
 	font-weight: 400;
-	text-transform: lowercase;
+	text-transform: none;
 	font-size:var(--fonte-base);
 	color: var(--cor-black);
 }
@@ -169,7 +164,7 @@ body {
 	font-family: 'Rawline';
 	font-weight: 600;
 	font-size: var(--fonte-1up);
-	text-transform: capitalize;
+	text-transform: none;
 	display: flex;
 	align-items: center;
 	color: var(--cor-black);
@@ -869,7 +864,7 @@ body.autismo .container .lateral .sidebar-bg {
 
 .barra form div {
 	display: flex;
-  flex-direction: row;
+    flex-direction: row;
 	margin-right: 5px;
 	grid-area: barra;
 	background-color: #fff;
@@ -981,7 +976,7 @@ body.autismo .container .lateral .sidebar-bg {
     overflow-y: hidden;
     height: auto;
     font-size: var(--fonte-1up);
-    text-transform: lowercase;
+    text-transform: none;
  }
 
 
@@ -1370,7 +1365,7 @@ a:hover div .noticia-com-img-titulo {
 }
 
 .noticia-wrapper:hover .background-wrapper, .noticia-wrapper:hover .background-wrapper2,  .noticia-wrapper:hover .background-wrapper3, .noticia-wrapper:hover .background-wrapper4 {
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 25%, var(--cor-middleground) 100%);
+  background-image: linear-gradient(0deg, #fff 25px, rgba(0, 0, 0, 0) 125px);
 }
 
 /*CARDS*/
@@ -1539,7 +1534,7 @@ a:hover div .noticia-com-img-titulo {
   transition-duration: 150ms;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
-  line-height: 1;
+  /*line-height: 1;*/
 }
 
 .mais-link:hover::after {
@@ -1963,9 +1958,10 @@ a:hover div .noticia-com-img-titulo {
 
   .youtube {
 	padding-top: 10px;
-	width: 100%;
+	width: 80%;
 	grid-area: youtube;
-	height:240px;
+	aspect-ratio: 16 / 9;
+	margin: 0 auto;
  }
 
  .youtube iframe{
@@ -2123,7 +2119,7 @@ a:hover div .noticia-com-img-titulo {
 	font-family: 'Rawline';
 	display: flex;
 	width: 100%;
-	background-color: var(--cor-footer);
+	background-color: var(--cor-tema);
 	justify-content: center;
 	margin: 0 auto;
   }
@@ -2344,7 +2340,7 @@ a:hover div .noticia-com-img-titulo {
 		text-align: left;
 		padding-top: 9px;
 		font-size: var(--fonte-3up);
-		line-height: 2rem;
+		line-height: 1;
 	}
 
 	#tit_centro{
