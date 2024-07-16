@@ -49,7 +49,7 @@ a {
 
 p {
 	font-family: 'rawline';
-	font-size: var(--fonte-base);
+	font-size: var(--fonte-1up);
 	font-weight: 400;
 	line-height: 1.45;
 	color: var(--cor-texto-escuro);
@@ -219,7 +219,6 @@ body {
 }
 
 #tit_centro{
-
 	margin: 0;
 	text-transform: uppercase;
 	text-align: left;
@@ -227,6 +226,10 @@ body {
 	font-weight: 400;
 	font-size: var(--fonte-base);
 	color: var(--cor-texto-medio);
+}
+
+#tit_centro:hover {
+	color: var(--cor-tema);
 }
 
 #tit_curso{
@@ -1365,7 +1368,7 @@ a:hover div .noticia-com-img-titulo {
 }
 
 .noticia-wrapper:hover .background-wrapper, .noticia-wrapper:hover .background-wrapper2,  .noticia-wrapper:hover .background-wrapper3, .noticia-wrapper:hover .background-wrapper4 {
-  background-image: linear-gradient(0deg, #fff 25px, rgba(0, 0, 0, 0) 125px);
+  background-image: linear-gradient(0deg, #fff 25px, rgba(0, 0, 0, 0) 75px);
 }
 
 /*CARDS*/
@@ -1592,7 +1595,8 @@ a:hover div .noticia-com-img-titulo {
 
 .noticia-h2 {
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	gap: 10px;
 	justify-content: space-between;
 
 	font-size: var(--fonte-base);
@@ -1619,9 +1623,8 @@ a:hover div .noticia-com-img-titulo {
 
   .noticia-compartilhe {
 	display: flex;
-	flex-direction: row;
-	gap: 10px;
-	align-items: center;
+	flex-direction: column;
+	gap: 0px;
 	justify-content: flex-start;
   }
 
@@ -1679,8 +1682,8 @@ a:hover div .noticia-com-img-titulo {
   }
 
   .noticias-relacionadas {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	display: flex;
+	flex-direction: column;
 	gap: 30px;
   }
 
@@ -2371,7 +2374,34 @@ body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a:h
     border-bottom: 2px solid #fff;
 }
 
+/*fleig desktop*/
 
+.noticia-compartilhe {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.noticia-h2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	font-size: var(--fonte-base);
+	font-weight: 400;
+	line-height: 1.45;
+	color: var(--cor-texto-escuro);
+
+	margin-bottom: var(--fonte-2up);
+}
+
+.noticias-relacionadas {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+  }
 
 /*------------------------ menu responsivo end ---------------------------------*/
 	.sidebar {
