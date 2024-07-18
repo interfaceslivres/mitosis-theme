@@ -54,6 +54,7 @@ p {
 	line-height: 1.45;
 	color: var(--cor-texto-escuro);
 	margin-bottom: 16px;
+	/*max-width: 800px;*/
 }
 
 h1 {
@@ -1360,7 +1361,7 @@ a:hover div .noticia-com-img-titulo {
   font-weight: 600;
   font-size: var(--fonte-2up);
   line-height: 1.15;
-  color: var(--cor-tema);
+  color: white;
 
   height: 100%;
   display: flex;
@@ -1368,7 +1369,7 @@ a:hover div .noticia-com-img-titulo {
 }
 
 .noticia-wrapper:hover .background-wrapper, .noticia-wrapper:hover .background-wrapper2,  .noticia-wrapper:hover .background-wrapper3, .noticia-wrapper:hover .background-wrapper4 {
-  background-image: linear-gradient(0deg, #fff 25px, rgba(0, 0, 0, 0) 75px);
+  background-image: linear-gradient(0deg, rgba(0,0,0,.85), transparent 100px);
 }
 
 /*CARDS*/
@@ -1455,7 +1456,7 @@ a:hover div .noticia-com-img-titulo {
   font-weight: 600;
   font-size: var(--fonte-2up);
   line-height: 1.15;
-  color: var(--cor-tema);
+  color: white;
 
   top: 0;
   height: 100%;
@@ -1469,7 +1470,7 @@ a:hover div .noticia-com-img-titulo {
   font-weight: 600;
   font-size: var(--fonte-2up);
   line-height: 1.15;
-  color: var(--cor-tema);
+  color: white;
 
   height: 100%;
   display: flex;
@@ -1537,7 +1538,7 @@ a:hover div .noticia-com-img-titulo {
   transition-duration: 150ms;
   transition-timing-function: ease-in-out;
   transition-delay: 0s;
-  /*line-height: 1;*/
+  line-height: inherit;
 }
 
 .mais-link:hover::after {
@@ -1702,6 +1703,12 @@ a:hover div .noticia-com-img-titulo {
 
 .content-grid p {
   margin-bottom: var(--fonte-base);
+  max-width: 800px;
+}
+
+.content-grid iframe {
+	margin-bottom: var(--fonte-base);
+	max-width: 800px;
 }
 
 .content-grid p a, .content-grid ul a, .content-grid h2 a {
@@ -1946,8 +1953,8 @@ a:hover div .noticia-com-img-titulo {
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto;
 	gap: 0px 0px;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
 	grid-auto-flow: row;
 	grid-template-areas:
 	  "secoes"
@@ -1961,7 +1968,8 @@ a:hover div .noticia-com-img-titulo {
 
   .youtube {
 	padding-top: 10px;
-	width: 80%;
+	width: 100%;
+	max-width: 800px;
 	grid-area: youtube;
 	aspect-ratio: 16 / 9;
 	margin: 0 auto;
@@ -1995,8 +2003,8 @@ a:hover div .noticia-com-img-titulo {
 	font-family: 'Rawline';
 	font-style: normal;
 	font-weight: 400;
-	font-size: var(--fonte-base);
-	line-height: 1.7rem;
+	font-size: var(--fonte-1up);
+	line-height: 1.45;
 	margin-bottom: 0;
 	color: var(--cor-texto-escuro);
 
@@ -2376,25 +2384,18 @@ body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a:h
 
 /*fleig desktop*/
 
-.noticia-compartilhe {
-	display: flex;
-	flex-direction: row;
-	gap: 10px;
-	align-items: center;
-	justify-content: flex-start;
-}
-
-.noticia-h2 {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-
-	font-size: var(--fonte-base);
-	font-weight: 400;
-	line-height: 1.45;
-	color: var(--cor-texto-escuro);
-
-	margin-bottom: var(--fonte-2up);
+.curso {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto;
+	gap: 0px 0px;
+	padding-left: 30px;
+	padding-right: 30px;
+	grid-auto-flow: row;
+	grid-template-areas:
+	  "secoes"
+	  "youtube"
+	  "text-curso";
 }
 
 .noticias-relacionadas {
