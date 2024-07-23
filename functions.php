@@ -333,8 +333,6 @@ function cats_related_post() {
                           </div> <!-- fecha div rotulo-claro -->
                           <a href="<?php the_permalink();?>" class="noticia-com-img camada-1" style="
                           background-image:
-                          linear-gradient(180deg, rgba(0,0,0,.3) 0px, transparent 50px),
-                          linear-gradient(0deg, black 0px, transparent 100px),
                           url(<?php the_post_thumbnail_url(); ?>)">
                             <div class="background-wrapper">                  
                               <div class="noticia-com-img-titulo"><?php the_title(); ?></div>
@@ -477,7 +475,7 @@ class WidgetRedesSociais extends WP_Widget {
             echo '<address>' . wp_kses_post($endereco) . '</address>';
         }
         if (!empty($telefone)) {
-            echo '<div class="f-link tel"><a href="' . esc_html($telefone) . '">' . esc_html($telefone) . '</a></div>';
+            echo '<div class="f-link tel"><a href="tel: ' . esc_html($telefone) . '">' . esc_html($telefone) . '</a></div>';
         }
         if (!empty($contato)) {
             echo '<div class="f-link"><a class="mais-link" href="' . esc_url($contato) . '">Contato</a></div>';

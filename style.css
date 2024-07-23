@@ -1123,12 +1123,12 @@ body.autismo .container .lateral .sidebar-bg {
 
 .secoes {
 	font-family: 'Rawline';
-	padding-top: 15px;
+	padding-top: 2rem;
 	font-size: var(--fonte-3up);
     font-weight: 400;
     line-height: 1.15;
     color: var(--cor-texto-medio);
-    margin-bottom: var(--fonte-3up);
+    margin-bottom: var(--fonte-1up);
 
 }
 
@@ -1158,7 +1158,7 @@ body.autismo .container .lateral .sidebar-bg {
   grid-area: coluna2;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 
 .noticias-coluna-unica {
@@ -1230,6 +1230,7 @@ body.autismo .container .lateral .sidebar-bg {
   background-size: cover;
   background-position: center;
   display: block;
+  height: 100%;
 }
 
 .background-wrapper {
@@ -1249,7 +1250,7 @@ body.autismo .container .lateral .sidebar-bg {
   position: relative;
   width: 100%;
   height: 100%;
-  min-height: 390px;
+  min-height: 180px;
   justify-content: flex-end;
   display: flex;
   flex-direction: column;
@@ -1267,7 +1268,12 @@ body.autismo .container .lateral .sidebar-bg {
     flex-direction: column;
     padding: var(--fonte-base);
     box-sizing: border-box;
-  }
+	background-image: linear-gradient(90deg, white 45%, transparent 70%);
+}
+
+.background-wrapper3:hover {
+	background-image: linear-gradient(90deg, #f3f3f3 45%, transparent 70%);
+}
 
   .background-wrapper4 {
 	position: relative;
@@ -1327,11 +1333,11 @@ body.autismo .container .lateral .sidebar-bg {
 }
 
 .rotulo a {
-  color: var(--cor-tema);
+  color: var(--cor-texto-medio);
 }
 
 .rotulo a:hover{
-  color: var(--cor-tema);
+  color: var(--cor-texto-medio);
   text-decoration: underline;
 }
 
@@ -1368,8 +1374,16 @@ a:hover div .noticia-com-img-titulo {
   align-items: flex-end;
 }
 
-.noticia-wrapper:hover .background-wrapper, .noticia-wrapper:hover .background-wrapper2,  .noticia-wrapper:hover .background-wrapper3, .noticia-wrapper:hover .background-wrapper4 {
-  background-image: linear-gradient(0deg, rgba(0,0,0,.85), transparent 100px);
+.noticia-wrapper .background-wrapper, .noticia-wrapper .background-wrapper2, .noticia-wrapper .background-wrapper4 {
+	background-image: linear-gradient(180deg, rgba(0,0,0,.3) 0px, transparent 50px), linear-gradient(0deg, rgba(0,0,0,.85), transparent 100px);
+}
+
+.noticia-wrapper:hover .background-wrapper, .noticia-wrapper:hover .background-wrapper2, .noticia-wrapper:hover .background-wrapper4 {
+  background-image: linear-gradient(180deg, rgba(0,0,0,.3) 0px, transparent 50px), linear-gradient(0deg, rgba(0,0,0,1), transparent 100px);
+}
+
+#noticias .background-wrapper3 .noticia-com-img-titulo {
+	color: var(--cor-tema);
 }
 
 /*CARDS*/
@@ -1414,6 +1428,7 @@ a:hover div .noticia-com-img-titulo {
   background-position: right;
   display: block;
   background-repeat: no-repeat;
+  background-size: 60%;
 }
 
 .noticia-com-img .rotulo {
@@ -1456,7 +1471,7 @@ a:hover div .noticia-com-img-titulo {
   font-weight: 600;
   font-size: var(--fonte-2up);
   line-height: 1.15;
-  color: white;
+  color: var(--cor-tema);;
 
   top: 0;
   height: 100%;
@@ -1465,7 +1480,7 @@ a:hover div .noticia-com-img-titulo {
 }
 
 #noticias .noticia-com-img-titulo {
-  width: 70%;
+  width: 50%;
   font-style: normal;
   font-weight: 600;
   font-size: var(--fonte-2up);
@@ -2174,7 +2189,7 @@ a:hover div .noticia-com-img-titulo {
 	display: inline;
   }
 
-  #footer-dados > div > div > a:hover {
+  footer a:hover {
   	filter: brightness(90%);
   }
 
@@ -2404,6 +2419,18 @@ body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a:h
 	gap: 30px;
   }
 
+.background-wrapper2 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 390px;
+	justify-content: flex-end;
+	display: flex;
+	flex-direction: column;
+	padding: var(--fonte-base);
+	box-sizing: border-box;
+}
+
 /*------------------------ menu responsivo end ---------------------------------*/
 	.sidebar {
 		margin-left: 2vw;
@@ -2499,7 +2526,7 @@ body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a:h
 		grid-template-rows: 1fr;
 		grid-template-areas:
 		"coluna1 coluna2";
-		gap: 30px;
+		gap: 20px;
 	  }
 
 	.noticias {
@@ -2518,7 +2545,7 @@ body.contraste .container .cabecalho .nav-bar-bg .nav-bar .topnav #nav ul li a:h
 	.secoes {
 		font-size: 2rem;
     	line-height: 1.625rem;
-		padding-top: 45px;
+		padding-top: 2rem;
 	}
 
 	.curso {

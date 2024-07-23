@@ -52,7 +52,7 @@
                                                             ?>
                                                             </div><!-- fecha div categorias -->
                                                         </div><!-- fecha div rotulo -->
-                                                        <a href="<?php the_permalink();?>" class="noticia-com-img camada-1" style="background-image: linear-gradient(270deg, rgba(255, 255, 255, 0) 30%, #fff 50%), url(<?php the_post_thumbnail_url(); ?>); 
+                                                        <a href="<?php the_permalink();?>" class="noticia-com-img camada-1" style="background-image: url(<?php the_post_thumbnail_url(); ?>); 
                                                         ">
                                                             <div class="background-wrapper3">                  
                                                             <div class="noticia-com-img-titulo"><?php the_title(); ?></div>
