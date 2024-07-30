@@ -52,8 +52,8 @@
     <div class="logo-bg">
     	<div class="logo">
     		<a href="<?php echo get_home_url(); ?>">
-	    	<?php the_custom_logo(); ?>
-				</a>
+	    		<?php the_custom_logo(); ?>
+			</a>
     	</div>
     </div>
       <div class="sidebar-bg">
@@ -99,9 +99,12 @@
 	      
 
 	    	<div class="title">
-	    		<a href="<?php $custom_urlcentro = esc_url(get_theme_mod('custom_urlcentro', 'https://www.ufpb.br'));
-echo esc_url($custom_urlcentro) ?>" id="tit_centro"><?php
-$custom_centro = get_theme_mod('custom_centro', 'Reitoria'); echo esc_html($custom_centro);?></a><br />
+
+	    		<a href="<?php $custom_urlcentro = esc_url(get_theme_mod('custom_urlcentro', 'https://www.ufpb.br')); echo esc_url($custom_urlcentro) ?>" id="tit_centro">
+				<?php $custom_centro = get_theme_mod('custom_centro', 'Reitoria');
+				echo esc_html($custom_centro);?>
+				</a><br />
+
 	        <h1 id="tit_curso"><a href="<?php echo get_home_url(); ?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
 	    	</div>
 

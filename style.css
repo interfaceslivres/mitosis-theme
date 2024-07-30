@@ -42,6 +42,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	--fonte-4up: 2.903rem;
 }
 
+#barra-brasil {
+	display: none;
+}
+
+#footer-brasil.azul {
+	display: none;
+}
+
 a {
 	color: inherit; /* blue colors for links too */
 	text-decoration: inherit; /* no underline */
