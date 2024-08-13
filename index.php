@@ -281,10 +281,7 @@
 
 
     <div class="curso">
-
-
-<?php $widget_values = dynamic_sidebar('widgets-da-home'); ?>
-
-</div>
+      <?php $widget_values = dynamic_sidebar('widgets-da-home'); ?>
+    </div>
 
 <?php get_footer(); ?>

@@ -157,26 +157,22 @@ class Widget_Curso extends WP_Widget {
 
         // Localização
         if (!empty($instance['localizacao'])) {
-
-
-				// URL do Google Maps
-				$google_maps_url = esc_html($instance['localizacao']);
-				if (preg_match('/@([-0-9.]+),([-0-9.]+)/', $google_maps_url, $matches)) {
-				    $latitude = $matches[1];
-				    $longitude = $matches[2];
-				    
-				    // Crie o código de incorporação do Google Maps
-				    $iframe_code = '<iframe src="https://maps.google.com/maps?q='.$latitude.','.$longitude.'&t=k&hl=pt-BR&z=20&amp;output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
-				}
-
-
+            // URL do Google Maps
+            $google_maps_url = esc_html($instance['localizacao']);
+            //$iframe_code = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1285.6058857601795!2d-34.841882630723035!3d-7.146140248199722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acc294e74f5101%3A0x92100ca7381a3ff8!2sLG%20Est%C3%BAdio%20Ensaio!5e1!3m2!1sen!2sbr!4v1722448081687!5m2!1sen!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade></iframe>';
+            if (preg_match('/@([-0-9.]+),([-0-9.]+)/', $google_maps_url, $matches)) {
+                $latitude = $matches[1];
+                $longitude = $matches[2];                
+                // Crie o código de incorporação do Google Maps
+                //$iframe_code = '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1285.6058857601795!2d-34.841882630723035!3d-7.146140248199722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acc294e74f5101%3A0x92100ca7381a3ff8!2sLG%20Est%C3%BAdio%20Ensaio!5e1!3m2!1sen!2sbr!4v1722448081687!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+                $iframe_code = '<iframe src="https://maps.google.com/maps?q='.$latitude.','.$longitude.'&t=k&hl=pt-BR&z=20&amp;output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>';
+            }
 
 	        echo '<div class="mais"> <div class="mapa"> <div class="mapa-titulo">';
 	        echo '<h2>Localização:</h2></div>';
 	        echo '<div class="mapa-img">' . $iframe_code . '</div></div>';
 	        echo '<div class="text-ufpb"> <div class="text-ufpb-text"> <p>' . nl2br(esc_html($instance['texto-localizacao'])) . '</p></div><div class="text-ufpb-link">';
     	
-
             wp_nav_menu(   
                 array ( 
                     'theme_location' => 'localizacao-menu',
@@ -185,7 +181,6 @@ class Widget_Curso extends WP_Widget {
                     'link_class'   => 'mais-link'
                 ) 
             ); 
-
 	    }
 
         echo '</div> </div> </div> </div> </div></div> </div>  <!-- fecha todas as divs do conteiner -->';
@@ -273,7 +268,6 @@ add_action('customize_register', 'adicionar_controle_imagem_footer');
 
 
 //noticias relacionadas ou outras noticias
-
 function cats_related_post() {
 
     $post_id = get_the_ID();

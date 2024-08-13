@@ -116,29 +116,29 @@
 	    	<div class="nav-bar">
 	        <div class="topnav" id="myTopnav">
 	        	<nav id="nav">
-	            <ul>
-								<?php 
-									wp_nav_menu(   
-										array ( 
-											'theme_location' => 'main-menu',
-											'items_wrap' => '%3$s',
-											'container' => false,
-										) 
-									); 
-								?>
-							</ul>
-							<ul class="acc-container">
-								<?php 
-									wp_nav_menu(   
-										array ( 
-											'theme_location' => 'sidebar-menu',
-											'items_wrap' => '%3$s',
-											'container' => false,
-										) 
-									); 
-								?>
-			        </ul>
-            </nav>
+					<ul>
+						<?php 
+							wp_nav_menu(   
+								array ( 
+									'theme_location' => 'main-menu',
+									'items_wrap' => '%3$s',
+									'container' => false,
+								) 
+							); 
+						?>
+					</ul>
+					<ul class="acc-container">
+						<?php 
+							wp_nav_menu(   
+								array ( 
+									'theme_location' => 'sidebar-menu',
+									'items_wrap' => '%3$s',
+									'container' => false,
+								) 
+							); 
+						?>
+					</ul>
+            	</nav>
 
           	<a href="javascript:void(0);" class="icon" onclick="menuTransforma()"><i id="menuParaFechar" class="fa-solid fa-bars"></i><p class="menuAbrir" id="menuMenu">Menu</p><p class="menuFechar" id="menuFecharId">Fechar</p></a>
 	      	</div>

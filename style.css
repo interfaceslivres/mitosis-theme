@@ -1127,6 +1127,7 @@ body.autismo .container .lateral .sidebar-bg {
 	grid-area: main;
 	margin-right: 0%; /*alterar no media query*/
 	min-height: 720px;
+	max-width: 800px;
 }
 
 .secoes {
